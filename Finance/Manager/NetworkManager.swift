@@ -13,6 +13,8 @@ import SwiftyJSON
 import KRProgressHUD
 
 class NetworkManager {
+//    comment for checking
+    
     
     static let SharedInstance = NetworkManager()
 
