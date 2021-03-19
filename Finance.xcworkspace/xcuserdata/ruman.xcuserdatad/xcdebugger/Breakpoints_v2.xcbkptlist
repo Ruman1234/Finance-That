@@ -7,49 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD335F82-F345-4D87-9EB5-CEBE94968255"
+            uuid = "FC0D0376-9B7B-49A6-8CB8-3A354D01915C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Finance/ViewControllers/Registration/UserPage3ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "signInBtn(_:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "createAccBtn(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DD335F82-F345-4D87-9EB5-CEBE94968255 - 6288345d66a39813"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Finance.UserPage3ViewController.signInBtn(Any) -&gt; ()"
-                  moduleName = "Finance"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ruman/Desktop/Finance-That/Finance/ViewControllers/Registration/UserPage3ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  uuid = "DD335F82-F345-4D87-9EB5-CEBE94968255 - 6288345d66a39813"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Finance.UserPage3ViewController.signInBtn(Any) -&gt; ()"
-                  moduleName = "Finance"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ruman/Desktop/Finance-That/Finance/ViewControllers/Registration/UserPage3ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
-                  offsetFromSymbolStart = "572">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC62EC1A-F977-4DBE-B697-6FBFD7801E12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Finance/ViewControllers/Registration/UserPage3ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "createAccBtn(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

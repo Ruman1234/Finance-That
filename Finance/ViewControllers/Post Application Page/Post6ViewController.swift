@@ -43,9 +43,7 @@ class Post6ViewController: UIViewController {
         emailLbl.textColor = Color.App_theme_color
         telephoneLbl.textColor = Color.App_theme_color
 
-        nextbtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextbtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextbtn.layer.cornerRadius = 10
+        nextbtn.setButtonTheme()
 
     }
     

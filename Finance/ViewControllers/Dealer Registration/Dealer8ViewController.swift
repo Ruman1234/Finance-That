@@ -15,9 +15,7 @@ class Dealer8ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        goToHomeBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        goToHomeBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        goToHomeBtn.layer.cornerRadius = 10
+        goToHomeBtn.setButtonTheme()
 
     }
  

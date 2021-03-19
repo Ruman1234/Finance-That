@@ -39,9 +39,7 @@ class Dealer4ViewController: UIViewController {
         lbl2.textColor = Color.App_theme_color
         numberLbl.textColor = Color.App_theme_color
 
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
 
         self.design(btn: previous)
         
@@ -79,10 +77,9 @@ class Dealer4ViewController: UIViewController {
     func design(btn :UIButton)  {
         
         btn.layer.backgroundColor = UIColor.white.cgColor
-        btn.layer.cornerRadius = 10
+
         btn.layer.borderWidth = 1
-        btn.layer.borderColor = Color.red_theme_color.cgColor
-        btn.setTitleColor(Color.red_theme_color, for: .normal)
+        btn.setButtonTheme()
 
     }
 

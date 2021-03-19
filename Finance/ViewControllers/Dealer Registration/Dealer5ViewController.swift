@@ -63,9 +63,7 @@ class Dealer5ViewController: UIViewController {
         telephoneLbl.textColor = Color.App_theme_color
         percentageLbl.textColor = Color.App_theme_color
          
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
 
         self.design(btn: previousBtn)
         lbl1.text = "\(currentOwner.getNumber()) Owner’s Information"
@@ -73,10 +71,9 @@ class Dealer5ViewController: UIViewController {
     
     func design(btn :UIButton)  {
         btn.layer.backgroundColor = UIColor.white.cgColor
-        btn.layer.cornerRadius = 10
+        
         btn.layer.borderWidth = 1
-        btn.layer.borderColor = Color.red_theme_color.cgColor
-        btn.setTitleColor(Color.red_theme_color, for: .normal)
+        btn.setButtonTheme()
     }
     
     override func viewDidLayoutSubviews() {

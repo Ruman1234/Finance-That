@@ -31,6 +31,8 @@ class CustomTextField: UITextField {
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 1
         self.layer.masksToBounds = true
+        self.font = UIFont(name: "Basis Grotesque Pro Medium", size: 15)
+        self.textColor = Color.App_theme_color
     }
     
     override init(frame: CGRect) {

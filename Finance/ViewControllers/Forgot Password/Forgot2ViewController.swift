@@ -46,9 +46,7 @@ class Forgot2ViewController: UIViewController {
         self.setTextField(textField: self.txt5)
         self.setTextField(textField: self.txt6)
         
-        continueBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        continueBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        continueBtn.layer.cornerRadius = 10
+        continueBtn.setButtonTheme()
 
     }
     

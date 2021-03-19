@@ -26,9 +26,7 @@ class Forgt1ViewController: UIViewController {
         lbl3.textColor = Color.gray_theme_color
         emailLbl.textColor = Color.App_theme_color
         
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
     }
     
     override func viewWillLayoutSubviews() {
@@ -45,24 +43,10 @@ class Forgt1ViewController: UIViewController {
     }
     
     func reset() {
-        var dict = Dictionary<String, Any>()
-
-            dict = ["email": emailTextField.text ?? "", "redirect_url": "http://24.227.130.19/"]
-        var  jsonData = NSData()
-
-       // var dataString2 :String = ""
-        do {
-             jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) as NSData
-            // you can now cast it with the right type
-        } catch {
-            print(error.localizedDescription)
-        }
-
-        NetworkManager.SharedInstance.ResetPassword(email: emailTextField.text ?? "", redirect_url: "http://24.227.130.19/", viewcontroller: self, param: dict) { (res) in
+        NetworkManager.SharedInstance.ResetPassword(email: emailTextField.text ?? "", viewcontroller: self) { (res) in
             if res.success == true {
                 let main = self.storyboard?.instantiateViewController(withIdentifier: "Forgot2ViewController") as! Forgot2ViewController
                 self.navigationController?.pushViewController(main, animated: true)
-
             }
         } failure: { (err) in
             print("Failed")

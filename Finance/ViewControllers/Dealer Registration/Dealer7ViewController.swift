@@ -50,9 +50,7 @@ class Dealer7ViewController: UIViewController {
         readLbl.textColor = Color.App_theme_color
         ifYouNeedlbl.textColor = Color.App_theme_color
         
-        submitBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        submitBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        submitBtn.layer.cornerRadius = 10
+        submitBtn.setButtonTheme()
 
         self.design(btn: previousBtn)
     }
@@ -63,10 +61,9 @@ class Dealer7ViewController: UIViewController {
 
     func design(btn :UIButton)  {
         btn.layer.backgroundColor = UIColor.white.cgColor
-        btn.layer.cornerRadius = 10
+        
         btn.layer.borderWidth = 1
-        btn.layer.borderColor = Color.red_theme_color.cgColor
-        btn.setTitleColor(Color.red_theme_color, for: .normal)
+        btn.setButtonTheme()
     }
     
     @IBAction func backBtn(_ sender: Any) {

@@ -34,9 +34,7 @@ class LogInViewController: UIViewController {
         emailLbl.textColor = Color.App_theme_color
         passwordLbl.textColor = Color.App_theme_color
         forgtBtn.setTitleColor(Color.primary_theme_color, for: .normal)
-        loginBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        loginBtn.layer.cornerRadius = 10
-        loginBtn.setTitleColor(Color.white_theme_color, for: .normal)
+        loginBtn.setButtonTheme()
         dntLbl.textColor = Color.App_theme_color
         signUpBtn.setTitleColor(Color.App_theme_color, for: .normal)
         signLbl.textColor = Color.gray_theme_color

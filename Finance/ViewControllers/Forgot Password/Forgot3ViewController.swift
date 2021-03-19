@@ -30,9 +30,7 @@ class Forgot3ViewController: UIViewController {
         forgotLbl.textColor = Color.App_theme_color
         newLbl.textColor = Color.App_theme_color
         reEnterLbl.textColor = Color.App_theme_color
-        changeBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        changeBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        changeBtn.layer.cornerRadius = 10
+        changeBtn.setButtonTheme()
         
         self.view(view: view1)
         self.view(view: view2)
