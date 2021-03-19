@@ -15,7 +15,7 @@ import KRProgressHUD
 class NetworkManager {
 //    comment for checking
     
-    
+// comment for checking
     static let SharedInstance = NetworkManager()
 
     
