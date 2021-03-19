@@ -31,41 +31,19 @@ class ViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func skipBtn(_ sender: Any) {
+    
+//        let main = self.storyboard?.instantiateViewController(withIdentifier: "UserPage1ViewController") as! UserPage1ViewController
+//        self.navigationController?.pushViewController(main, animated: true)
         
-        if lbl1.text == "Pictures & Videos" {
-           
-            lbl1.text = "Confused between choices?"
-            lbl2.text = "Compare Cars"
-            lbl3.text = "Compare to choose the right car!"
-            img.image = UIImage(named: "Frame")
-            view1.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
-            view2.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
-
-        }else if lbl1.text == "Confused between choices?"{
-            lbl1.text = "Get best deals"
-            lbl2.text = "Prices and Offers"
-            lbl3.text = "We bring accurate price & best offers to you!"
-            img.image = UIImage(named: "Group")
-            view1.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
-            view2.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
-            view3.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
-
-
-        }else {
-            let main = self.storyboard?.instantiateViewController(withIdentifier: "UserPage1ViewController") as! UserPage1ViewController
-            self.navigationController?.pushViewController(main, animated: true)
-        }
+        let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
+        let main =
+            homePageStoryBoard.instantiateViewController(withIdentifier: "HomePage1ViewController") as! HomePage1ViewController
+        self.navigationController?.pushViewController(main, animated: true)
     }
     
     @IBAction func nextBtn(_ sender: Any) {
@@ -93,20 +71,4 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(main, animated: true)
         }
     }
-}
-
-class Color {
-    
-    static let App_theme_color = UIColor(red: 0.247, green: 0.137, blue: 0.333, alpha: 1)
-    
-    static let red_theme_color = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1)
-
-    static let primary_theme_color = UIColor(red: 0.184, green: 0.502, blue: 0.929, alpha: 1)
-    
-    static let gray_theme_color = UIColor(red: 0.51, green: 0.514, blue: 0.522, alpha: 1)
-
-    static let white_theme_color = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-    
-    static let lightgray_theme_color = UIColor(red: 0.965, green: 0.973, blue: 0.984, alpha: 1)
-
 }

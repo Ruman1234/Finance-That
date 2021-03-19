@@ -7,6 +7,14 @@ target 'Finance' do
 
   # Pods for Finance
 
+pod 'DropDown'
+pod 'Alamofire'
+pod 'SwiftyJSON'
+pod 'ObjectMapper'
+pod 'SDWebImage'
+pod "KRProgressHUD"
+pod 'IQKeyboardManagerSwift'
+
   target 'FinanceTests' do
     inherit! :search_paths
     # Pods for testing

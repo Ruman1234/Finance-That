@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Basis Grotesque Pro Medium.ttf">
+            <string>BasisGrotesquePro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="gTV-IL-0wX" customClass="SearchByTypeCollectionViewCell" customModule="Finance" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="104" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="104" height="115"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Automotive" translatesAutoresizingMaskIntoConstraints="NO" id="b1Q-PM-X6R">
+                        <rect key="frame" x="15" y="42" width="74" height="24"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automotive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMp-YR-ECN">
+                        <rect key="frame" x="2" y="83" width="99" height="14.5"/>
+                        <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="b1Q-PM-X6R" secondAttribute="top" constant="2" id="1wI-xy-7pB"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="b1Q-PM-X6R" secondAttribute="trailing" constant="15" id="8xV-yR-7jK"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="WMp-YR-ECN" secondAttribute="bottom" constant="17.5" id="DbG-SM-Wqb"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="WMp-YR-ECN" secondAttribute="trailing" constant="3" id="Psg-lr-yzD"/>
+                <constraint firstItem="WMp-YR-ECN" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="2" id="UB6-I6-u5e"/>
+                <constraint firstItem="WMp-YR-ECN" firstAttribute="top" secondItem="b1Q-PM-X6R" secondAttribute="bottom" constant="17" id="Yif-yX-eGj"/>
+                <constraint firstItem="b1Q-PM-X6R" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="15" id="YpA-B1-fz9"/>
+            </constraints>
+            <connections>
+                <outlet property="img" destination="b1Q-PM-X6R" id="qRR-XJ-vae"/>
+                <outlet property="lbl" destination="WMp-YR-ECN" id="gHu-OV-kOY"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="76.674107142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Automotive" width="74" height="24.5"/>
+    </resources>
+</document>

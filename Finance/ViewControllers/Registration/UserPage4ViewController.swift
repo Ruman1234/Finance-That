@@ -21,17 +21,10 @@ class UserPage4ViewController: UIViewController {
         homePageBtn.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-
-    
     @IBAction func homePgBtn(_ sender: Any) {
         
         let main = self.storyboard?.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController

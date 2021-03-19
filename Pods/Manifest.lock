@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (5.4.1)
+  - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.6)
+  - KRActivityIndicatorView (3.0.7)
+  - KRProgressHUD (3.4.7):
+    - KRActivityIndicatorView (= 3.0.7)
+  - ObjectMapper (4.2.0)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DropDown
+  - IQKeyboardManagerSwift
+  - KRProgressHUD
+  - ObjectMapper
+  - SDWebImage
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DropDown
+    - IQKeyboardManagerSwift
+    - KRActivityIndicatorView
+    - KRProgressHUD
+    - ObjectMapper
+    - SDWebImage
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
+  KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 3063d8e843e1c36c4bd9185ea94083e12cd8241c
+
+COCOAPODS: 1.10.1

@@ -24,16 +24,13 @@ class UserPage1ViewController: UIViewController {
         
         dealerBtn.layer.backgroundColor = UIColor(red: 0.965, green: 0.973, blue: 0.984, alpha: 1).cgColor
         dealerBtn.layer.cornerRadius = 10
+        
+        buyerBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 100)
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func buyerAndSellerBtn(_ sender: Any) {
@@ -45,7 +42,7 @@ class UserPage1ViewController: UIViewController {
     
     @IBAction func dealershipBtn(_ sender: Any) {
         
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "UserPage2ViewController") as! UserPage2ViewController
+        let main = self.storyboard?.instantiateViewController(withIdentifier: "Dealer1ViewController") as! Dealer1ViewController
         self.navigationController?.pushViewController(main, animated: true)
 
     }
