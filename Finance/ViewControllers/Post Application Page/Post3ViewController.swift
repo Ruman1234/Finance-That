@@ -42,7 +42,7 @@ class Post3ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
-        scroller.contentSize = CGSize(width: 400, height: 800)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 800)
     }
     
     override func viewWillAppear(_ animated: Bool) {

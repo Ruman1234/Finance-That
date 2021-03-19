@@ -10,6 +10,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var scolview: UIScrollView!
     @IBOutlet weak var lognLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var emailTextField: CustomTextField!
@@ -47,6 +48,10 @@ class LogInViewController: UIViewController {
         self.design(btn: fbBtn)
         self.design(btn: linkBtn)
         passwordTextField.enablePasswordToggle()
+    }
+    override func viewDidLayoutSubviews() {
+        scolview.isScrollEnabled = true
+        scolview.contentSize = CGSize(width: self.view.frame.width, height: 736)
     }
     
     override func viewWillLayoutSubviews() {

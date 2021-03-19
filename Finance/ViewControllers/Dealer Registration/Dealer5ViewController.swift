@@ -81,7 +81,7 @@ class Dealer5ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
-        scroller.contentSize = CGSize(width: 400, height: 900)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 900)
     }
     
     override func viewWillLayoutSubviews() {

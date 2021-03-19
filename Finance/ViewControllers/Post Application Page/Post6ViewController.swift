@@ -51,7 +51,7 @@ class Post6ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
-        scroller.contentSize = CGSize(width: 400, height: 1000)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 1000)
     }
     
     override func viewWillAppear(_ animated: Bool) {
