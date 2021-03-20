@@ -14,25 +14,9 @@
             filePath = "Finance/ViewControllers/Dealer Registration/Dealer5ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "nextBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AE5F780E-C419-4CB5-8248-21F1A6491612"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Finance/ViewControllers/Dealer Registration/Dealer5ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,8 +30,8 @@
             filePath = "Finance/ViewControllers/Dealer Registration/Dealer5ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "getNumber()"
             landmarkType = "7">
          </BreakpointContent>
@@ -64,7 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "login()"
+            landmarkName = "validInput()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -80,8 +64,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "login()"
-            landmarkType = "7">
+            landmarkName = "LogInViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,6 +82,38 @@
             endingLineNumber = "93"
             landmarkName = "login()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F9F4665B-4E7A-46BF-9438-C715561542A5 - 39ec3997f799b964"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finance.LogInViewController.login() -&gt; ()"
+                  moduleName = "Finance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Finance-That/Finance/ViewControllers/Log%20In/LogInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "F9F4665B-4E7A-46BF-9438-C715561542A5 - 3f8ba1c700d5da93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Finance.LoginModel) -&gt; () in Finance.LogInViewController.login() -&gt; ()"
+                  moduleName = "Finance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Finance-That/Finance/ViewControllers/Log%20In/LogInViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "125">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

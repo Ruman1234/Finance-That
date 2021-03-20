@@ -71,14 +71,15 @@ class Dealer5ViewController: UIViewController {
     
     func design(btn :UIButton)  {
         btn.layer.backgroundColor = UIColor.white.cgColor
-        
+        btn.layer.cornerRadius = 10
         btn.layer.borderWidth = 1
-        btn.setButtonTheme()
+        btn.layer.borderColor = Color.red_theme_color.cgColor
+        btn.setTitleColor(Color.red_theme_color, for: .normal)
     }
     
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
-        scroller.contentSize = CGSize(width: self.view.frame.width, height: 900)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 1070)
     }
     
     override func viewWillLayoutSubviews() {
