@@ -37,9 +37,43 @@ class Forgot3ViewController: UIViewController {
         self.view(view: view3)
         self.view(view: view4)
 
-        
+        newPassTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
+    
+    @objc func textFieldDidChange(textField: UITextField) {
+//        there are 4 checks for green defined regex
+//        if textCount < 8 && textCount > 4
+//        textCount < 3
+//        textCount > 7
+        let defaultColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 1).cgColor
+        let textCount = newPassTextField.text?.count ?? 0
+        if newPassTextField.isValidPassword() || textCount > 13{
+            let greenColor = UIColor(red: 0.506, green: 0.858, blue: 0.057, alpha: 1).cgColor
+            view1.layer.backgroundColor = greenColor
+            view2.layer.backgroundColor = greenColor
+            view3.layer.backgroundColor = greenColor
+            view4.layer.backgroundColor = greenColor
+        }else if textCount < 8 && textCount > 4{
+            let redColor = UIColor.red.cgColor
+            view1.layer.backgroundColor = redColor
+            view2.layer.backgroundColor = redColor
+            view3.layer.backgroundColor = defaultColor
+            view4.layer.backgroundColor = defaultColor
+        }else if textCount < 3{
+            let redColor = UIColor.red.cgColor
+            view1.layer.backgroundColor = redColor
+            view2.layer.backgroundColor = defaultColor
+            view3.layer.backgroundColor = defaultColor
+            view4.layer.backgroundColor = defaultColor
+        }else if textCount > 7 && textCount < 13{
+            let orangeColor = UIColor.orange.cgColor
+            view1.layer.backgroundColor = orangeColor
+            view2.layer.backgroundColor = orangeColor
+            view3.layer.backgroundColor = orangeColor
+            view4.layer.backgroundColor = defaultColor
+        }
+    }
     override func viewWillLayoutSubviews() {
         self.navigationController?.isNavigationBarHidden = true
     }
@@ -68,11 +102,13 @@ class Forgot3ViewController: UIViewController {
     }
     
     func view(view : UIView)  {
-       
-        view.layer.backgroundColor = UIColor(red: 0.506, green: 0.858, blue: 0.057, alpha: 1).cgColor
+        view.backgroundColor = .white
+
+
+        view.layer.backgroundColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 1).cgColor
         view.layer.cornerRadius = 4
-        view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor(red: 0.82, green: 0.827, blue: 0.839, alpha: 1).cgColor
+//        view.layer.borderWidth = 1
+//        view.layer.borderColor = UIColor(red: 0.82, green: 0.827, blue: 0.839, alpha: 1).cgColor
 
     }
     

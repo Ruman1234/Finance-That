@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yfw-wg-heB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUt-8o-QEs">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -286,7 +286,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealership Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0l-X2-nQa">
-                                        <rect key="frame" x="141.33333333333331" y="57.000000000000007" width="131.33333333333331" height="15.333333333333336"/>
+                                        <rect key="frame" x="139" y="57" width="136" height="17"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -313,19 +313,19 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets set your dealership identity!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycg-re-a1w">
-                                        <rect key="frame" x="16" y="168.33333333333334" width="217.33333333333334" height="17.666666666666657"/>
+                                        <rect key="frame" x="16" y="170" width="222" height="17.333333333333343"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealership Legal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fES-gY-Pt6">
-                                        <rect key="frame" x="16" y="216" width="133" height="15.333333333333343"/>
+                                        <rect key="frame" x="16" y="217.33333333333334" width="136.66666666666666" height="17"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUm-ls-z8D" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="243.33333333333337" width="382" height="40"/>
+                                        <rect key="frame" x="16" y="246.33333333333337" width="382" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="PvD-sg-qwi"/>
                                         </constraints>
@@ -333,13 +333,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealership Operating name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQb-4J-YtW">
-                                        <rect key="frame" x="16" y="299.33333333333331" width="159" height="15.333333333333314"/>
+                                        <rect key="frame" x="16" y="302.33333333333331" width="164.33333333333334" height="17"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-Jr-Kov" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="326.66666666666669" width="382" height="40"/>
+                                        <rect key="frame" x="16" y="331.33333333333331" width="382" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="09Q-rC-YVT"/>
                                         </constraints>
@@ -347,7 +347,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 19801" translatesAutoresizingMaskIntoConstraints="NO" id="xx4-j1-P2e">
-                                        <rect key="frame" x="56" y="106.33333333333333" width="302" height="31.999999999999986"/>
+                                        <rect key="frame" x="56" y="108" width="302" height="32"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1486,7 +1486,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 19801-5" translatesAutoresizingMaskIntoConstraints="NO" id="Ts7-oB-yVH">
-                                        <rect key="frame" x="58" y="110" width="298.33333333333331" height="32"/>
+                                        <rect key="frame" x="57.666666666666657" y="110" width="298.66666666666674" height="32"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4P-fp-fc3">
                                         <rect key="frame" x="17" y="179" width="20" height="20"/>
@@ -1781,7 +1781,6 @@
         <!--Log In View Controller-->
         <scene sceneID="EVt-qy-4p4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cZa-mz-Ycb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LogInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aFQ-gF-5WI" customClass="LogInViewController" customModule="Finance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LfA-PF-0oo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -2051,6 +2050,7 @@
                         <outlet property="view2" destination="CKU-PF-hp1" id="P3p-xp-lPw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZa-mz-Ycb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="1585.5978260869567"/>
         </scene>
@@ -2413,7 +2413,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Td2-Rh-nMg">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Td2-Rh-nMg">
                                         <rect key="frame" x="16" y="243" width="25" height="3"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
@@ -2421,7 +2421,7 @@
                                             <constraint firstAttribute="height" constant="3" id="n6I-Ej-av3"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMH-oB-bn6">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMH-oB-bn6">
                                         <rect key="frame" x="46" y="243" width="25" height="3"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
@@ -2429,7 +2429,7 @@
                                             <constraint firstAttribute="width" constant="25" id="ppR-K9-ZVh"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTM-zA-lQN">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTM-zA-lQN">
                                         <rect key="frame" x="76" y="243" width="25" height="3"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
@@ -2437,7 +2437,7 @@
                                             <constraint firstAttribute="height" constant="3" id="ws5-Nt-Mty"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-ZX-Ooh">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-ZX-Ooh">
                                         <rect key="frame" x="106" y="243" width="25" height="3"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
