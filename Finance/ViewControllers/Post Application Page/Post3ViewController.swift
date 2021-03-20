@@ -34,15 +34,13 @@ class Post3ViewController: UIViewController {
         durationLbl.textColor = Color.App_theme_color
         grossLbl.textColor = Color.App_theme_color
         
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
 
     }
     
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
-        scroller.contentSize = CGSize(width: 400, height: 800)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 800)
     }
     
     override func viewWillAppear(_ animated: Bool) {

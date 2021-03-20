@@ -38,9 +38,7 @@ class Post9ViewController: UIViewController {
         listingBtn.layer.borderColor = UIColor(red: 0.918, green: 0.918, blue: 0.933, alpha: 1).cgColor
         
 
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
         
         dropDown.anchorView = listingBtn // UIView or UIBarButtonItem
 

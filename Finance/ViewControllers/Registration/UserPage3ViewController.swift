@@ -43,9 +43,7 @@ class UserPage3ViewController: UIViewController {
         agreeLbl.textColor = Color.App_theme_color
         alreadyLbl.textColor = Color.App_theme_color
 
-        createBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        createBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        createBtn.layer.cornerRadius = 10
+        createBtn.setButtonTheme()
 
         radioBtn.layer.borderColor = UIColor(red: 0.506, green: 0.858, blue: 0.057, alpha: 1).cgColor
         radioBtn.layer.borderWidth = 1
@@ -58,7 +56,7 @@ class UserPage3ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
         // Do any additional setup after loading the view
-        scroller.contentSize = CGSize(width: 400, height: 900)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 900)
     }
     
     override func viewWillLayoutSubviews() {

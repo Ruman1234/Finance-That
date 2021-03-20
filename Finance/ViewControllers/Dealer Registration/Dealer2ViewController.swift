@@ -27,9 +27,7 @@ class Dealer2ViewController: UIViewController {
         lbl3.textColor = Color.App_theme_color
         lbl4.textColor = Color.App_theme_color
         
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
         
     }
     

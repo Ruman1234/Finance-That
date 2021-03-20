@@ -30,9 +30,7 @@ class Post7ViewController: UIViewController {
         haveReadLbl.textColor = Color.App_theme_color
         agreeLbl.textColor = Color.App_theme_color
         
-        submitBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        submitBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        submitBtn.layer.cornerRadius = 10
+        submitBtn.setButtonTheme()
 
     }
     

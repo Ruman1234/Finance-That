@@ -149,37 +149,12 @@ extension NetworkManager {
         }
     }
     
-    //    func Email(email:String,
-    //               redirect_url : String,
-    //
-    //       success : @escaping (String) -> Void,
-    //                   failure : @escaping (NSError) -> Void)  {
-    //
-    //           self.request(url: Constants.BASE_URL  + Constants.EMAIL, method: .post,parameters:["email" : email,"redirect_url": redirect_url]) { (response) in
-    //
-    //               if response.response?.statusCode == 200 {
-    //                   do{
-    //                       let value = try response.result.get()
-    //                       success(Mapper<String>().map(JSON: value as! [String : Any])!)
-    //                   }catch{
-    //                       failure(NSError())
-    //                   }
-    //
-    //               }else{
-    //                   failure(NSError())
-    //               }
-    //           }
-    //       }
-    
     func ResetPassword(email:String,
-                       redirect_url:String,
                        viewcontroller : UIViewController = UIViewController(),
-                       param : [String : Any],
                        success : @escaping (ResetPasswordModel) -> Void,
                        failure : @escaping (NSError) -> Void)  {
         
-        self.request(url: Constants.BASE_URL  + Constants.EMAIL, method: .post,parameters:param) { (response) in
-            
+        self.request(url: Constants.BASE_URL  + Constants.EMAIL, method: .post,parameters:["email" : email]) { (response) in
             if response.response?.statusCode == 200 {
                 do{
                     let value = try response.result.get()

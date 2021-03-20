@@ -17,6 +17,7 @@ class UserPage2ViewController: UIViewController {
     @IBOutlet weak var linkedinBtn: UIButton!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var privacyPolicyLbl: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,11 @@ By clicking "Create account", you agree to our
         continueBtn.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
         continueBtn.layer.cornerRadius = 10
     }
-    
+    override func viewDidLayoutSubviews() {
+        scrollView.isScrollEnabled = true
+        // Do any additional setup after loading the view
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: 736)
+    }
     override func viewWillLayoutSubviews() {
         self.navigationController?.isNavigationBarHidden = true
     }

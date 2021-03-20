@@ -40,9 +40,9 @@ class ViewController: UIViewController {
 //        let main = self.storyboard?.instantiateViewController(withIdentifier: "UserPage1ViewController") as! UserPage1ViewController
 //        self.navigationController?.pushViewController(main, animated: true)
         
-        let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
+        let homePageStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let main =
-            homePageStoryBoard.instantiateViewController(withIdentifier: "HomePage1ViewController") as! HomePage1ViewController
+            homePageStoryBoard.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
         self.navigationController?.pushViewController(main, animated: true)
     }
     

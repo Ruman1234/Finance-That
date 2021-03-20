@@ -36,3 +36,11 @@ class Constants {
     static let RESET_PASSWORD = "password-reset-complete/"
 
 }
+
+extension UIButton{
+    func setButtonTheme()  {
+        self.layer.backgroundColor = Color.red_theme_color.cgColor
+        self.layer.cornerRadius = 20
+        self.setTitleColor(Color.white_theme_color, for: .normal)
+    }
+}

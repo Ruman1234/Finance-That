@@ -48,16 +48,14 @@ class Dealer3ViewController: UIViewController {
         telephoneLbl.textColor = Color.App_theme_color
         faxLbl.textColor = Color.App_theme_color
 
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
 
         self.design(btn: previousBtn)
     }
     
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
-        scroller.contentSize = CGSize(width: 400, height: 852)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 852)
     }
     
     override func viewWillLayoutSubviews() {
@@ -94,10 +92,8 @@ class Dealer3ViewController: UIViewController {
     func design(btn :UIButton)  {
         
         btn.layer.backgroundColor = UIColor.white.cgColor
-        btn.layer.cornerRadius = 10
         btn.layer.borderWidth = 1
-        btn.layer.borderColor = Color.red_theme_color.cgColor
-        btn.setTitleColor(Color.red_theme_color, for: .normal)
+        btn.setButtonTheme()
 
     }
     

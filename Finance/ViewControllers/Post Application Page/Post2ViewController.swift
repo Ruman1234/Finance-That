@@ -40,15 +40,13 @@ class Post2ViewController: UIViewController {
         statusLbl.textColor = Color.App_theme_color
         provinceLbl.textColor = Color.App_theme_color
 
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
 
     }
     
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
-        scroller.contentSize = CGSize(width: 400, height: 900)
+        scroller.contentSize = CGSize(width: self.view.frame.width, height: 900)
     }
     
     override func viewWillAppear(_ animated: Bool) {

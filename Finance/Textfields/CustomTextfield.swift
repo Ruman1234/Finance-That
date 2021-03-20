@@ -7,6 +7,12 @@
 //
 import UIKit
 
+@objc public enum TextFieldType: Int {
+    case defaultTextField = 0
+    case password
+    
+}
+
 class CustomTextField: UITextField {
 
     // Whatever you like
@@ -23,7 +29,7 @@ class CustomTextField: UITextField {
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
-    
+    @IBInspectable public var inputType: TextFieldType = .defaultTextField
     func setup() {
         self.delegate = self
         self.layer.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1).cgColor
@@ -31,6 +37,8 @@ class CustomTextField: UITextField {
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 1
         self.layer.masksToBounds = true
+        self.font = UIFont(name: "Basis Grotesque Pro Medium", size: 15)
+        self.textColor = Color.App_theme_color
     }
     
     override init(frame: CGRect) {
@@ -41,7 +49,21 @@ class CustomTextField: UITextField {
         super.init(coder: aDecoder)
         setup()
     }
-    
+    public func isValidPassword() -> Bool {
+        // MARK: - Regex Explanation
+        /*
+        ^                         Start anchor
+        (?=.*[A-Z].*[A-Z])        Ensure string has two uppercase letters.
+        (?=.*[!@#$&*])            Ensure string has one special case letter.
+        (?=.*[0-9].*[0-9])        Ensure string has two digits.
+        (?=.*[a-z].*[a-z].*[a-z]) Ensure string has three lowercase letters.
+        .{8}                      Ensure string is of length 8.
+        $
+         */
+        
+        let passwordRegex = "^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$"
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self.text)
+    }
 }
 
 extension CustomTextField:UITextFieldDelegate{
@@ -52,6 +74,12 @@ extension CustomTextField:UITextFieldDelegate{
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderColor = Color.textfield_grey_color.cgColor
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if inputType == .password{
+            return true
+        }
+        return true
     }
 }
 extension CustomTextField{

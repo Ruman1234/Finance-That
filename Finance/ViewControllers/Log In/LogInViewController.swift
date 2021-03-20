@@ -10,6 +10,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var scolview: UIScrollView!
     @IBOutlet weak var lognLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var emailTextField: CustomTextField!
@@ -33,9 +34,7 @@ class LogInViewController: UIViewController {
         emailLbl.textColor = Color.App_theme_color
         passwordLbl.textColor = Color.App_theme_color
         forgtBtn.setTitleColor(Color.primary_theme_color, for: .normal)
-        loginBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        loginBtn.layer.cornerRadius = 10
-        loginBtn.setTitleColor(Color.white_theme_color, for: .normal)
+        loginBtn.setButtonTheme()
         dntLbl.textColor = Color.App_theme_color
         signUpBtn.setTitleColor(Color.App_theme_color, for: .normal)
         signLbl.textColor = Color.gray_theme_color
@@ -47,6 +46,10 @@ class LogInViewController: UIViewController {
         self.design(btn: fbBtn)
         self.design(btn: linkBtn)
         passwordTextField.enablePasswordToggle()
+    }
+    override func viewDidLayoutSubviews() {
+        scolview.isScrollEnabled = true
+        scolview.contentSize = CGSize(width: self.view.frame.width, height: 736)
     }
     
     override func viewWillLayoutSubviews() {

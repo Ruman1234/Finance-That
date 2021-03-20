@@ -62,9 +62,7 @@ class Dealer6ViewController: UIViewController {
         dealershipExteriorLbl.textColor = Color.App_theme_color
         ArticleLbl.textColor = Color.App_theme_color
         
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
         
         vc.sourceType = .photoLibrary
         vc.delegate = self
@@ -83,10 +81,9 @@ class Dealer6ViewController: UIViewController {
     
     func design(btn :UIButton)  {
         btn.layer.backgroundColor = UIColor.white.cgColor
-        btn.layer.cornerRadius = 10
+        
         btn.layer.borderWidth = 1
-        btn.layer.borderColor = Color.red_theme_color.cgColor
-        btn.setTitleColor(Color.red_theme_color, for: .normal)
+        btn.setButtonTheme()
     }
     
     func upload(btn :UIButton)  {
