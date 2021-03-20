@@ -21,6 +21,7 @@
 		1811922025F45D9000839599 /* Post8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811921F25F45D9000839599 /* Post8ViewController.swift */; };
 		1811922525F4691000839599 /* Post9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811922425F4691000839599 /* Post9ViewController.swift */; };
 		1811922A25F4691F00839599 /* Post10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811922925F4691F00839599 /* Post10ViewController.swift */; };
+		181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */; };
 		181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D877F25E8B2CF002E116D /* CustomTextfield.swift */; };
 		181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */; };
 		182D7DF32602177500B06657 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D7DF22602177500B06657 /* HomePage.storyboard */; };
@@ -107,6 +108,7 @@
 		1811921F25F45D9000839599 /* Post8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post8ViewController.swift; sourceTree = "<group>"; };
 		1811922425F4691000839599 /* Post9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post9ViewController.swift; sourceTree = "<group>"; };
 		1811922925F4691F00839599 /* Post10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post10ViewController.swift; sourceTree = "<group>"; };
+		181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		181D877F25E8B2CF002E116D /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage1ViewController.swift; sourceTree = "<group>"; };
 		182D7DF22602177500B06657 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 			path = "Log In";
 			sourceTree = "<group>";
 		};
+		181C89732606354A002EE22F /* OnBoardingCell */ = {
+			isa = PBXGroup;
+			children = (
+				181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */,
+			);
+			path = OnBoardingCell;
+			sourceTree = "<group>";
+		};
 		181ECFA12600C57D002FCC9E /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +291,7 @@
 		183AC92326035856003D1999 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				181C89732606354A002EE22F /* OnBoardingCell */,
 				1885D75C2603A2330093B60E /* FeaturedCell */,
 				1885D75B2603A20C0093B60E /* SearchByTypeCell */,
 			);
@@ -762,6 +773,7 @@
 				1860381025FA65D60093BC02 /* NetworkManager.swift in Sources */,
 				18076CFA25E74878003B9ABB /* UserPage1ViewController.swift in Sources */,
 				18A54CB425F6806500B96D46 /* Constants.swift in Sources */,
+				181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */,
 				18076CFC25E754A9003B9ABB /* UserPage2ViewController.swift in Sources */,
 				186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */,
 				187B405725ED5153003EC979 /* Dealer7ViewController.swift in Sources */,
