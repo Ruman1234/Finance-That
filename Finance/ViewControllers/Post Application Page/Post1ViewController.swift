@@ -39,9 +39,7 @@ class Post1ViewController: UIViewController {
         yesLbl.textColor = Color.App_theme_color
         noLbl.textColor = Color.App_theme_color
         
-        nextBtn.setTitleColor(Color.white_theme_color, for: .normal)
-        nextBtn.layer.backgroundColor = Color.red_theme_color.cgColor
-        nextBtn.layer.cornerRadius = 10
+        nextBtn.setButtonTheme()
 
     }
     
