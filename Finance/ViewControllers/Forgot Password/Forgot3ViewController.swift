@@ -21,6 +21,7 @@ class Forgot3ViewController: UIViewController {
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view4: UIView!
+    @IBOutlet weak var passwordStatusLbl: UILabel!
     
     var code = String()
     
@@ -36,16 +37,20 @@ class Forgot3ViewController: UIViewController {
         self.view(view: view2)
         self.view(view: view3)
         self.view(view: view4)
-
+        newPassTextField.enablePasswordToggle()
+        renterPassTextfield.enablePasswordToggle()
         newPassTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
     
     @objc func textFieldDidChange(textField: UITextField) {
-//        there are 4 checks for green defined regex
-//        if textCount < 8 && textCount > 4
-//        textCount < 3
-//        textCount > 7
+//        MARK:- Password Status checker
+        /*
+        there are 4 checks for green defined regex // strong
+        if textCount < 8 && textCount > 4          // weak
+        textCount < 3                              // weak
+        textCount > 7                              // medium */
+        
         let defaultColor = UIColor(red: 0.917, green: 0.917, blue: 0.917, alpha: 1).cgColor
         let textCount = newPassTextField.text?.count ?? 0
         if newPassTextField.isValidPassword() || textCount > 13{
@@ -54,24 +59,28 @@ class Forgot3ViewController: UIViewController {
             view2.layer.backgroundColor = greenColor
             view3.layer.backgroundColor = greenColor
             view4.layer.backgroundColor = greenColor
+            passwordStatusLbl.text = "Strong"
         }else if textCount < 8 && textCount > 4{
             let redColor = UIColor.red.cgColor
             view1.layer.backgroundColor = redColor
             view2.layer.backgroundColor = redColor
             view3.layer.backgroundColor = defaultColor
             view4.layer.backgroundColor = defaultColor
+            passwordStatusLbl.text = "Weak"
         }else if textCount < 3{
             let redColor = UIColor.red.cgColor
             view1.layer.backgroundColor = redColor
             view2.layer.backgroundColor = defaultColor
             view3.layer.backgroundColor = defaultColor
             view4.layer.backgroundColor = defaultColor
+            passwordStatusLbl.text = "Weak"
         }else if textCount > 7 && textCount < 13{
             let orangeColor = UIColor.orange.cgColor
             view1.layer.backgroundColor = orangeColor
             view2.layer.backgroundColor = orangeColor
             view3.layer.backgroundColor = orangeColor
             view4.layer.backgroundColor = defaultColor
+            passwordStatusLbl.text = "Medium"
         }
     }
     override func viewWillLayoutSubviews() {
