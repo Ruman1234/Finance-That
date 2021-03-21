@@ -11,7 +11,6 @@ import UIKit
 class Dealer2ViewController: UIViewController {
 
     @IBOutlet weak var backBtn: UIButton!
-    @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
     @IBOutlet weak var lbl3: UILabel!
     @IBOutlet weak var legalNameTextField: CustomTextField!
@@ -22,7 +21,6 @@ class Dealer2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lbl1.textColor = Color.App_theme_color
         lbl2.textColor = Color.App_theme_color
         lbl3.textColor = Color.App_theme_color
         lbl4.textColor = Color.App_theme_color

@@ -61,9 +61,10 @@ class Dealer7ViewController: UIViewController {
 
     func design(btn :UIButton)  {
         btn.layer.backgroundColor = UIColor.white.cgColor
-        
+        btn.layer.cornerRadius = 19
         btn.layer.borderWidth = 1
-        btn.setButtonTheme()
+        btn.layer.borderColor = Color.red_theme_color.cgColor
+        btn.setTitleColor(Color.red_theme_color, for: .normal)
     }
     
     @IBAction func backBtn(_ sender: Any) {

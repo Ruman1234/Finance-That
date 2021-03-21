@@ -99,7 +99,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func skipBtn(_ sender: Any) {
 //        let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
         let main =
-            self.storyboard?.instantiateViewController(withIdentifier: "Dealer1ViewController") as! Dealer1ViewController
+            self.storyboard?.instantiateViewController(withIdentifier: "UserPage1ViewController") as! UserPage1ViewController
         self.navigationController?.pushViewController(main, animated: true)
     }
     

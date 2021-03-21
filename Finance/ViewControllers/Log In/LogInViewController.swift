@@ -49,7 +49,7 @@ class LogInViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         scolview.isScrollEnabled = true
-        scolview.contentSize = CGSize(width: self.view.frame.width, height: 736)
+        scolview.contentSize = CGSize(width: self.view.frame.width, height: 770)
     }
     
     override func viewWillLayoutSubviews() {
