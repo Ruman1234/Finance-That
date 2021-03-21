@@ -20,10 +20,10 @@ class Dealer1ViewController: UIViewController {
         super.viewDidLoad()
         
         recreationalBtn.backgroundColor = Color.lightgray_theme_color
-        recreationalBtn.layer.cornerRadius = 10
+        recreationalBtn.layer.cornerRadius = 20
 
         automotiveBtn.backgroundColor = Color.lightgray_theme_color
-        automotiveBtn.layer.cornerRadius = 10
+        automotiveBtn.layer.cornerRadius = 20
 
     }
     
