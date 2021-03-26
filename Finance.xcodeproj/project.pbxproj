@@ -12,6 +12,8 @@
 		18076CFE25E75979003B9ABB /* UserPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFD25E75979003B9ABB /* UserPage3ViewController.swift */; };
 		18076D0025E77398003B9ABB /* UserPage4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFF25E77398003B9ABB /* UserPage4ViewController.swift */; };
 		18076D0325E77925003B9ABB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076D0225E77925003B9ABB /* LogInViewController.swift */; };
+		180FC56B260CD0F500DEFBAA /* AllCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */; };
+		180FC571260CD15F00DEFBAA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FC570260CD15F00DEFBAA /* FilterViewController.swift */; };
 		1811920225F4368C00839599 /* Post2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811920125F4368C00839599 /* Post2ViewController.swift */; };
 		1811920725F43CAD00839599 /* Post3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811920625F43CAD00839599 /* Post3ViewController.swift */; };
 		1811920C25F453DF00839599 /* Post4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811920B25F453DF00839599 /* Post4ViewController.swift */; };
@@ -24,6 +26,7 @@
 		181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */; };
 		181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D877F25E8B2CF002E116D /* CustomTextfield.swift */; };
 		181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */; };
+		18286A7E260DC3D6003C8706 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */; };
 		182D7DF32602177500B06657 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D7DF22602177500B06657 /* HomePage.storyboard */; };
 		18320E4A25F300EA00F104E1 /* Post Application Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18320E4925F300EA00F104E1 /* Post Application Page.storyboard */; };
 		18387E3025E7212F000F67EB /* BasisGrotesquePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18387E2D25E7212E000F67EB /* BasisGrotesquePro-Light.ttf */; };
@@ -44,6 +47,11 @@
 		186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B5725FA78D600FB9AA6 /* LoginModel.swift */; };
 		186F5B5D25FA7D8A00FB9AA6 /* ResetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B5C25FA7D8A00FB9AA6 /* ResetPasswordModel.swift */; };
 		186F5B6A25FA957A00FB9AA6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B6925FA957A00FB9AA6 /* Utilities.swift */; };
+		1877A9BB260B395200712F91 /* ApplicationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9BA260B395200712F91 /* ApplicationDetailTableViewCell.swift */; };
+		1877A9CF260B53E700712F91 /* PrivateSellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */; };
+		1877A9D7260B548000712F91 /* ListingsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1877A9D6260B548000712F91 /* ListingsPage.storyboard */; };
+		1877A9E0260B60ED00712F91 /* CarNamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9DF260B60ED00712F91 /* CarNamesCollectionViewCell.swift */; };
+		1877A9E8260B74AB00712F91 /* CarDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9E7260B74AB00712F91 /* CarDetailCollectionViewCell.swift */; };
 		187B405525ED4AA3003EC979 /* Dealer6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B405425ED4AA3003EC979 /* Dealer6ViewController.swift */; };
 		187B405725ED5153003EC979 /* Dealer7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B405625ED5152003EC979 /* Dealer7ViewController.swift */; };
 		187B405925ED5829003EC979 /* Dealer8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B405825ED5829003EC979 /* Dealer8ViewController.swift */; };
@@ -71,6 +79,11 @@
 		18EDAC5725E9392F0096AFD4 /* Forgot2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5625E9392F0096AFD4 /* Forgot2ViewController.swift */; };
 		18EDAC5925E939410096AFD4 /* Forgot3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5825E939410096AFD4 /* Forgot3ViewController.swift */; };
 		18EDAC5B25E954130096AFD4 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5A25E954130096AFD4 /* OTPTextField.swift */; };
+		18FAAA18260886E60041B897 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA17260886E60041B897 /* NotificationsViewController.swift */; };
+		18FAAA1D260893F70041B897 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA1C260893F70041B897 /* NotificationCell.swift */; };
+		18FAAA262608A1E00041B897 /* MyApplicationsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA252608A1E00041B897 /* MyApplicationsPageViewController.swift */; };
+		18FAAA2C2608AB860041B897 /* MyApplicationPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA2B2608AB860041B897 /* MyApplicationPageTableViewCell.swift */; };
+		18FAAA342608E7FA0041B897 /* MyApplicationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA332608E7FA0041B897 /* MyApplicationDetailViewController.swift */; };
 		84016DF54AE835E3836B2F37 /* Pods_Finance_FinanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEC4CA3DF9FE42B555A5C6A /* Pods_Finance_FinanceUITests.framework */; };
 		AD6069C412257A6E1FF37A43 /* Pods_FinanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE16D1C0C831DD5D523E767 /* Pods_FinanceTests.framework */; };
 		E4BB68CD7F530A2B7B7D95BC /* Pods_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D5FED40E03898177B25AAA /* Pods_Finance.framework */; };
@@ -99,6 +112,8 @@
 		18076CFD25E75979003B9ABB /* UserPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage3ViewController.swift; sourceTree = "<group>"; };
 		18076CFF25E77398003B9ABB /* UserPage4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage4ViewController.swift; sourceTree = "<group>"; };
 		18076D0225E77925003B9ABB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesCell.swift; sourceTree = "<group>"; };
+		180FC570260CD15F00DEFBAA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		1811920125F4368C00839599 /* Post2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post2ViewController.swift; sourceTree = "<group>"; };
 		1811920625F43CAD00839599 /* Post3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post3ViewController.swift; sourceTree = "<group>"; };
 		1811920B25F453DF00839599 /* Post4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post4ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +126,7 @@
 		181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		181D877F25E8B2CF002E116D /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage1ViewController.swift; sourceTree = "<group>"; };
+		18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		182D7DF22602177500B06657 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		18320E4925F300EA00F104E1 /* Post Application Page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Post Application Page.storyboard"; sourceTree = "<group>"; };
 		18387E2D25E7212E000F67EB /* BasisGrotesquePro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Light.ttf"; sourceTree = "<group>"; };
@@ -131,6 +147,11 @@
 		186F5B5725FA78D600FB9AA6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		186F5B5C25FA7D8A00FB9AA6 /* ResetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordModel.swift; sourceTree = "<group>"; };
 		186F5B6925FA957A00FB9AA6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1877A9BA260B395200712F91 /* ApplicationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateSellerViewController.swift; sourceTree = "<group>"; };
+		1877A9D6260B548000712F91 /* ListingsPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingsPage.storyboard; sourceTree = "<group>"; };
+		1877A9DF260B60ED00712F91 /* CarNamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNamesCollectionViewCell.swift; sourceTree = "<group>"; };
+		1877A9E7260B74AB00712F91 /* CarDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		187B405425ED4AA3003EC979 /* Dealer6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer6ViewController.swift; sourceTree = "<group>"; };
 		187B405625ED5152003EC979 /* Dealer7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer7ViewController.swift; sourceTree = "<group>"; };
 		187B405825ED5829003EC979 /* Dealer8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer8ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +185,11 @@
 		18EDAC5625E9392F0096AFD4 /* Forgot2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot2ViewController.swift; sourceTree = "<group>"; };
 		18EDAC5825E939410096AFD4 /* Forgot3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot3ViewController.swift; sourceTree = "<group>"; };
 		18EDAC5A25E954130096AFD4 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		18FAAA17260886E60041B897 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		18FAAA1C260893F70041B897 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		18FAAA252608A1E00041B897 /* MyApplicationsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationsPageViewController.swift; sourceTree = "<group>"; };
+		18FAAA2B2608AB860041B897 /* MyApplicationPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationPageTableViewCell.swift; sourceTree = "<group>"; };
+		18FAAA332608E7FA0041B897 /* MyApplicationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationDetailViewController.swift; sourceTree = "<group>"; };
 		4FB5B725CB10DCE2BCAE0255 /* Pods-Finance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finance.release.xcconfig"; path = "Target Support Files/Pods-Finance/Pods-Finance.release.xcconfig"; sourceTree = "<group>"; };
 		4FEC4CA3DF9FE42B555A5C6A /* Pods_Finance_FinanceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finance_FinanceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB906258C6EF57CD32DE260 /* Pods-Finance-FinanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finance-FinanceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +248,14 @@
 			path = "Log In";
 			sourceTree = "<group>";
 		};
+		180FC56F260CD11D00DEFBAA /* AllCategoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */,
+			);
+			path = AllCategoriesCell;
+			sourceTree = "<group>";
+		};
 		181C89732606354A002EE22F /* OnBoardingCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +275,14 @@
 			path = "Home Page";
 			sourceTree = "<group>";
 		};
+		18286A7C260DC3B2003C8706 /* CategoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */,
+			);
+			path = CategoriesCell;
+			sourceTree = "<group>";
+		};
 		18387E2A25E71E7D000F67EB /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +297,11 @@
 		183AC90826034AB3003D1999 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				18286A7C260DC3B2003C8706 /* CategoriesCell */,
+				180FC56F260CD11D00DEFBAA /* AllCategoriesCell */,
+				1877A9B9260B391500712F91 /* ApplicatonDetailCell */,
+				18FAAA2A2608AB4A0041B897 /* MyApplicationPageCell */,
+				18FAAA212608940E0041B897 /* Notification Cell */,
 				183AC90926034ABC003D1999 /* HomeBuySellExploreCell */,
 				1885D73B260397640093B60E /* SearchByTypeCell */,
 				183AC91826035422003D1999 /* HomeFeaturedCell */,
@@ -284,6 +331,10 @@
 			isa = PBXGroup;
 			children = (
 				181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */,
+				18FAAA17260886E60041B897 /* NotificationsViewController.swift */,
+				18FAAA252608A1E00041B897 /* MyApplicationsPageViewController.swift */,
+				18FAAA332608E7FA0041B897 /* MyApplicationDetailViewController.swift */,
+				180FC570260CD15F00DEFBAA /* FilterViewController.swift */,
 			);
 			path = HomePageViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +352,7 @@
 		183F88E225E7115E00EFD168 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1877A9CD260B53B900712F91 /* Listings Page */,
 				1852750B25F3B9760018CD81 /* Post Application Page */,
 				183F88E325E7117E00EFD168 /* OnBoarding */,
 				18076CF825E747F8003B9ABB /* Registration */,
@@ -357,6 +409,33 @@
 				1860381425FA65F00093BC02 /* ExtentionNetworManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		1877A9B9260B391500712F91 /* ApplicatonDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				1877A9BA260B395200712F91 /* ApplicationDetailTableViewCell.swift */,
+			);
+			path = ApplicatonDetailCell;
+			sourceTree = "<group>";
+		};
+		1877A9CD260B53B900712F91 /* Listings Page */ = {
+			isa = PBXGroup;
+			children = (
+				1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */,
+				1877A9D6260B548000712F91 /* ListingsPage.storyboard */,
+				1877A9DE260B60C300712F91 /* CollectionView */,
+			);
+			path = "Listings Page";
+			sourceTree = "<group>";
+		};
+		1877A9DE260B60C300712F91 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1877A9DF260B60ED00712F91 /* CarNamesCollectionViewCell.swift */,
+				1877A9E7260B74AB00712F91 /* CarDetailCollectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		1885D73B260397640093B60E /* SearchByTypeCell */ = {
@@ -439,10 +518,10 @@
 				1860380E25FA65510093BC02 /* Manager */,
 				18A54CB825F6808500B96D46 /* Textfields */,
 				18A54CB225F6804F00B96D46 /* Utilities */,
-				18A48A8425E64DEE006F3097 /* AppDelegate.swift */,
-				18A48A8625E64DEE006F3097 /* SceneDelegate.swift */,
 				18387E2A25E71E7D000F67EB /* Fonts */,
 				183F88E225E7115E00EFD168 /* ViewControllers */,
+				18A48A8425E64DEE006F3097 /* AppDelegate.swift */,
+				18A48A8625E64DEE006F3097 /* SceneDelegate.swift */,
 				18A48A8A25E64DEE006F3097 /* Main.storyboard */,
 				18A48A8D25E64DF3006F3097 /* Assets.xcassets */,
 				18A48A8F25E64DF3006F3097 /* LaunchScreen.storyboard */,
@@ -495,6 +574,22 @@
 				18EDAC5825E939410096AFD4 /* Forgot3ViewController.swift */,
 			);
 			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		18FAAA212608940E0041B897 /* Notification Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18FAAA1C260893F70041B897 /* NotificationCell.swift */,
+			);
+			path = "Notification Cell";
+			sourceTree = "<group>";
+		};
+		18FAAA2A2608AB4A0041B897 /* MyApplicationPageCell */ = {
+			isa = PBXGroup;
+			children = (
+				18FAAA2B2608AB860041B897 /* MyApplicationPageTableViewCell.swift */,
+			);
+			path = MyApplicationPageCell;
 			sourceTree = "<group>";
 		};
 		45E090331E7C0A7AD8E53611 /* Pods */ = {
@@ -636,6 +731,7 @@
 				183AC90D26034B29003D1999 /* HomeBuySellExploreCell.xib in Resources */,
 				18C782CD25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf in Resources */,
 				182D7DF32602177500B06657 /* HomePage.storyboard in Resources */,
+				1877A9D7260B548000712F91 /* ListingsPage.storyboard in Resources */,
 				183AC91426034E76003D1999 /* FeaturedCell.xib in Resources */,
 				18320E4A25F300EA00F104E1 /* Post Application Page.storyboard in Resources */,
 				18387E3225E7212F000F67EB /* BasisGrotesquePro-Bold.ttf in Resources */,
@@ -775,22 +871,31 @@
 				18A54CB425F6806500B96D46 /* Constants.swift in Sources */,
 				181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */,
 				18076CFC25E754A9003B9ABB /* UserPage2ViewController.swift in Sources */,
+				180FC571260CD15F00DEFBAA /* FilterViewController.swift in Sources */,
+				18FAAA18260886E60041B897 /* NotificationsViewController.swift in Sources */,
 				186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */,
 				187B405725ED5153003EC979 /* Dealer7ViewController.swift in Sources */,
 				183AC90C26034B29003D1999 /* HomeBuySellExploreCell.swift in Sources */,
+				1877A9E8260B74AB00712F91 /* CarDetailCollectionViewCell.swift in Sources */,
+				18FAAA262608A1E00041B897 /* MyApplicationsPageViewController.swift in Sources */,
 				18A0426F25ECFBC9001B09F2 /* Dealer1ViewController.swift in Sources */,
+				1877A9BB260B395200712F91 /* ApplicationDetailTableViewCell.swift in Sources */,
+				1877A9CF260B53E700712F91 /* PrivateSellerViewController.swift in Sources */,
 				1811920225F4368C00839599 /* Post2ViewController.swift in Sources */,
+				180FC56B260CD0F500DEFBAA /* AllCategoriesCell.swift in Sources */,
 				181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */,
 				18A48A8925E64DEE006F3097 /* ViewController.swift in Sources */,
 				18A48A8525E64DEE006F3097 /* AppDelegate.swift in Sources */,
 				18EDAC5525E939130096AFD4 /* Forgt1ViewController.swift in Sources */,
 				18A0427525ED2589001B09F2 /* Dealer4ViewController.swift in Sources */,
 				1885D73E26039CAE0093B60E /* SearchByTypeTableViewCell.swift in Sources */,
+				18FAAA342608E7FA0041B897 /* MyApplicationDetailViewController.swift in Sources */,
 				1885D7562603A0780093B60E /* SearchByTypeCollectionViewCell.swift in Sources */,
 				189CA4D825F99F9A007EAAF4 /* Post10TableViewCell.swift in Sources */,
 				1811922A25F4691F00839599 /* Post10ViewController.swift in Sources */,
 				18076CFE25E75979003B9ABB /* UserPage3ViewController.swift in Sources */,
 				181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */,
+				18286A7E260DC3D6003C8706 /* CategoriesTableViewCell.swift in Sources */,
 				184BA19725FBDDED0045FCD3 /* ResetCompleteModel.swift in Sources */,
 				1811920C25F453DF00839599 /* Post4ViewController.swift in Sources */,
 				1860381525FA65F00093BC02 /* ExtentionNetworManager.swift in Sources */,
@@ -805,6 +910,7 @@
 				187B405925ED5829003EC979 /* Dealer8ViewController.swift in Sources */,
 				1852750D25F3B9A40018CD81 /* Post1ViewController.swift in Sources */,
 				18076D0325E77925003B9ABB /* LogInViewController.swift in Sources */,
+				1877A9E0260B60ED00712F91 /* CarNamesCollectionViewCell.swift in Sources */,
 				186F5B6A25FA957A00FB9AA6 /* Utilities.swift in Sources */,
 				186F5B4E25FA76D700FB9AA6 /* DealerDetailsModel.swift in Sources */,
 				1811921125F45D6800839599 /* Post5ViewController.swift in Sources */,
@@ -813,10 +919,12 @@
 				18A0427325ED1E26001B09F2 /* Dealer3ViewController.swift in Sources */,
 				186F5B5D25FA7D8A00FB9AA6 /* ResetPasswordModel.swift in Sources */,
 				1811920725F43CAD00839599 /* Post3ViewController.swift in Sources */,
+				18FAAA2C2608AB860041B897 /* MyApplicationPageTableViewCell.swift in Sources */,
 				186F5B5325FA780B00FB9AA6 /* BuyerDetailModel.swift in Sources */,
 				18076D0025E77398003B9ABB /* UserPage4ViewController.swift in Sources */,
 				18EDAC5B25E954130096AFD4 /* OTPTextField.swift in Sources */,
 				183AC92E26035897003D1999 /* FeaturedCollectionViewCell.swift in Sources */,
+				18FAAA1D260893F70041B897 /* NotificationCell.swift in Sources */,
 				18A0427725ED31DC001B09F2 /* Dealer5ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -992,12 +1100,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2WN2QR859M;
 				INFOPLIST_FILE = Finance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ammar.Finance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MrTech.FinanceThat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1010,12 +1119,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2WN2QR859M;
 				INFOPLIST_FILE = Finance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ammar.Finance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MrTech.FinanceThat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

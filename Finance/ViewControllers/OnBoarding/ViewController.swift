@@ -28,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         onBoardCollectionview.delegate = self
         onBoardCollectionview.dataSource = self
-        
+        overrideUserInterfaceStyle = .light
         nextBtn.layer.cornerRadius = nextBtn.frame.width/2
         view1.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
         view1.layer.cornerRadius = 4
@@ -97,10 +97,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func skipBtn(_ sender: Any) {
-//        let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
-        let main =
-            self.storyboard?.instantiateViewController(withIdentifier: "UserPage1ViewController") as! UserPage1ViewController
-        self.navigationController?.pushViewController(main, animated: true)
+        let NotificationsStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
+        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "FilterViewController") as! FilterViewController
+        self.navigationController?.pushViewController(NotificationsViewController, animated: true)
     }
     
     @IBAction func nextBtn(_ sender: Any) {
@@ -125,6 +124,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             view1.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
             view2.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
             view3.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
+        }else{
+            let main =
+                self.storyboard?.instantiateViewController(withIdentifier: "UserPage1ViewController") as! UserPage1ViewController
+            self.navigationController?.pushViewController(main, animated: true)
         }
     }
     
