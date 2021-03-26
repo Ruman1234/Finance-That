@@ -97,10 +97,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func skipBtn(_ sender: Any) {
-//        let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
-        let main =
-            self.storyboard?.instantiateViewController(withIdentifier: "UserPage1ViewController") as! UserPage1ViewController
-        self.navigationController?.pushViewController(main, animated: true)
+        let NotificationsStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
+        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "FilterViewController") as! FilterViewController
+        self.navigationController?.pushViewController(NotificationsViewController, animated: true)
     }
     
     @IBAction func nextBtn(_ sender: Any) {

@@ -23,7 +23,18 @@ class Color {
     
     static let lightgray_theme_color = UIColor(red: 0.965, green: 0.973, blue: 0.984, alpha: 1)
 
-    static let textfield_grey_color = UIColor(red: 0.918, green: 0.918, blue: 0.933, alpha: 1)
+    static let blue_View_color = UIColor(red: 0.341, green: 0.6, blue: 0.945, alpha: 1).cgColor
+    
+    static let orange_View_color = UIColor(red: 0.949, green: 0.6, blue: 0.29, alpha: 1).cgColor
+
+    static let green_View_color = UIColor(red: 0.506, green: 0.858, blue: 0.057, alpha: 1).cgColor
+
+    static let red_View_color = UIColor(red: 0.979, green: 0.22, blue: 0.311, alpha: 1).cgColor
+
+    static let textfield_grey_color = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
+
+    static let light_grey_color = UIColor(red: 0.357, green: 0.357, blue: 0.361, alpha: 1)
+
 }
 
 class Constants {
@@ -42,5 +53,17 @@ extension UIButton{
         self.layer.backgroundColor = Color.red_theme_color.cgColor
         self.layer.cornerRadius = 20
         self.setTitleColor(Color.white_theme_color, for: .normal)
+    }
+}
+
+extension UIView{
+    func setRoundView() {
+        self.layer.cornerRadius = self.frame.size.width/2
+    }
+}
+
+extension UIFont{
+    func BasisGrotesqueProMedium(size : CGFloat) -> UIFont {
+        return UIFont(name: "Basis Grotesque Pro Medium", size: size)!
     }
 }
