@@ -1,5 +1,5 @@
 //
-//  CategoriesTableViewCell.swift
+//  RecentSearchTableViewCell.swift
 //  Finance
 //
 //  Created by Ammar Irfan on 26/03/2021.
@@ -8,10 +8,11 @@
 
 import UIKit
 
-class CategoriesTableViewCell: UITableViewCell {
+class RecentSearchTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var radioBtn: UIButton!
-    @IBOutlet weak var lbl: UILabel!
+    @IBOutlet weak var locImg: UIImageView!
+    @IBOutlet weak var airLbl: UILabel!
+    @IBOutlet weak var numLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,11 +25,4 @@ class CategoriesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func radioBtn(_ sender: Any) {
-        if radioBtn.isSelected == true{
-            radioBtn.isSelected = false
-        }else if radioBtn.isSelected == false {
-            radioBtn.isSelected = true
-        }
-    }
 }

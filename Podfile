@@ -14,6 +14,8 @@ pod 'ObjectMapper'
 pod 'SDWebImage'
 pod "KRProgressHUD"
 pod 'IQKeyboardManagerSwift'
+pod 'RangeSeekSlider'
+pod 'RangeSeekSlider'
 
   target 'FinanceTests' do
     inherit! :search_paths

@@ -6,6 +6,7 @@ PODS:
   - KRProgressHUD (3.4.7):
     - KRActivityIndicatorView (= 3.0.7)
   - ObjectMapper (4.2.0)
+  - RangeSeekSlider (1.8.0)
   - SDWebImage (5.10.4):
     - SDWebImage/Core (= 5.10.4)
   - SDWebImage/Core (5.10.4)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - KRProgressHUD
   - ObjectMapper
+  - RangeSeekSlider
   - SDWebImage
   - SwiftyJSON
 
@@ -28,6 +30,7 @@ SPEC REPOS:
     - KRActivityIndicatorView
     - KRProgressHUD
     - ObjectMapper
+    - RangeSeekSlider
     - SDWebImage
     - SwiftyJSON
 
@@ -38,9 +41,10 @@ SPEC CHECKSUMS:
   KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
   KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 3063d8e843e1c36c4bd9185ea94083e12cd8241c
+PODFILE CHECKSUM: cd3f4d06400121fa2fbf338c72147c955b9dd212
 
 COCOAPODS: 1.10.1

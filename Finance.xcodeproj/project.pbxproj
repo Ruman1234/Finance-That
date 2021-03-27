@@ -26,6 +26,9 @@
 		181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */; };
 		181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D877F25E8B2CF002E116D /* CustomTextfield.swift */; };
 		181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */; };
+		1823659D260E9DFE009117B3 /* CarNamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */; };
+		182365A2260E9E49009117B3 /* CarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */; };
+		182365B0260EA14A009117B3 /* CarDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182365AF260EA14A009117B3 /* CarDetailCollectionViewCell.swift */; };
 		18286A7E260DC3D6003C8706 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */; };
 		182D7DF32602177500B06657 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D7DF22602177500B06657 /* HomePage.storyboard */; };
 		18320E4A25F300EA00F104E1 /* Post Application Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18320E4925F300EA00F104E1 /* Post Application Page.storyboard */; };
@@ -42,6 +45,8 @@
 		1852750D25F3B9A40018CD81 /* Post1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852750C25F3B9A40018CD81 /* Post1ViewController.swift */; };
 		1860381025FA65D60093BC02 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860380F25FA65D60093BC02 /* NetworkManager.swift */; };
 		1860381525FA65F00093BC02 /* ExtentionNetworManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860381425FA65F00093BC02 /* ExtentionNetworManager.swift */; };
+		18683695260E171D00565444 /* SearchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683694260E171D00565444 /* SearchScreenViewController.swift */; };
+		1868369B260E21E300565444 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868369A260E21E300565444 /* RecentSearchTableViewCell.swift */; };
 		186F5B4E25FA76D700FB9AA6 /* DealerDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B4D25FA76D700FB9AA6 /* DealerDetailsModel.swift */; };
 		186F5B5325FA780B00FB9AA6 /* BuyerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B5225FA780B00FB9AA6 /* BuyerDetailModel.swift */; };
 		186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B5725FA78D600FB9AA6 /* LoginModel.swift */; };
@@ -74,6 +79,7 @@
 		18A48A9C25E64DF3006F3097 /* FinanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A48A9B25E64DF3006F3097 /* FinanceTests.swift */; };
 		18A48AA725E64DF3006F3097 /* FinanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A48AA625E64DF3006F3097 /* FinanceUITests.swift */; };
 		18A54CB425F6806500B96D46 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A54CB325F6806400B96D46 /* Constants.swift */; };
+		18C043B5260DE2D90002181A /* RangeSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C043B4260DE2D90002181A /* RangeSliderTableViewCell.swift */; };
 		18C782CD25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18C782CC25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf */; };
 		18EDAC5525E939130096AFD4 /* Forgt1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5425E939130096AFD4 /* Forgt1ViewController.swift */; };
 		18EDAC5725E9392F0096AFD4 /* Forgot2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5625E9392F0096AFD4 /* Forgot2ViewController.swift */; };
@@ -126,6 +132,9 @@
 		181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		181D877F25E8B2CF002E116D /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage1ViewController.swift; sourceTree = "<group>"; };
+		1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNamesTableViewCell.swift; sourceTree = "<group>"; };
+		182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTableViewCell.swift; sourceTree = "<group>"; };
+		182365AF260EA14A009117B3 /* CarDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		182D7DF22602177500B06657 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		18320E4925F300EA00F104E1 /* Post Application Page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Post Application Page.storyboard"; sourceTree = "<group>"; };
@@ -142,6 +151,8 @@
 		1852750C25F3B9A40018CD81 /* Post1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post1ViewController.swift; sourceTree = "<group>"; };
 		1860380F25FA65D60093BC02 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1860381425FA65F00093BC02 /* ExtentionNetworManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtentionNetworManager.swift; sourceTree = "<group>"; };
+		18683694260E171D00565444 /* SearchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewController.swift; sourceTree = "<group>"; };
+		1868369A260E21E300565444 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
 		186F5B4D25FA76D700FB9AA6 /* DealerDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerDetailsModel.swift; sourceTree = "<group>"; };
 		186F5B5225FA780B00FB9AA6 /* BuyerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerDetailModel.swift; sourceTree = "<group>"; };
 		186F5B5725FA78D600FB9AA6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -180,6 +191,7 @@
 		18A48AA625E64DF3006F3097 /* FinanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceUITests.swift; sourceTree = "<group>"; };
 		18A48AA825E64DF3006F3097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A54CB325F6806400B96D46 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18C043B4260DE2D90002181A /* RangeSliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTableViewCell.swift; sourceTree = "<group>"; };
 		18C782CC25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Basis Grotesque Pro Medium.ttf"; sourceTree = "<group>"; };
 		18EDAC5425E939130096AFD4 /* Forgt1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgt1ViewController.swift; sourceTree = "<group>"; };
 		18EDAC5625E9392F0096AFD4 /* Forgot2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot2ViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +309,10 @@
 		183AC90826034AB3003D1999 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */,
+				1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */,
+				18683699260E21B700565444 /* RecentSearchesCell */,
+				18C043B3260DE2B30002181A /* RangeSeekSliderCell */,
 				18286A7C260DC3B2003C8706 /* CategoriesCell */,
 				180FC56F260CD11D00DEFBAA /* AllCategoriesCell */,
 				1877A9B9260B391500712F91 /* ApplicatonDetailCell */,
@@ -335,6 +351,7 @@
 				18FAAA252608A1E00041B897 /* MyApplicationsPageViewController.swift */,
 				18FAAA332608E7FA0041B897 /* MyApplicationDetailViewController.swift */,
 				180FC570260CD15F00DEFBAA /* FilterViewController.swift */,
+				18683694260E171D00565444 /* SearchScreenViewController.swift */,
 			);
 			path = HomePageViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +359,7 @@
 		183AC92326035856003D1999 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				186836A7260E232900565444 /* CarDetailCell */,
 				181C89732606354A002EE22F /* OnBoardingCell */,
 				1885D75C2603A2330093B60E /* FeaturedCell */,
 				1885D75B2603A20C0093B60E /* SearchByTypeCell */,
@@ -352,6 +370,7 @@
 		183F88E225E7115E00EFD168 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				181ECFA12600C57D002FCC9E /* Home Page */,
 				1877A9CD260B53B900712F91 /* Listings Page */,
 				1852750B25F3B9760018CD81 /* Post Application Page */,
 				183F88E325E7117E00EFD168 /* OnBoarding */,
@@ -409,6 +428,22 @@
 				1860381425FA65F00093BC02 /* ExtentionNetworManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		18683699260E21B700565444 /* RecentSearchesCell */ = {
+			isa = PBXGroup;
+			children = (
+				1868369A260E21E300565444 /* RecentSearchTableViewCell.swift */,
+			);
+			path = RecentSearchesCell;
+			sourceTree = "<group>";
+		};
+		186836A7260E232900565444 /* CarDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				182365AF260EA14A009117B3 /* CarDetailCollectionViewCell.swift */,
+			);
+			path = CarDetailCell;
 			sourceTree = "<group>";
 		};
 		1877A9B9260B391500712F91 /* ApplicatonDetailCell */ = {
@@ -484,7 +519,6 @@
 				187B405425ED4AA3003EC979 /* Dealer6ViewController.swift */,
 				187B405625ED5152003EC979 /* Dealer7ViewController.swift */,
 				187B405825ED5829003EC979 /* Dealer8ViewController.swift */,
-				181ECFA12600C57D002FCC9E /* Home Page */,
 			);
 			path = "Dealer Registration";
 			sourceTree = "<group>";
@@ -564,6 +598,14 @@
 				18EDAC5A25E954130096AFD4 /* OTPTextField.swift */,
 			);
 			path = Textfields;
+			sourceTree = "<group>";
+		};
+		18C043B3260DE2B30002181A /* RangeSeekSliderCell */ = {
+			isa = PBXGroup;
+			children = (
+				18C043B4260DE2D90002181A /* RangeSliderTableViewCell.swift */,
+			);
+			path = RangeSeekSliderCell;
 			sourceTree = "<group>";
 		};
 		18EDAC5325E938E20096AFD4 /* Forgot Password */ = {
@@ -872,6 +914,7 @@
 				181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */,
 				18076CFC25E754A9003B9ABB /* UserPage2ViewController.swift in Sources */,
 				180FC571260CD15F00DEFBAA /* FilterViewController.swift in Sources */,
+				182365B0260EA14A009117B3 /* CarDetailCollectionViewCell.swift in Sources */,
 				18FAAA18260886E60041B897 /* NotificationsViewController.swift in Sources */,
 				186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */,
 				187B405725ED5153003EC979 /* Dealer7ViewController.swift in Sources */,
@@ -889,6 +932,7 @@
 				18EDAC5525E939130096AFD4 /* Forgt1ViewController.swift in Sources */,
 				18A0427525ED2589001B09F2 /* Dealer4ViewController.swift in Sources */,
 				1885D73E26039CAE0093B60E /* SearchByTypeTableViewCell.swift in Sources */,
+				182365A2260E9E49009117B3 /* CarDetailTableViewCell.swift in Sources */,
 				18FAAA342608E7FA0041B897 /* MyApplicationDetailViewController.swift in Sources */,
 				1885D7562603A0780093B60E /* SearchByTypeCollectionViewCell.swift in Sources */,
 				189CA4D825F99F9A007EAAF4 /* Post10TableViewCell.swift in Sources */,
@@ -900,6 +944,7 @@
 				1811920C25F453DF00839599 /* Post4ViewController.swift in Sources */,
 				1860381525FA65F00093BC02 /* ExtentionNetworManager.swift in Sources */,
 				18EDAC5925E939410096AFD4 /* Forgot3ViewController.swift in Sources */,
+				1823659D260E9DFE009117B3 /* CarNamesTableViewCell.swift in Sources */,
 				187B405525ED4AA3003EC979 /* Dealer6ViewController.swift in Sources */,
 				183AC91326034E76003D1999 /* FeaturedCell.swift in Sources */,
 				18A48A8725E64DEE006F3097 /* SceneDelegate.swift in Sources */,
@@ -909,6 +954,7 @@
 				18EDAC5725E9392F0096AFD4 /* Forgot2ViewController.swift in Sources */,
 				187B405925ED5829003EC979 /* Dealer8ViewController.swift in Sources */,
 				1852750D25F3B9A40018CD81 /* Post1ViewController.swift in Sources */,
+				18C043B5260DE2D90002181A /* RangeSliderTableViewCell.swift in Sources */,
 				18076D0325E77925003B9ABB /* LogInViewController.swift in Sources */,
 				1877A9E0260B60ED00712F91 /* CarNamesCollectionViewCell.swift in Sources */,
 				186F5B6A25FA957A00FB9AA6 /* Utilities.swift in Sources */,
@@ -921,8 +967,10 @@
 				1811920725F43CAD00839599 /* Post3ViewController.swift in Sources */,
 				18FAAA2C2608AB860041B897 /* MyApplicationPageTableViewCell.swift in Sources */,
 				186F5B5325FA780B00FB9AA6 /* BuyerDetailModel.swift in Sources */,
+				1868369B260E21E300565444 /* RecentSearchTableViewCell.swift in Sources */,
 				18076D0025E77398003B9ABB /* UserPage4ViewController.swift in Sources */,
 				18EDAC5B25E954130096AFD4 /* OTPTextField.swift in Sources */,
+				18683695260E171D00565444 /* SearchScreenViewController.swift in Sources */,
 				183AC92E26035897003D1999 /* FeaturedCollectionViewCell.swift in Sources */,
 				18FAAA1D260893F70041B897 /* NotificationCell.swift in Sources */,
 				18A0427725ED31DC001B09F2 /* Dealer5ViewController.swift in Sources */,

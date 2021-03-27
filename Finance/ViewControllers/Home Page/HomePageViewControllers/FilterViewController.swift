@@ -14,14 +14,15 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var categoriesTableView: UITableView!
     @IBOutlet weak var previousBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
+    
     var categoriesArray = [DataArray]()
     let allCategoriesArr = ["All Categories","Year","Make","Model","Price","Color","Trim","KM","Condition","Transmission","Body Type","Seatings","Fuel Type","Drive Train","Cylinder","Exterior Color","Owners","Accidents"]
     
     let categoriesArr = ["Automobiles","ATV/UTVs","Condos","Motorcycles","Boats","Watercrafts","RVs"]
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoriesArray = [DataArray(section: "Categories", rows: categoriesArr)]
+        categoriesArray = [DataArray(section: "Categories", rows: ["1"])]
         
         allCategoriesTableView.delegate = self
         allCategoriesTableView.dataSource = self
@@ -29,9 +30,8 @@ class FilterViewController: UIViewController {
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
         
-       
+        
     }
-    
 }
 
 extension FilterViewController : UITableViewDataSource, UITableViewDelegate {
@@ -40,7 +40,7 @@ extension FilterViewController : UITableViewDataSource, UITableViewDelegate {
         if tableView == categoriesTableView {
             return categoriesArray.count
         }
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -56,7 +56,7 @@ extension FilterViewController : UITableViewDataSource, UITableViewDelegate {
             header.addSubview(label)
             return header
         }
-
+        
         return UIView()
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -67,11 +67,11 @@ extension FilterViewController : UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == categoriesTableView {
-            return 40
+            return 320
         }
         return 58
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if tableView == allCategoriesTableView {
@@ -88,9 +88,18 @@ extension FilterViewController : UITableViewDataSource, UITableViewDelegate {
             allCategories.allCategoriesLbl.text = allCategoriesArr[indexPath.row]
             return allCategories
         }else {
-            let categoriesCell = tableView.dequeueReusableCell(withIdentifier: "categoriesCell", for: indexPath) as! CategoriesTableViewCell
-            categoriesCell.lbl.text = categoriesArray[indexPath.section].rows[indexPath.row]
-            return categoriesCell
+//            let sliderCell = tableView.dequeueReusableCell(withIdentifier: "sliderCell", for: indexPath) as! RangeSliderTableViewCell
+//            return sliderCell
+//            if indexPath.section == 0{
+//                let categoriesCell = tableView.dequeueReusableCell(withIdentifier: "categoriesCell", for: indexPath) as! CategoriesTableViewCell
+//              categoriesCell.lbl.text = categoriesArray[indexPath.section].rows[indexPath.row]
+//               return categoriesCell
+//            }
+//           if indexPath.section == 1{
+               let sliderCell = tableView.dequeueReusableCell(withIdentifier: "sliderCell", for: indexPath) as! RangeSliderTableViewCell
+                return sliderCell
+//            }
+           return UITableViewCell()
         }
     }
 }
