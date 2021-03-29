@@ -16,6 +16,8 @@ class SearchScreenViewController: UIViewController {
         super.viewDidLoad()
         
         carsTableView.delegate = self
+        carsTableView.dataSource = self
+        carsTableView.estimatedRowHeight = 720
     }
 
 }
@@ -23,33 +25,41 @@ class SearchScreenViewController: UIViewController {
 extension SearchScreenViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         if indexPath.row == 0 {
             let carCell = tableView.dequeueReusableCell(withIdentifier: "carNameCell", for: indexPath) as! CarNamesTableViewCell
-                  
-            return cell
+            carCell.carNamesCollectionView.tag = indexPath.row
+            return carCell
 
-        }else if indexPath.row == 1{
+        }else if indexPath.row < 5{
             
-            let recentSearchcell = tableView.dequeueReusableCell(withIdentifier: "recentSearchcell", for: indexPath) as! RecentSearchTableViewCell
-            cell.collectionView.tag = indexPath.row
-           
-            return cell
+            let recentSearchcell = tableView.dequeueReusableCell(withIdentifier: "recentSearchCell", for: indexPath) as! RecentSearchTableViewCell
+            
+            return recentSearchcell
 
-        }else if indexPath.row == 2{
+        }else if indexPath.row == 5{
         
-        let carDetailcell = tableView.dequeueReusableCell(withIdentifier: "carDetail", for: indexPath) as! CarDetailTableViewCell
-            cell.collectionView2.tag = indexPath.row
-            return cell
+            let carDetailcell = tableView.dequeueReusableCell(withIdentifier: "carDetail", for: indexPath) as! CarDetailTableViewCell
+            
+            let height = carDetailcell.carInfoCollectionView.collectionViewLayout.collectionViewContentSize.height
+            carDetailcell.collectionViewHeight.constant = height
+            carDetailcell.carInfoCollectionView.layoutIfNeeded()
+            
+            carDetailcell.carInfoCollectionView.tag = indexPath.row
+            
+            return carDetailcell
 
         }else{
             return UITableViewCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
         
-

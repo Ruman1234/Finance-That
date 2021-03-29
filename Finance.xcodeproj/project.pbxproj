@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1802AE772610FC6A00C32F63 /* UserPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1802AE762610FC6A00C32F63 /* UserPage.storyboard */; };
+		1802AE7C2610FC9E00C32F63 /* UserProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802AE7B2610FC9E00C32F63 /* UserProfilePageViewController.swift */; };
+		1802AE812611117500C32F63 /* SavedAdsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802AE802611117500C32F63 /* SavedAdsPageViewController.swift */; };
+		1802AE87261112C900C32F63 /* SavedAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802AE86261112C900C32F63 /* SavedAdsTableViewCell.swift */; };
 		18076CFA25E74878003B9ABB /* UserPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CF925E74878003B9ABB /* UserPage1ViewController.swift */; };
 		18076CFC25E754A9003B9ABB /* UserPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFB25E754A9003B9ABB /* UserPage2ViewController.swift */; };
 		18076CFE25E75979003B9ABB /* UserPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFD25E75979003B9ABB /* UserPage3ViewController.swift */; };
 		18076D0025E77398003B9ABB /* UserPage4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFF25E77398003B9ABB /* UserPage4ViewController.swift */; };
 		18076D0325E77925003B9ABB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076D0225E77925003B9ABB /* LogInViewController.swift */; };
+		180D51782611EAE50066C85A /* EditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D51772611EAE50066C85A /* EditPostViewController.swift */; };
+		180D51812611F8B60066C85A /* AddPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D51802611F8B60066C85A /* AddPhotoCollectionViewCell.swift */; };
 		180FC56B260CD0F500DEFBAA /* AllCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */; };
 		180FC571260CD15F00DEFBAA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FC570260CD15F00DEFBAA /* FilterViewController.swift */; };
 		1811920225F4368C00839599 /* Post2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811920125F4368C00839599 /* Post2ViewController.swift */; };
@@ -26,12 +32,14 @@
 		181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */; };
 		181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D877F25E8B2CF002E116D /* CustomTextfield.swift */; };
 		181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */; };
+		1820EF182611C2CF00F8EDF6 /* MyAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820EF172611C2CF00F8EDF6 /* MyAdsViewController.swift */; };
+		1820EF202611C50E00F8EDF6 /* MyAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820EF1F2611C50E00F8EDF6 /* MyAdsTableViewCell.swift */; };
 		1823659D260E9DFE009117B3 /* CarNamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */; };
 		182365A2260E9E49009117B3 /* CarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */; };
-		182365B0260EA14A009117B3 /* CarDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182365AF260EA14A009117B3 /* CarDetailCollectionViewCell.swift */; };
 		18286A7E260DC3D6003C8706 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */; };
 		182D7DF32602177500B06657 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D7DF22602177500B06657 /* HomePage.storyboard */; };
 		18320E4A25F300EA00F104E1 /* Post Application Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18320E4925F300EA00F104E1 /* Post Application Page.storyboard */; };
+		1833B22E2610796A00543E3E /* CarInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833B22D2610796A00543E3E /* CarInfoCollectionViewCell.swift */; };
 		18387E3025E7212F000F67EB /* BasisGrotesquePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18387E2D25E7212E000F67EB /* BasisGrotesquePro-Light.ttf */; };
 		18387E3125E7212F000F67EB /* BasisGrotesquePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18387E2E25E7212F000F67EB /* BasisGrotesquePro-Regular.ttf */; };
 		18387E3225E7212F000F67EB /* BasisGrotesquePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18387E2F25E7212F000F67EB /* BasisGrotesquePro-Bold.ttf */; };
@@ -64,6 +72,10 @@
 		1885D73F26039CAE0093B60E /* SearchByTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885D73D26039CAE0093B60E /* SearchByTypeTableViewCell.xib */; };
 		1885D7562603A0780093B60E /* SearchByTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D7542603A0780093B60E /* SearchByTypeCollectionViewCell.swift */; };
 		1885D7572603A0780093B60E /* SearchByTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885D7552603A0780093B60E /* SearchByTypeCollectionViewCell.xib */; };
+		188F094026120C8F000D0E2D /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F093F26120C8F000D0E2D /* ChatPageViewController.swift */; };
+		188F094826121444000D0E2D /* ChatPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F094726121444000D0E2D /* ChatPageTableViewCell.swift */; };
+		188F094D26121B30000D0E2D /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F094C26121B30000D0E2D /* ActionSheetViewController.swift */; };
+		188F095526121D27000D0E2D /* ActionSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F095426121D27000D0E2D /* ActionSheetTableViewCell.swift */; };
 		189CA4D825F99F9A007EAAF4 /* Post10TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CA4D725F99F9A007EAAF4 /* Post10TableViewCell.swift */; };
 		18A0426F25ECFBC9001B09F2 /* Dealer1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0426E25ECFBC9001B09F2 /* Dealer1ViewController.swift */; };
 		18A0427125ECFEFA001B09F2 /* Dealer2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0427025ECFEFA001B09F2 /* Dealer2ViewController.swift */; };
@@ -113,11 +125,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1802AE762610FC6A00C32F63 /* UserPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPage.storyboard; sourceTree = "<group>"; };
+		1802AE7B2610FC9E00C32F63 /* UserProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePageViewController.swift; sourceTree = "<group>"; };
+		1802AE802611117500C32F63 /* SavedAdsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsPageViewController.swift; sourceTree = "<group>"; };
+		1802AE86261112C900C32F63 /* SavedAdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsTableViewCell.swift; sourceTree = "<group>"; };
 		18076CF925E74878003B9ABB /* UserPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage1ViewController.swift; sourceTree = "<group>"; };
 		18076CFB25E754A9003B9ABB /* UserPage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage2ViewController.swift; sourceTree = "<group>"; };
 		18076CFD25E75979003B9ABB /* UserPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage3ViewController.swift; sourceTree = "<group>"; };
 		18076CFF25E77398003B9ABB /* UserPage4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage4ViewController.swift; sourceTree = "<group>"; };
 		18076D0225E77925003B9ABB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		180D51772611EAE50066C85A /* EditPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostViewController.swift; sourceTree = "<group>"; };
+		180D51802611F8B60066C85A /* AddPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesCell.swift; sourceTree = "<group>"; };
 		180FC570260CD15F00DEFBAA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		1811920125F4368C00839599 /* Post2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post2ViewController.swift; sourceTree = "<group>"; };
@@ -132,12 +150,14 @@
 		181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		181D877F25E8B2CF002E116D /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage1ViewController.swift; sourceTree = "<group>"; };
+		1820EF172611C2CF00F8EDF6 /* MyAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAdsViewController.swift; sourceTree = "<group>"; };
+		1820EF1F2611C50E00F8EDF6 /* MyAdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAdsTableViewCell.swift; sourceTree = "<group>"; };
 		1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNamesTableViewCell.swift; sourceTree = "<group>"; };
 		182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTableViewCell.swift; sourceTree = "<group>"; };
-		182365AF260EA14A009117B3 /* CarDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		182D7DF22602177500B06657 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		18320E4925F300EA00F104E1 /* Post Application Page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Post Application Page.storyboard"; sourceTree = "<group>"; };
+		1833B22D2610796A00543E3E /* CarInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		18387E2D25E7212E000F67EB /* BasisGrotesquePro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Light.ttf"; sourceTree = "<group>"; };
 		18387E2E25E7212F000F67EB /* BasisGrotesquePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Regular.ttf"; sourceTree = "<group>"; };
 		18387E2F25E7212F000F67EB /* BasisGrotesquePro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Bold.ttf"; sourceTree = "<group>"; };
@@ -170,6 +190,10 @@
 		1885D73D26039CAE0093B60E /* SearchByTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchByTypeTableViewCell.xib; sourceTree = "<group>"; };
 		1885D7542603A0780093B60E /* SearchByTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1885D7552603A0780093B60E /* SearchByTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchByTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		188F093F26120C8F000D0E2D /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
+		188F094726121444000D0E2D /* ChatPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageTableViewCell.swift; sourceTree = "<group>"; };
+		188F094C26121B30000D0E2D /* ActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
+		188F095426121D27000D0E2D /* ActionSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetTableViewCell.swift; sourceTree = "<group>"; };
 		189CA4D725F99F9A007EAAF4 /* Post10TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post10TableViewCell.swift; sourceTree = "<group>"; };
 		18A0426E25ECFBC9001B09F2 /* Dealer1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer1ViewController.swift; sourceTree = "<group>"; };
 		18A0427025ECFEFA001B09F2 /* Dealer2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer2ViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +265,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1802AE752610FC4500C32F63 /* User Page */ = {
+			isa = PBXGroup;
+			children = (
+				1802AE762610FC6A00C32F63 /* UserPage.storyboard */,
+				1802AE7B2610FC9E00C32F63 /* UserProfilePageViewController.swift */,
+				1802AE802611117500C32F63 /* SavedAdsPageViewController.swift */,
+				1820EF172611C2CF00F8EDF6 /* MyAdsViewController.swift */,
+				180D51772611EAE50066C85A /* EditPostViewController.swift */,
+				188F093F26120C8F000D0E2D /* ChatPageViewController.swift */,
+				1802AE852611129A00C32F63 /* TableViewCell */,
+				180D517F2611F8690066C85A /* CollectionViewCell */,
+			);
+			path = "User Page";
+			sourceTree = "<group>";
+		};
+		1802AE852611129A00C32F63 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1802AE86261112C900C32F63 /* SavedAdsTableViewCell.swift */,
+				1820EF1F2611C50E00F8EDF6 /* MyAdsTableViewCell.swift */,
+				188F094726121444000D0E2D /* ChatPageTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		18076CF825E747F8003B9ABB /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +307,14 @@
 				18076D0225E77925003B9ABB /* LogInViewController.swift */,
 			);
 			path = "Log In";
+			sourceTree = "<group>";
+		};
+		180D517F2611F8690066C85A /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				180D51802611F8B60066C85A /* AddPhotoCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		180FC56F260CD11D00DEFBAA /* AllCategoriesCell */ = {
@@ -370,6 +427,7 @@
 		183F88E225E7115E00EFD168 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1802AE752610FC4500C32F63 /* User Page */,
 				181ECFA12600C57D002FCC9E /* Home Page */,
 				1877A9CD260B53B900712F91 /* Listings Page */,
 				1852750B25F3B9760018CD81 /* Post Application Page */,
@@ -441,7 +499,7 @@
 		186836A7260E232900565444 /* CarDetailCell */ = {
 			isa = PBXGroup;
 			children = (
-				182365AF260EA14A009117B3 /* CarDetailCollectionViewCell.swift */,
+				1833B22D2610796A00543E3E /* CarInfoCollectionViewCell.swift */,
 			);
 			path = CarDetailCell;
 			sourceTree = "<group>";
@@ -457,9 +515,11 @@
 		1877A9CD260B53B900712F91 /* Listings Page */ = {
 			isa = PBXGroup;
 			children = (
-				1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */,
 				1877A9D6260B548000712F91 /* ListingsPage.storyboard */,
+				188F094C26121B30000D0E2D /* ActionSheetViewController.swift */,
+				1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */,
 				1877A9DE260B60C300712F91 /* CollectionView */,
+				188F095926121D30000D0E2D /* TableViewCell */,
 			);
 			path = "Listings Page";
 			sourceTree = "<group>";
@@ -498,6 +558,14 @@
 				183AC92D26035897003D1999 /* FeaturedCollectionViewCell.xib */,
 			);
 			path = FeaturedCell;
+			sourceTree = "<group>";
+		};
+		188F095926121D30000D0E2D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				188F095426121D27000D0E2D /* ActionSheetTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		189CA4CB25F99F48007EAAF4 /* TableViewCell */ = {
@@ -772,6 +840,7 @@
 				18387E3125E7212F000F67EB /* BasisGrotesquePro-Regular.ttf in Resources */,
 				183AC90D26034B29003D1999 /* HomeBuySellExploreCell.xib in Resources */,
 				18C782CD25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf in Resources */,
+				1802AE772610FC6A00C32F63 /* UserPage.storyboard in Resources */,
 				182D7DF32602177500B06657 /* HomePage.storyboard in Resources */,
 				1877A9D7260B548000712F91 /* ListingsPage.storyboard in Resources */,
 				183AC91426034E76003D1999 /* FeaturedCell.xib in Resources */,
@@ -912,12 +981,13 @@
 				18076CFA25E74878003B9ABB /* UserPage1ViewController.swift in Sources */,
 				18A54CB425F6806500B96D46 /* Constants.swift in Sources */,
 				181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */,
+				188F094826121444000D0E2D /* ChatPageTableViewCell.swift in Sources */,
 				18076CFC25E754A9003B9ABB /* UserPage2ViewController.swift in Sources */,
 				180FC571260CD15F00DEFBAA /* FilterViewController.swift in Sources */,
-				182365B0260EA14A009117B3 /* CarDetailCollectionViewCell.swift in Sources */,
 				18FAAA18260886E60041B897 /* NotificationsViewController.swift in Sources */,
 				186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */,
 				187B405725ED5153003EC979 /* Dealer7ViewController.swift in Sources */,
+				180D51812611F8B60066C85A /* AddPhotoCollectionViewCell.swift in Sources */,
 				183AC90C26034B29003D1999 /* HomeBuySellExploreCell.swift in Sources */,
 				1877A9E8260B74AB00712F91 /* CarDetailCollectionViewCell.swift in Sources */,
 				18FAAA262608A1E00041B897 /* MyApplicationsPageViewController.swift in Sources */,
@@ -926,8 +996,10 @@
 				1877A9CF260B53E700712F91 /* PrivateSellerViewController.swift in Sources */,
 				1811920225F4368C00839599 /* Post2ViewController.swift in Sources */,
 				180FC56B260CD0F500DEFBAA /* AllCategoriesCell.swift in Sources */,
+				1820EF182611C2CF00F8EDF6 /* MyAdsViewController.swift in Sources */,
 				181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */,
 				18A48A8925E64DEE006F3097 /* ViewController.swift in Sources */,
+				188F094026120C8F000D0E2D /* ChatPageViewController.swift in Sources */,
 				18A48A8525E64DEE006F3097 /* AppDelegate.swift in Sources */,
 				18EDAC5525E939130096AFD4 /* Forgt1ViewController.swift in Sources */,
 				18A0427525ED2589001B09F2 /* Dealer4ViewController.swift in Sources */,
@@ -938,19 +1010,24 @@
 				189CA4D825F99F9A007EAAF4 /* Post10TableViewCell.swift in Sources */,
 				1811922A25F4691F00839599 /* Post10ViewController.swift in Sources */,
 				18076CFE25E75979003B9ABB /* UserPage3ViewController.swift in Sources */,
+				1820EF202611C50E00F8EDF6 /* MyAdsTableViewCell.swift in Sources */,
 				181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */,
 				18286A7E260DC3D6003C8706 /* CategoriesTableViewCell.swift in Sources */,
 				184BA19725FBDDED0045FCD3 /* ResetCompleteModel.swift in Sources */,
+				180D51782611EAE50066C85A /* EditPostViewController.swift in Sources */,
 				1811920C25F453DF00839599 /* Post4ViewController.swift in Sources */,
 				1860381525FA65F00093BC02 /* ExtentionNetworManager.swift in Sources */,
+				188F094D26121B30000D0E2D /* ActionSheetViewController.swift in Sources */,
 				18EDAC5925E939410096AFD4 /* Forgot3ViewController.swift in Sources */,
 				1823659D260E9DFE009117B3 /* CarNamesTableViewCell.swift in Sources */,
 				187B405525ED4AA3003EC979 /* Dealer6ViewController.swift in Sources */,
 				183AC91326034E76003D1999 /* FeaturedCell.swift in Sources */,
 				18A48A8725E64DEE006F3097 /* SceneDelegate.swift in Sources */,
+				1802AE7C2610FC9E00C32F63 /* UserProfilePageViewController.swift in Sources */,
 				18A0427125ECFEFA001B09F2 /* Dealer2ViewController.swift in Sources */,
 				1811922525F4691000839599 /* Post9ViewController.swift in Sources */,
 				1811921625F45D7400839599 /* Post6ViewController.swift in Sources */,
+				188F095526121D27000D0E2D /* ActionSheetTableViewCell.swift in Sources */,
 				18EDAC5725E9392F0096AFD4 /* Forgot2ViewController.swift in Sources */,
 				187B405925ED5829003EC979 /* Dealer8ViewController.swift in Sources */,
 				1852750D25F3B9A40018CD81 /* Post1ViewController.swift in Sources */,
@@ -966,12 +1043,15 @@
 				186F5B5D25FA7D8A00FB9AA6 /* ResetPasswordModel.swift in Sources */,
 				1811920725F43CAD00839599 /* Post3ViewController.swift in Sources */,
 				18FAAA2C2608AB860041B897 /* MyApplicationPageTableViewCell.swift in Sources */,
+				1802AE87261112C900C32F63 /* SavedAdsTableViewCell.swift in Sources */,
 				186F5B5325FA780B00FB9AA6 /* BuyerDetailModel.swift in Sources */,
 				1868369B260E21E300565444 /* RecentSearchTableViewCell.swift in Sources */,
 				18076D0025E77398003B9ABB /* UserPage4ViewController.swift in Sources */,
 				18EDAC5B25E954130096AFD4 /* OTPTextField.swift in Sources */,
 				18683695260E171D00565444 /* SearchScreenViewController.swift in Sources */,
 				183AC92E26035897003D1999 /* FeaturedCollectionViewCell.swift in Sources */,
+				1802AE812611117500C32F63 /* SavedAdsPageViewController.swift in Sources */,
+				1833B22E2610796A00543E3E /* CarInfoCollectionViewCell.swift in Sources */,
 				18FAAA1D260893F70041B897 /* NotificationCell.swift in Sources */,
 				18A0427725ED31DC001B09F2 /* Dealer5ViewController.swift in Sources */,
 			);

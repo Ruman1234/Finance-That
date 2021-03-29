@@ -19,7 +19,7 @@ class CarNamesCollectionViewCell: UICollectionViewCell {
     
     func carButton(btn : UIButton) {
         btn.layer.backgroundColor = UIColor(red: 0.961, green: 0.961, blue: 0.961, alpha: 1).cgColor
-        btn.layer.cornerRadius = 10
+        btn.layer.cornerRadius = 16
         btn.layer.borderWidth = 0.5
         btn.layer.borderColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1).cgColor
     }
