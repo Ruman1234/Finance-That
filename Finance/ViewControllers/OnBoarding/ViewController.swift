@@ -97,8 +97,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func skipBtn(_ sender: Any) {
-        let NotificationsStoryBoard = UIStoryboard(name: "ListingsPage", bundle: nil)
-        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "PrivateSellerViewController") as! PrivateSellerViewController
+        let NotificationsStoryBoard = UIStoryboard(name: "PostAdPage", bundle: nil)
+        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "PaymentMethodViewController") as! PaymentMethodViewController
         self.navigationController?.pushViewController(NotificationsViewController, animated: true)
     }
     

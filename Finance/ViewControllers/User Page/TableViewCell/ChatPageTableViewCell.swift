@@ -19,9 +19,21 @@ class ChatPageTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setView(view: mainView)
+        hondaLbl.textColor = Color.App_theme_color
+        messageLbl.textColor = Color.gray_theme_color
+        dayLbl.textColor = Color.gray_theme_color
+        onlineView.setRoundView()
     }
-
+    
+    func setView(view: UIView) {
+        view.layer.backgroundColor = UIColor(red: 0.992, green: 0.992, blue: 0.992, alpha: 1).cgColor
+        view.layer.cornerRadius = 5
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor(red: 0.933, green: 0.933, blue: 0.933, alpha: 1).cgColor
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
