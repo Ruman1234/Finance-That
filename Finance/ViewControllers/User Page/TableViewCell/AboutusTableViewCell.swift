@@ -1,17 +1,19 @@
 //
-//  HomeBuySellExploreCell.swift
+//  AboutusTableViewCell.swift
 //  Finance
 //
-//  Created by Ammar Irfan on 18/03/2021.
+//  Created by Ammar Irfan on 09/04/2021.
 //  Copyright © 2021 Ammar Irfan. All rights reserved.
 //
 
 import UIKit
 
-class HomeBuySellExploreCell: UITableViewCell {
+class AboutusTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var mainImg: UIImageView!
-    @IBOutlet weak var exploreBtn: UIButton!
+    @IBOutlet weak var carImg: UIImageView!
+    @IBOutlet weak var buyAndSellLbl: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +24,6 @@ class HomeBuySellExploreCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }
+

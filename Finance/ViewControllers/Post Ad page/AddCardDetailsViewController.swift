@@ -10,10 +10,20 @@ import UIKit
 
 class AddCardDetailsViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: CustomTextField!
+    @IBOutlet weak var cardNumberTextField: CustomTextField!
+    @IBOutlet weak var expirationTextfield: CustomTextField!
+    @IBOutlet weak var CVVTextField: CustomTextField!
+    @IBOutlet weak var nextBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nextBtn.setButtonTheme()
     }
 
+    @IBAction func crossBtn(_ sender: Any) {
+    }
+    
+    @IBAction func nextBtn(_ sender: Any) {
+    }
 }

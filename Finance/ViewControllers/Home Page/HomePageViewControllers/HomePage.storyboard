@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="My6-IG-hRQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dm8-vy-wdt">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home Page1 View Controller-->
+        <!--Item-->
         <scene sceneID="Zsh-Ru-iPZ">
             <objects>
                 <viewController storyboardIdentifier="HomePage1ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="My6-IG-hRQ" customClass="HomePage1ViewController" customModule="Finance" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cov-yn-Xw7">
-                                <rect key="frame" x="0.0" y="365" width="414" height="371"/>
+                                <rect key="frame" x="0.0" y="365" width="414" height="322"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="371" id="fLT-dF-2GH"/>
@@ -40,10 +40,6 @@
                                     <outlet property="delegate" destination="My6-IG-hRQ" id="9Rc-Q7-eSy"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="bLP-Ky-m1e">
-                                <rect key="frame" x="20" y="104" width="374" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MaskGroup" translatesAutoresizingMaskIntoConstraints="NO" id="MxQ-eQ-ETg">
                                 <rect key="frame" x="20" y="185" width="374" height="170"/>
                                 <constraints>
@@ -60,8 +56,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2Q-tU-JbR">
                                 <rect key="frame" x="171" y="267" width="72" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98431372549019602" green="0.31764705882352939" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="11"/>
-                                <state key="normal" title="Explore"/>
+                                <state key="normal" title="Explore">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mc6-Zr-7fU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
@@ -111,32 +110,61 @@
                                     <constraint firstItem="LBs-Mk-IY5" firstAttribute="top" secondItem="Mc6-Zr-7fU" secondAttribute="top" constant="64" id="zG8-Zp-pd2"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqi-d5-ImU">
+                                <rect key="frame" x="20" y="104" width="374" height="48"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Vehicles" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4t2-e6-VlF" customClass="SearchTextField" customModule="Finance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search grey" translatesAutoresizingMaskIntoConstraints="NO" id="vkT-nh-eAy">
+                                        <rect key="frame" x="8" y="12" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="mZl-fU-u53"/>
+                                            <constraint firstAttribute="height" constant="24" id="nTe-Wp-CHl"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vkT-nh-eAy" firstAttribute="centerY" secondItem="4t2-e6-VlF" secondAttribute="centerY" id="3qc-xY-g30"/>
+                                    <constraint firstItem="4t2-e6-VlF" firstAttribute="leading" secondItem="vkT-nh-eAy" secondAttribute="trailing" constant="-32" id="FIP-Cm-FvU"/>
+                                    <constraint firstItem="4t2-e6-VlF" firstAttribute="leading" secondItem="Bqi-d5-ImU" secondAttribute="leading" id="NI1-Mw-LJd"/>
+                                    <constraint firstAttribute="height" constant="48" id="OVr-ey-TZ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="4t2-e6-VlF" secondAttribute="trailing" id="Q2W-mP-jJc"/>
+                                    <constraint firstItem="4t2-e6-VlF" firstAttribute="top" secondItem="Bqi-d5-ImU" secondAttribute="top" id="T2Y-DW-A57"/>
+                                    <constraint firstAttribute="bottom" secondItem="4t2-e6-VlF" secondAttribute="bottom" id="Ya4-ET-5N5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y2b-PM-lAL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y2b-PM-lAL" firstAttribute="trailing" secondItem="MxQ-eQ-ETg" secondAttribute="trailing" constant="20" id="04Q-Pl-FtJ"/>
                             <constraint firstItem="cov-yn-Xw7" firstAttribute="bottom" secondItem="y2b-PM-lAL" secondAttribute="bottom" id="0a5-oR-VKE"/>
+                            <constraint firstItem="Bqi-d5-ImU" firstAttribute="leading" secondItem="y2b-PM-lAL" secondAttribute="leading" constant="20" id="3u2-xy-m4S"/>
                             <constraint firstItem="cov-yn-Xw7" firstAttribute="top" secondItem="MxQ-eQ-ETg" secondAttribute="bottom" constant="10" id="6ua-5Y-2KR"/>
                             <constraint firstItem="cov-yn-Xw7" firstAttribute="leading" secondItem="y2b-PM-lAL" secondAttribute="leading" id="C9h-2Z-gGa"/>
-                            <constraint firstItem="bLP-Ky-m1e" firstAttribute="leading" secondItem="y2b-PM-lAL" secondAttribute="leading" constant="20" id="CFi-au-y9r"/>
-                            <constraint firstItem="bLP-Ky-m1e" firstAttribute="top" secondItem="Mc6-Zr-7fU" secondAttribute="bottom" constant="14" id="DpP-pD-npM"/>
-                            <constraint firstItem="MxQ-eQ-ETg" firstAttribute="top" secondItem="bLP-Ky-m1e" secondAttribute="bottom" constant="25" id="LNM-OJ-Lv3"/>
-                            <constraint firstItem="y2b-PM-lAL" firstAttribute="trailing" secondItem="bLP-Ky-m1e" secondAttribute="trailing" constant="20" id="SI4-TA-3PI"/>
+                            <constraint firstItem="Bqi-d5-ImU" firstAttribute="top" secondItem="Mc6-Zr-7fU" secondAttribute="bottom" constant="14" id="HYf-Ij-4hH"/>
+                            <constraint firstItem="y2b-PM-lAL" firstAttribute="trailing" secondItem="Bqi-d5-ImU" secondAttribute="trailing" constant="20" id="IL2-ve-BHW"/>
                             <constraint firstItem="Mc6-Zr-7fU" firstAttribute="leading" secondItem="y2b-PM-lAL" secondAttribute="leading" id="Uax-Cj-qTp"/>
                             <constraint firstItem="Mc6-Zr-7fU" firstAttribute="trailing" secondItem="y2b-PM-lAL" secondAttribute="trailing" id="bT2-7B-jZf"/>
                             <constraint firstItem="cov-yn-Xw7" firstAttribute="trailing" secondItem="y2b-PM-lAL" secondAttribute="trailing" id="cnL-Qm-xVz"/>
                             <constraint firstItem="MxQ-eQ-ETg" firstAttribute="leading" secondItem="y2b-PM-lAL" secondAttribute="leading" constant="20" id="eVD-cb-Xed"/>
                             <constraint firstItem="Mc6-Zr-7fU" firstAttribute="top" secondItem="y2b-PM-lAL" secondAttribute="top" id="gmW-CH-bX8"/>
+                            <constraint firstItem="MxQ-eQ-ETg" firstAttribute="top" secondItem="Bqi-d5-ImU" secondAttribute="bottom" constant="33" id="qqQ-e0-rDc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="VcJ-P3-tTi"/>
                     <connections>
                         <outlet property="homePageTableView" destination="cov-yn-Xw7" id="8M0-jL-s3c"/>
+                        <outlet property="searchView" destination="Bqi-d5-ImU" id="nvn-LD-vAk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaT-Lh-4QD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-340.57971014492756" y="10.597826086956523"/>
+            <point key="canvasLocation" x="566.66666666666674" y="10.597826086956523"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="Gkq-Yx-DeZ">
@@ -163,15 +191,15 @@
                                 <rect key="frame" x="0.0" y="84" width="414" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notificationCell" rowHeight="90" id="KzO-mq-lmc" customClass="NotificationCell" customModule="Finance" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notificationCell" rowHeight="105" id="KzO-mq-lmc" customClass="NotificationCell" customModule="Finance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KzO-mq-lmc" id="GxP-3h-ZmR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy0-oJ-d7x">
-                                                    <rect key="frame" x="20" y="5" width="374" height="69"/>
+                                                    <rect key="frame" x="20" y="10" width="374" height="84"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="taA-Ov-Bm6">
                                                             <rect key="frame" x="10" y="10" width="36" height="36"/>
@@ -214,7 +242,7 @@
                                                         <constraint firstItem="taA-Ov-Bm6" firstAttribute="leading" secondItem="hy0-oJ-d7x" secondAttribute="leading" constant="10" id="L4t-Ne-pzT"/>
                                                         <constraint firstItem="V6u-od-v1A" firstAttribute="top" secondItem="hy0-oJ-d7x" secondAttribute="top" constant="11" id="LKF-EX-ABR"/>
                                                         <constraint firstItem="V6u-od-v1A" firstAttribute="leading" secondItem="taA-Ov-Bm6" secondAttribute="trailing" constant="10" id="e7N-l7-zSn"/>
-                                                        <constraint firstAttribute="height" constant="69" id="f1m-2n-Hz0"/>
+                                                        <constraint firstAttribute="height" constant="84" id="f1m-2n-Hz0"/>
                                                         <constraint firstItem="2C8-pR-HMb" firstAttribute="top" secondItem="V6u-od-v1A" secondAttribute="bottom" constant="7" id="ggy-UZ-WRV"/>
                                                         <constraint firstItem="taA-Ov-Bm6" firstAttribute="top" secondItem="hy0-oJ-d7x" secondAttribute="top" constant="10" id="hhs-cr-5gr"/>
                                                         <constraint firstAttribute="trailing" secondItem="7c7-3u-TYl" secondAttribute="trailing" constant="10" id="ory-uC-Gvf"/>
@@ -224,8 +252,8 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="hy0-oJ-d7x" secondAttribute="bottom" constant="16" id="KHc-9L-1Tg"/>
-                                                <constraint firstItem="hy0-oJ-d7x" firstAttribute="top" secondItem="GxP-3h-ZmR" secondAttribute="top" constant="5" id="PaB-Fu-T6N"/>
+                                                <constraint firstAttribute="bottom" secondItem="hy0-oJ-d7x" secondAttribute="bottom" constant="11" id="KHc-9L-1Tg"/>
+                                                <constraint firstItem="hy0-oJ-d7x" firstAttribute="top" secondItem="GxP-3h-ZmR" secondAttribute="top" constant="10" id="PaB-Fu-T6N"/>
                                                 <constraint firstAttribute="trailing" secondItem="hy0-oJ-d7x" secondAttribute="trailing" constant="20" symbolic="YES" id="neF-TM-SVL"/>
                                                 <constraint firstItem="hy0-oJ-d7x" firstAttribute="leading" secondItem="GxP-3h-ZmR" secondAttribute="leading" constant="20" symbolic="YES" id="xel-fG-yLh"/>
                                             </constraints>
@@ -263,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9F-ZV-eSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408.69565217391306" y="18.75"/>
+            <point key="canvasLocation" x="1315.9420289855072" y="18.75"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="mou-0r-cwe">
@@ -290,7 +318,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="143" height="55"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcr-Xb-9JS">
-                                                            <rect key="frame" x="31" y="20" width="81" height="15.333333333333336"/>
+                                                            <rect key="frame" x="30.333333333333336" y="20" width="82.666666666666657" height="15"/>
                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="13"/>
                                                             <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -356,7 +384,7 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automobiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAF-u8-VLm">
-                                                            <rect key="frame" x="57" y="20" width="73" height="16"/>
+                                                            <rect key="frame" x="57.000000000000007" y="20" width="73.666666666666686" height="16"/>
                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="13"/>
                                                             <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -561,12 +589,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Applications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqe-kE-4mb">
                                 <rect key="frame" x="151.66666666666666" y="54.999999999999993" width="110.99999999999997" height="19.666666666666664"/>
                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-rS-Bie">
                                 <rect key="frame" x="20" y="97.666666666666671" width="8" height="8"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.59999999999999998" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="8" id="hHN-7I-ehm"/>
                                     <constraint firstAttribute="height" constant="8" id="xq1-S8-tSC"/>
@@ -575,12 +603,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditionally approved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma2-Oy-xco">
                                 <rect key="frame" x="32.999999999999993" y="97.333333333333329" width="84.333333333333314" height="9"/>
                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="8"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiK-iQ-qSf">
                                 <rect key="frame" x="133.33333333333334" y="97.666666666666671" width="8" height="8"/>
-                                <color key="backgroundColor" red="0.98039215690000003" green="0.57647058819999997" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.59999999999999998" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="8" id="OcM-Y2-fsu"/>
                                     <constraint firstAttribute="height" constant="8" id="wFW-aD-icQ"/>
@@ -589,12 +617,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-approved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJN-8m-BYs">
                                 <rect key="frame" x="146.33333333333334" y="97.333333333333329" width="50.666666666666657" height="9"/>
                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="8"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-pb-I2Q">
                                 <rect key="frame" x="213.33333333333334" y="97.666666666666671" width="8" height="8"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" red="0.50588235294117645" green="0.85882352941176465" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="8" id="41Z-5d-Eo1"/>
                                     <constraint firstAttribute="height" constant="8" id="r6B-1b-1Uo"/>
@@ -603,12 +631,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-Xx-GVw">
                                 <rect key="frame" x="226.33333333333334" y="97.333333333333329" width="35.000000000000028" height="9"/>
                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="8"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMy-1B-tma">
                                 <rect key="frame" x="277.66666666666669" y="97.666666666666671" width="8" height="8"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.2196078431372549" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="Bhz-MD-2Qv"/>
                                     <constraint firstAttribute="width" constant="8" id="ILs-xu-xDq"/>
@@ -617,12 +645,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Declined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vli-vR-0UJ">
                                 <rect key="frame" x="290.66666666666669" y="97.333333333333329" width="32.333333333333314" height="9"/>
                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="8"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WWo-OL-xeT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WWo-OL-xeT">
                                 <rect key="frame" x="0.0" y="125.33333333333331" width="414" height="610.66666666666674"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="applicationCell" rowHeight="211" id="JJz-wP-YH9" customClass="MyApplicationPageTableViewCell" customModule="Finance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="211"/>
@@ -632,24 +660,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRC-t8-VlX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
+                                                    <rect key="frame" x="20" y="5" width="374" height="201"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application ID: 2212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9v-lG-QNc">
                                                             <rect key="frame" x="16.000000000000007" y="16" width="117.66666666666669" height="17"/>
                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afp-fZ-vjJ">
-                                                            <rect key="frame" x="16" y="39" width="382" height="1"/>
-                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <rect key="frame" x="16" y="39" width="342" height="1"/>
+                                                            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="dnb-Ah-ygP"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mU1-ic-AHb">
-                                                            <rect key="frame" x="388" y="19" width="10" height="10"/>
-                                                            <color key="backgroundColor" systemColor="linkColor"/>
+                                                            <rect key="frame" x="348" y="19" width="10" height="10"/>
+                                                            <color key="backgroundColor" red="0.3411764705882353" green="0.59999999999999998" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="10" id="kR7-U1-Oga"/>
                                                                 <constraint firstAttribute="height" constant="10" id="lgg-jF-8Tu"/>
@@ -658,23 +686,23 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditionally approved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrp-Yc-xaS">
                                                             <rect key="frame" x="16" y="52" width="140.33333333333334" height="17"/>
                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.3411764705882353" green="0.59999999999999998" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Requested" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLN-b9-aSN">
-                                                            <rect key="frame" x="16" y="99" width="95" height="13"/>
+                                                            <rect key="frame" x="16" y="89" width="95" height="13"/>
                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2498.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaS-Kv-0aO">
-                                                            <rect key="frame" x="16" y="116" width="79.333333333333329" height="20"/>
+                                                            <rect key="frame" x="16" y="106" width="79.333333333333329" height="20"/>
                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Bold" family="Basis Grotesque Pro" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBh-hO-CdW">
-                                                            <rect key="frame" x="16" y="161" width="382" height="38"/>
+                                                            <rect key="frame" x="16" y="151" width="342" height="38"/>
                                                             <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="38" id="3fd-b5-CTs"/>
@@ -687,29 +715,29 @@
                                                             </connections>
                                                         </button>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="GKp-sS-l6t">
-                                                            <rect key="frame" x="296.33333333333331" y="120.66666666666669" width="16" height="16"/>
+                                                            <rect key="frame" x="256.33333333333331" y="108" width="16" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16" id="aT8-K5-KTB"/>
                                                                 <constraint firstAttribute="width" constant="16" id="m46-K2-Sov"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 23, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imO-lB-3k3">
-                                                            <rect key="frame" x="317.33333333333331" y="121" width="80.666666666666686" height="15"/>
+                                                            <rect key="frame" x="277.33333333333331" y="108.66666666666667" width="80.666666666666686" height="15"/>
                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="13"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.50980392156862742" green="0.51372549019607838" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="XBh-hO-CdW" firstAttribute="top" secondItem="QaS-Kv-0aO" secondAttribute="bottom" constant="25" id="2EO-KN-Yca"/>
-                                                        <constraint firstItem="VLN-b9-aSN" firstAttribute="top" secondItem="qrp-Yc-xaS" secondAttribute="bottom" constant="30" id="3EW-l5-9Sd"/>
                                                         <constraint firstItem="M9v-lG-QNc" firstAttribute="leading" secondItem="QRC-t8-VlX" secondAttribute="leading" constant="16" id="6lU-Yg-hFW"/>
                                                         <constraint firstItem="mU1-ic-AHb" firstAttribute="top" secondItem="QRC-t8-VlX" secondAttribute="top" constant="19" id="BUP-Fi-TMl"/>
                                                         <constraint firstItem="GKp-sS-l6t" firstAttribute="centerY" secondItem="imO-lB-3k3" secondAttribute="centerY" id="ETc-WK-fRQ"/>
                                                         <constraint firstItem="imO-lB-3k3" firstAttribute="leading" secondItem="GKp-sS-l6t" secondAttribute="trailing" constant="5" id="FBx-NC-yww"/>
                                                         <constraint firstItem="VLN-b9-aSN" firstAttribute="leading" secondItem="QRC-t8-VlX" secondAttribute="leading" constant="16" id="HrV-Oo-bOI"/>
                                                         <constraint firstAttribute="bottom" secondItem="XBh-hO-CdW" secondAttribute="bottom" constant="12" id="M8t-ty-lZL"/>
+                                                        <constraint firstItem="imO-lB-3k3" firstAttribute="centerY" secondItem="QaS-Kv-0aO" secondAttribute="centerY" id="WsG-HH-Z4b"/>
                                                         <constraint firstAttribute="trailing" secondItem="mU1-ic-AHb" secondAttribute="trailing" constant="16" id="dqh-Il-Xt8"/>
                                                         <constraint firstItem="M9v-lG-QNc" firstAttribute="top" secondItem="QRC-t8-VlX" secondAttribute="top" constant="16" id="fDE-XE-2ML"/>
                                                         <constraint firstAttribute="trailing" secondItem="Afp-fZ-vjJ" secondAttribute="trailing" constant="16" id="iXa-u7-fiH"/>
@@ -718,28 +746,31 @@
                                                         <constraint firstItem="QaS-Kv-0aO" firstAttribute="top" secondItem="VLN-b9-aSN" secondAttribute="bottom" constant="4" id="on0-Na-sDN"/>
                                                         <constraint firstItem="XBh-hO-CdW" firstAttribute="leading" secondItem="QRC-t8-VlX" secondAttribute="leading" constant="16" id="pAD-GC-nsK"/>
                                                         <constraint firstAttribute="trailing" secondItem="imO-lB-3k3" secondAttribute="trailing" constant="16" id="prc-aY-Zfv"/>
-                                                        <constraint firstItem="imO-lB-3k3" firstAttribute="top" secondItem="Afp-fZ-vjJ" secondAttribute="bottom" constant="81" id="sWU-iv-qqz"/>
                                                         <constraint firstItem="qrp-Yc-xaS" firstAttribute="top" secondItem="Afp-fZ-vjJ" secondAttribute="bottom" constant="12" id="tFl-tG-ieH"/>
                                                         <constraint firstItem="Afp-fZ-vjJ" firstAttribute="top" secondItem="M9v-lG-QNc" secondAttribute="bottom" constant="6" id="xBU-mM-R1g"/>
                                                         <constraint firstAttribute="trailing" secondItem="XBh-hO-CdW" secondAttribute="trailing" constant="16" id="yaj-yn-f1q"/>
                                                         <constraint firstItem="qrp-Yc-xaS" firstAttribute="leading" secondItem="QRC-t8-VlX" secondAttribute="leading" constant="16" id="zfl-li-rdK"/>
+                                                        <constraint firstItem="VLN-b9-aSN" firstAttribute="top" secondItem="qrp-Yc-xaS" secondAttribute="bottom" constant="20" id="zsl-fi-pX4"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="QRC-t8-VlX" secondAttribute="trailing" id="Ftb-l8-X4v"/>
-                                                <constraint firstItem="QRC-t8-VlX" firstAttribute="leading" secondItem="pnt-2t-soF" secondAttribute="leading" id="YKd-b9-D8y"/>
-                                                <constraint firstAttribute="bottom" secondItem="QRC-t8-VlX" secondAttribute="bottom" id="nrB-Al-v4A"/>
-                                                <constraint firstItem="QRC-t8-VlX" firstAttribute="top" secondItem="pnt-2t-soF" secondAttribute="top" id="uod-wp-chF"/>
+                                                <constraint firstAttribute="trailing" secondItem="QRC-t8-VlX" secondAttribute="trailing" constant="20" id="Ftb-l8-X4v"/>
+                                                <constraint firstItem="QRC-t8-VlX" firstAttribute="leading" secondItem="pnt-2t-soF" secondAttribute="leading" constant="20" id="YKd-b9-D8y"/>
+                                                <constraint firstAttribute="bottom" secondItem="QRC-t8-VlX" secondAttribute="bottom" constant="5" id="nrB-Al-v4A"/>
+                                                <constraint firstItem="QRC-t8-VlX" firstAttribute="top" secondItem="pnt-2t-soF" secondAttribute="top" constant="5" id="uod-wp-chF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="amountLbl" destination="VLN-b9-aSN" id="OxE-qW-U4G"/>
                                             <outlet property="approvedLbl" destination="qrp-Yc-xaS" id="e4c-vp-qsk"/>
+                                            <outlet property="blueColorView" destination="mU1-ic-AHb" id="LYz-Y8-RWl"/>
                                             <outlet property="calenderImg" destination="GKp-sS-l6t" id="3aC-qu-dSW"/>
                                             <outlet property="calenderLbl" destination="imO-lB-3k3" id="Xfc-4O-zAY"/>
                                             <outlet property="grayView" destination="Afp-fZ-vjJ" id="kdi-IQ-kaG"/>
                                             <outlet property="idLbl" destination="M9v-lG-QNc" id="itL-yb-C5h"/>
+                                            <outlet property="mainView" destination="QRC-t8-VlX" id="E7O-7v-kno"/>
                                             <outlet property="priceLbl" destination="QaS-Kv-0aO" id="0fC-Mx-dfO"/>
                                             <outlet property="viewBtn" destination="XBh-hO-CdW" id="WYF-vr-o7T"/>
                                         </connections>
@@ -748,7 +779,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XbM-6A-1xq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ma2-Oy-xco" firstAttribute="centerY" secondItem="f4H-rS-Bie" secondAttribute="centerY" id="2H9-C6-Ji4"/>
                             <constraint firstItem="7YV-Xx-GVw" firstAttribute="centerY" secondItem="ucL-pb-I2Q" secondAttribute="centerY" id="9MW-Zc-pjP"/>
@@ -789,7 +820,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qI0-tJ-Vuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150.7246376811595" y="22.826086956521742"/>
+            <point key="canvasLocation" x="2057.971014492754" y="22.826086956521742"/>
         </scene>
         <!--My Application Detail View Controller-->
         <scene sceneID="cpz-wJ-wsL">
@@ -808,7 +839,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application 1123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-gJ-3Yc">
                                                 <rect key="frame" x="151.33333333333334" y="54.999999999999993" width="111.66666666666666" height="19.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iA-FN-Gi0">
@@ -821,12 +852,12 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application ID: 2212" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aD-8n-FVC">
                                                         <rect key="frame" x="16.000000000000007" y="16" width="117.66666666666669" height="17"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.24705882352941178" green="0.13725490196078433" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0g-ku-Kfu">
                                                         <rect key="frame" x="16" y="38.999999999999986" width="342" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="iCY-qT-hWq"/>
                                                         </constraints>
@@ -842,19 +873,19 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAn-Xd-tGj">
                                                         <rect key="frame" x="15.999999999999996" y="51.999999999999986" width="58.666666666666657" height="17"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Requested" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHU-gu-ga0">
                                                         <rect key="frame" x="16" y="102.99999999999999" width="95" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2498.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRs-SM-bYE">
                                                         <rect key="frame" x="16" y="120" width="79.333333333333329" height="20"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Bold" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5g-Pc-YZD">
@@ -877,19 +908,19 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 23, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQZ-tY-hQC">
                                                         <rect key="frame" x="277.33333333333331" y="116.99999999999999" width="80.666666666666686" height="15.000000000000014"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="13"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.50980392156862742" green="0.51372549019607838" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="647-745-4543" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfV-Us-5XP">
                                                         <rect key="frame" x="285" y="67.999999999999986" width="73" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="john.doe@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdK-Di-fw8">
                                                         <rect key="frame" x="254" y="51.999999999999986" width="104" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -942,61 +973,61 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approved Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7g-wE-t9G">
                                                         <rect key="frame" x="16" y="53" width="90.666666666666671" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downpayment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCo-pz-I5D">
                                                         <rect key="frame" x="16" y="113" width="70.666666666666671" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2498.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teD-o4-iuk">
                                                         <rect key="frame" x="16" y="131" width="78.666666666666671" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2498.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnD-tC-Abv">
                                                         <rect key="frame" x="16" y="71" width="78.666666666666671" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amortization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXN-1N-gci">
                                                         <rect key="frame" x="294.66666666666669" y="53" width="63.333333333333314" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="108 Months" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8G-Q5-fCI">
                                                         <rect key="frame" x="266" y="71" width="92" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cR-Up-dK3">
                                                         <rect key="frame" x="295" y="113" width="63" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.99%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbO-fn-CnB">
                                                         <rect key="frame" x="308" y="131" width="50" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTT-GS-7pv">
                                                         <rect key="frame" x="16" y="169" width="49" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2498.00 Monthly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWQ-UH-ue2">
                                                         <rect key="frame" x="16" y="187" width="146.66666666666666" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1033,7 +1064,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Party Vehicle Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-9m-a1U">
                                                 <rect key="frame" x="20" y="571" width="185.33333333333334" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUD-vl-91M">
@@ -1046,7 +1077,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wK5-5c-h9O">
                                                 <rect key="frame" x="20.000000000000007" y="624" width="90.666666666666686" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afm-gC-sUl" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1060,7 +1091,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0G-02-MRI">
                                                 <rect key="frame" x="20" y="713" width="78.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0C-JX-BXJ" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1071,7 +1102,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqD-h5-ogw">
                                                 <rect key="frame" x="20" y="802" width="72.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGA-fC-dyU" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1082,7 +1113,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kilometers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h9-8m-wgp">
                                                 <rect key="frame" x="19.999999999999996" y="891" width="63.666666666666657" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLq-fu-hQ1" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1093,7 +1124,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM5-G8-mtk">
                                                 <rect key="frame" x="20" y="980" width="31.333333333333329" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLP-75-rIN" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1104,7 +1135,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAj-iz-nol">
                                                 <rect key="frame" x="20.000000000000004" y="1069" width="59.333333333333343" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tEZ-LL-kcd" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1125,7 +1156,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finance That Vehicle Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mx0-fb-icJ">
                                                 <rect key="frame" x="20" y="1230" width="197" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG1-Rf-ACV">
@@ -1138,7 +1169,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finance That Stock Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL2-Gj-xr6">
                                                 <rect key="frame" x="20" y="1274" width="170" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Type the stock number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rp-P8-v5h" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1162,7 +1193,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock Found!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5d-H2-KeA">
                                                 <rect key="frame" x="20" y="1411" width="80" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rS1-Sq-m4S">
@@ -1179,13 +1210,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1231" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4u-h6-iku">
                                                         <rect key="frame" x="17" y="13" width="20.666666666666671" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1905 Can-Am Defender DPS HD10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iv-Gm-9tM">
                                                         <rect key="frame" x="62.666666666666686" y="13" width="173" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iea-yf-jZS">
@@ -1199,7 +1230,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$24,999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1q-KI-4c3">
                                                         <rect key="frame" x="316.33333333333331" y="13" width="41.666666666666686" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1231,7 +1262,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Party Seller Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWp-dZ-XJ6">
                                                 <rect key="frame" x="20" y="1558" width="176.33333333333334" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDE-rF-YN8" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1245,7 +1276,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seller Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoB-U1-HYE">
                                                 <rect key="frame" x="20" y="1602" width="72.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7F-ok-cSF">
@@ -1258,7 +1289,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealership Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyR-Zl-T7z">
                                                 <rect key="frame" x="20" y="1691" width="102" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfh-n2-BKd" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1272,7 +1303,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ2-ti-Z2S">
                                                 <rect key="frame" x="20" y="1780" width="84.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIb-IW-Z6s" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1286,7 +1317,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telephone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MX-Nd-lcM">
                                                 <rect key="frame" x="19.999999999999996" y="1869" width="62.666666666666657" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQI-Nl-Wwz" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1300,7 +1331,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telephone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-Tb-gww">
                                                 <rect key="frame" x="19.999999999999996" y="1958" width="62.666666666666657" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jwf-bb-8vR" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1314,7 +1345,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fax number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v34-gD-l6V">
                                                 <rect key="frame" x="20" y="2047" width="69.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifn-Sd-RJI" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1328,7 +1359,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ys-vV-T04">
                                                 <rect key="frame" x="20.000000000000007" y="2136" width="89.666666666666686" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rn0-l0-H2Q" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1342,7 +1373,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Province" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-nP-5qB">
                                                 <rect key="frame" x="20" y="2225" width="53" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOI-sY-wWc" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1356,7 +1387,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nG-Mm-5Er">
                                                 <rect key="frame" x="20" y="2314" width="24.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEx-FB-QrU" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1370,7 +1401,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postal Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2S-6C-Ecm">
                                                 <rect key="frame" x="20" y="2403" width="73.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="js3-w7-eNH" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1397,7 +1428,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finance That Seller Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ0-JS-p8x">
                                                         <rect key="frame" x="16" y="16" width="188" height="17"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0J-Hd-90M">
@@ -1410,85 +1441,85 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seller Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9m-NG-zrl">
                                                         <rect key="frame" x="16" y="52" width="60" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiD-FH-XZh">
                                                         <rect key="frame" x="16" y="112" width="70.666666666666671" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@dealership.ca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="804-n8-FZD">
                                                         <rect key="frame" x="16" y="130" width="149.66666666666666" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvm-g8-L9h">
                                                         <rect key="frame" x="16" y="70" width="76.333333333333329" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealership Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXI-6e-YkK">
                                                         <rect key="frame" x="243" y="52" width="85" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealership inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmT-Kv-PYM">
                                                         <rect key="frame" x="243.00000000000003" y="70" width="115.33333333333334" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telephone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdX-r4-Dul">
                                                         <rect key="frame" x="243.00000000000003" y="112" width="52.333333333333343" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="416-534-3433" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s95-TT-mTJ">
                                                         <rect key="frame" x="243" y="130" width="115" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postal Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbw-MM-3eV">
                                                         <rect key="frame" x="15.999999999999996" y="168" width="61.666666666666657" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509803922" green="0.35686274509803922" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123 Street Blvd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDR-nq-yFX">
                                                         <rect key="frame" x="16.000000000000007" y="186" width="117.66666666666669" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-dd-IFc">
                                                         <rect key="frame" x="243" y="172" width="19.666666666666686" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bramptom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-GW-Phu">
                                                         <rect key="frame" x="243" y="190" width="81" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postal Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM9-vO-abc">
                                                         <rect key="frame" x="15.999999999999996" y="228" width="61.666666666666657" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L6T 3J5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXK-gf-Ai4">
                                                         <rect key="frame" x="16" y="246" width="64.666666666666671" height="22"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1534,7 +1565,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4C-yH-bIn">
                                                 <rect key="frame" x="20" y="2864" width="68.333333333333329" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rqc-VG-k83">
@@ -1546,36 +1577,39 @@
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="97Z-g7-48h">
                                                 <rect key="frame" x="20" y="2904" width="374" height="60"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="3hr-Vk-Xmt"/>
                                                 </constraints>
                                                 <string key="text">You may upload documents related to your loan application below. Please refer to File Type to see which documents are requested for your application. Only PDF, JPG, JPEG, PNG format allowed &amp; with maximum size of 5MB per file.</string>
-                                                <color key="textColor" systemColor="labelColor"/>
+                                                <color key="textColor" red="0.50980392156862742" green="0.51372549019607838" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s00-JK-Lve">
                                                 <rect key="frame" x="20.000000000000007" y="2980" width="108.66666666666669" height="17"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkn-WP-qbR">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkn-WP-qbR">
                                                 <rect key="frame" x="20" y="3005" width="374" height="48"/>
+                                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="9kM-7X-H6v"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                <state key="normal" title="Select Document Type"/>
+                                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Select Document Type">
+                                                    <color key="titleColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6s-4m-6V5">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6s-4m-6V5">
                                                 <rect key="frame" x="20" y="3073" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="4Ff-Qk-pk5"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                <state key="normal" title="Choose file"/>
+                                                <state key="normal" image="ChooseFile"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY0-6X-MNo">
                                                 <rect key="frame" x="20" y="3133" width="374" height="38"/>
@@ -1589,7 +1623,7 @@
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="anx-eH-kGc">
                                                 <rect key="frame" x="0.0" y="3219" width="414" height="266"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="266" id="yhM-Mg-L9V"/>
                                                 </constraints>
@@ -1607,19 +1641,19 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="filename.jpg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbp-Vi-mRY">
                                                                             <rect key="frame" x="20" y="15" width="44" height="10"/>
                                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="8"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Front" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoV-4g-PHv">
                                                                             <rect key="frame" x="192" y="15" width="29" height="10"/>
                                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="8"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 23, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jes-bs-Pcw">
                                                                             <rect key="frame" x="302" y="15" width="48" height="10"/>
                                                                             <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="8"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xib-gY-tO6">
@@ -1631,7 +1665,7 @@
                                                                             <state key="normal" image="Bucket"/>
                                                                         </button>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
                                                                         <constraint firstItem="Jes-bs-Pcw" firstAttribute="leading" secondItem="QoV-4g-PHv" secondAttribute="trailing" constant="81" id="2Q4-4E-8ch"/>
                                                                         <constraint firstAttribute="trailing" secondItem="xib-gY-tO6" secondAttribute="trailing" constant="20" symbolic="YES" id="VMv-0o-XgN"/>
@@ -1651,6 +1685,7 @@
                                                                 <constraint firstAttribute="bottom" secondItem="Ny5-46-owo" secondAttribute="bottom" id="trz-Yw-Kbi"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <outlet property="dateLbl" destination="Jes-bs-Pcw" id="3X3-GJ-UY3"/>
                                                             <outlet property="deleteBtn" destination="xib-gY-tO6" id="93G-tq-i9B"/>
@@ -1660,8 +1695,15 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Down 24px-1" translatesAutoresizingMaskIntoConstraints="NO" id="CYn-SB-N1f">
+                                                <rect key="frame" x="354" y="3017" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="2ec-yj-dte"/>
+                                                    <constraint firstAttribute="width" constant="24" id="hWm-4K-QhJ"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="rS1-Sq-m4S" firstAttribute="trailing" secondItem="P7i-l8-xU7" secondAttribute="trailing" id="09E-PW-k2c"/>
                                             <constraint firstItem="CLq-fu-hQ1" firstAttribute="top" secondItem="1h9-8m-wgp" secondAttribute="bottom" constant="8" symbolic="YES" id="0E3-Va-A5V"/>
@@ -1699,6 +1741,7 @@
                                             <constraint firstItem="7xy-nP-5qB" firstAttribute="top" secondItem="rn0-l0-H2Q" secondAttribute="bottom" constant="16" id="BNp-yn-tJB"/>
                                             <constraint firstItem="BIx-AK-pnd" firstAttribute="leading" secondItem="XU9-TE-xxA" secondAttribute="leading" constant="36" id="Bcl-fo-YSg"/>
                                             <constraint firstItem="HOD-jP-fV7" firstAttribute="top" secondItem="tEZ-LL-kcd" secondAttribute="bottom" constant="20" id="Bvf-7E-siR"/>
+                                            <constraint firstItem="CYn-SB-N1f" firstAttribute="centerY" secondItem="Dkn-WP-qbR" secondAttribute="centerY" id="CEN-Uf-ZZz"/>
                                             <constraint firstItem="NOI-sY-wWc" firstAttribute="trailing" secondItem="rn0-l0-H2Q" secondAttribute="trailing" id="Cjc-8f-CdR"/>
                                             <constraint firstItem="js3-w7-eNH" firstAttribute="trailing" secondItem="sEx-FB-QrU" secondAttribute="trailing" id="Cke-75-NHd"/>
                                             <constraint firstItem="rn0-l0-H2Q" firstAttribute="trailing" secondItem="Ifn-Sd-RJI" secondAttribute="trailing" id="DhO-ME-8Fs"/>
@@ -1853,6 +1896,7 @@
                                             <constraint firstItem="A0C-JX-BXJ" firstAttribute="top" secondItem="Afm-gC-sUl" secondAttribute="bottom" constant="41" id="vAp-Wr-5wc"/>
                                             <constraint firstItem="Jwf-bb-8vR" firstAttribute="top" secondItem="PEv-Tb-gww" secondAttribute="bottom" constant="8" id="vo8-fs-FU9"/>
                                             <constraint firstItem="CCS-gD-esq" firstAttribute="trailing" secondItem="Avs-LL-S56" secondAttribute="trailing" id="vuc-DU-FBW"/>
+                                            <constraint firstItem="CYn-SB-N1f" firstAttribute="leading" secondItem="Dkn-WP-qbR" secondAttribute="trailing" constant="-40" id="wpi-GE-1av"/>
                                             <constraint firstItem="yXN-1N-gci" firstAttribute="top" secondItem="q8T-Py-Mcx" secondAttribute="bottom" constant="11.999999999999829" id="xTB-EU-GPk"/>
                                             <constraint firstItem="rS1-Sq-m4S" firstAttribute="top" secondItem="W5d-H2-KeA" secondAttribute="bottom" constant="8" symbolic="YES" id="z8o-Ok-eLc"/>
                                             <constraint firstItem="rn0-l0-H2Q" firstAttribute="height" secondItem="Ifn-Sd-RJI" secondAttribute="height" id="zTz-Yk-pLv"/>
@@ -1972,7 +2016,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKj-pg-fwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942.0289855072465" y="1138.4510869565217"/>
+            <point key="canvasLocation" x="2849.275362318841" y="1138.4510869565217"/>
         </scene>
         <!--Search Screen View Controller-->
         <scene sceneID="1n5-tX-aQc">
@@ -2274,6 +2318,23 @@
             </objects>
             <point key="canvasLocation" x="-468.11594202898556" y="784.23913043478262"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="w9p-h0-ns8">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dm8-vy-wdt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tq6-Rx-aC7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="My6-IG-hRQ" kind="relationship" relationship="viewControllers" id="Z8T-QL-Wy2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RqB-nM-Sfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340.57971014492756" y="10.597826086956523"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="MzF-9g-t8r">
@@ -2284,34 +2345,25 @@
         <image name="BlackCar" width="160" height="120"/>
         <image name="Bucket" width="14" height="14"/>
         <image name="Calendar" width="16" height="16"/>
+        <image name="ChooseFile" width="335" height="40"/>
         <image name="Down 24px" width="24" height="24"/>
+        <image name="Down 24px-1" width="20" height="20"/>
         <image name="Heart" width="24" height="24"/>
         <image name="Icon" width="20" height="20"/>
         <image name="Location-1" width="12" height="14"/>
         <image name="MaskGroup" width="335" height="170"/>
         <image name="ellipse" width="3.6666667461395264" height="16"/>
         <image name="girl" width="36" height="36"/>
+        <image name="search grey" width="24" height="24"/>
         <image name="side menu" width="24" height="24"/>
         <image name="tabler_bell" width="24" height="24"/>
         <image name="tag 1" width="16" height="16"/>
         <image name="uncheck" width="21.333333969116211" height="21.333333969116211"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -28,7 +28,8 @@ class ChatPageViewController: UIViewController {
     }
     
     @IBAction func editBtn(_ sender: Any) {
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "BlockViewController") as! BlockViewController
+        
+        let main = self.storyboard?.instantiateViewController(withIdentifier: "BottomCardViewController") as! BottomCardViewController
         main.modalPresentationStyle = .overCurrentContext
         main.modalTransitionStyle = .crossDissolve
         present(main, animated: true, completion: nil)

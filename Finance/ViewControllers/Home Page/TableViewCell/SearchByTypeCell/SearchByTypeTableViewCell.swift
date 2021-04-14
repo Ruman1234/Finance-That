@@ -61,14 +61,14 @@ extension SearchByTypeTableViewCell : UICollectionViewDelegateFlowLayout{
         return CGSize(width: size, height: 115)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)    }
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 12
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 12
     }
 
 }

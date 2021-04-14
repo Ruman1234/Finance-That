@@ -30,7 +30,16 @@ class FilterViewController: UIViewController {
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
         
-        
+        nextBtn.setButtonTheme()
+        self.design(btn: previousBtn)
+    }
+    
+    func design(btn :UIButton)  {
+        btn.layer.backgroundColor = UIColor.white.cgColor
+        btn.layer.cornerRadius = 19
+        btn.layer.borderWidth = 1
+        btn.layer.borderColor = Color.red_theme_color.cgColor
+        btn.setTitleColor(Color.red_theme_color, for: .normal)
     }
 }
 
@@ -45,13 +54,13 @@ extension FilterViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if tableView == categoriesTableView {
-            let header = UIView(frame: CGRect(x: 24, y: 0, width: self.categoriesTableView.frame.size.width, height: 58))
+            let header = UIView(frame: CGRect(x: 20, y: 0, width: self.categoriesTableView.frame.size.width, height: 20))
             header.backgroundColor = .white
             
             let label = UILabel(frame: header.frame)
             label.text = categoriesArray[section].section
             label.textAlignment = .left
-            label.font = UIFont(name: "Basis Grotesque Pro Medium", size: 13)
+            label.font = UIFont(name: "Basis Grotesque Pro Medium", size: 17)
             label.textColor = Color.App_theme_color
             header.addSubview(label)
             return header
@@ -59,12 +68,14 @@ extension FilterViewController : UITableViewDataSource, UITableViewDelegate {
         
         return UIView()
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if tableView == categoriesTableView {
             return 58
         }
         return 0
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if tableView == categoriesTableView {
             return 320

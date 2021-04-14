@@ -16,6 +16,8 @@ pod "KRProgressHUD"
 pod 'IQKeyboardManagerSwift'
 pod 'RangeSeekSlider'
 pod 'RangeSeekSlider'
+pod 'SwiftyStarRatingView'
+pod 'ImageViewer.swift'
 
   target 'FinanceTests' do
     inherit! :search_paths

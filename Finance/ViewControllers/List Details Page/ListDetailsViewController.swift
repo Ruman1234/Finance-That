@@ -53,6 +53,7 @@ class ListDetailsViewController: UIViewController {
     @IBOutlet weak var msgBtn: UIButton!
     @IBOutlet weak var financeThatBtn: UIButton!
     @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var photosBtn: UIButton!
     
     
     override func viewDidLoad() {
@@ -70,6 +71,9 @@ class ListDetailsViewController: UIViewController {
         
         setTextView(textView: descriptionTextView)
         setTextView(textView: reviewDetailsTextView)
+        
+        photosBtn.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8).cgColor
+        photosBtn.layer.cornerRadius = 5
     }
     
     func setFinanceButton() {
@@ -96,6 +100,10 @@ class ListDetailsViewController: UIViewController {
         view.layer.borderColor = UIColor(red: 0.933, green: 0.933, blue: 0.941, alpha: 1).cgColor
     }
     
+    @IBAction func photosBtn(_ sender: Any) {
+        let main = self.storyboard?.instantiateViewController(withIdentifier: "ImageGalleryViewController") as! ImageGalleryViewController
+        self.navigationController?.pushViewController(main, animated: true)
+    }
     @IBAction func financeThatBtn(_ sender: Any) {
     }
     @IBAction func chatBtn(_ sender: Any) {
@@ -104,6 +112,7 @@ class ListDetailsViewController: UIViewController {
     }
     @IBAction func submitBtn(_ sender: Any) {
     }
+    
     @IBAction func paymentCalculateBtn(_ sender: Any) {
         let main = self.storyboard?.instantiateViewController(withIdentifier: "PaymentCalculatorViewController") as! PaymentCalculatorViewController
         main.modalPresentationStyle = .overCurrentContext

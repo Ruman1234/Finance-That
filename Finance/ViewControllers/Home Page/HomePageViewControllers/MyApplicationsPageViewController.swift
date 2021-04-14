@@ -21,9 +21,14 @@ class MyApplicationsPageViewController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var preApprovedLbl: UILabel!
     @IBOutlet weak var declineLbl: UILabel!
     
+    var sectionArray = [DataArray]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sectionArray = [DataArray(section: "Current Application", rows: ["1","1"]),
+                                  DataArray(section: "Past Application", rows: ["1","1","1","1","1"])]
+
         applicationTableView.delegate = self
         applicationTableView.dataSource = self
         
@@ -44,15 +49,35 @@ class MyApplicationsPageViewController: UIViewController, UITableViewDelegate, U
         redView.setRoundView()
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionArray.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return sectionArray[section].rows.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if tableView == applicationTableView {
+            let header = UIView(frame: CGRect(x: 20, y: 0, width: self.applicationTableView.frame.size.width, height: 40))
+            header.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
+            
+            let label = UILabel(frame: header.frame)
+            label.text = sectionArray[section].section
+            label.textAlignment = .left
+            label.font = UIFont(name: "Basis Grotesque Pro Medium", size: 17)
+            label.textColor = Color.App_theme_color
+            header.addSubview(label)
+            return header
+        }
+        return UIView()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "applicationCell", for: indexPath) as! MyApplicationPageTableViewCell
         return cell
-        
     }
+    
     @IBAction func viewBtn(_ sender: Any) {
         
         let main = self.storyboard?.instantiateViewController(withIdentifier: "MyApplicationDetailViewController") as! MyApplicationDetailViewController

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Unfortunately your credit score does not meet our minimum requirement of 500. If you believe that we have the incorrect information please contact us at applications@financethat.ca.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Unfortunately your credit score does not meet our minimum requirement of 500. If you believe that we have the incorrect information please contact us at applications@financethat.ca@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Unfortunately your credit score does not meet our minimum requirement of 500. If you believe that we have the incorrect information please contact us at applications@financethat.ca@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

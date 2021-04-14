@@ -38,12 +38,12 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         cell.profileImg.image = imgArr[indexPath.row]
         cell.name.text = nameArr[indexPath.row]
         cell.messageLbl.text = messageArr[indexPath.row]
-        
+        cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 90
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

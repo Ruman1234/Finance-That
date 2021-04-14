@@ -45,6 +45,11 @@ class Constants {
     static let LOGIN = "api/token/"
     static let EMAIL = "request-reset-email/"
     static let RESET_PASSWORD = "password-reset-complete/"
+    static let Price_Listing = "ad_details/rprice_listing/"
+    static let New_Listing = "ad_details/new_listing?latitude&longitude"
+    static let Under_Listing = "ad_details/under_listing/"
+    static let Feature_Listing = "ad_details/featured_listing"
+    static let Listing_Filter = "ad_details/listing_filter/"
 
 }
 

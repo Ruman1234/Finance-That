@@ -111,53 +111,6 @@ class MyApplicationDetailViewController: UIViewController, UITableViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        applicationLbl.textColor = Color.App_theme_color
-        idLbl.textColor = Color.App_theme_color
-        nameLbl.textColor = Color.App_theme_color
-        gmailLbl.textColor = Color.App_theme_color
-//        numberLbl.textColor = Color.App_theme_color
-        amountLbl.textColor = Color.App_theme_color
-//        priceLbl.textColor = Color.App_theme_color
-        dateLbl.textColor = Color.App_theme_color
-        approvedLbl.textColor = Color.light_grey_color
-        approvedPrice.textColor = Color.App_theme_color
-        amorizationLbl.textColor = Color.App_theme_color
-        amorizationMonthLbl.textColor = Color.light_grey_color
-        downPaymentLbl.textColor = Color.light_grey_color
-        downPriceLbl.textColor = Color.App_theme_color
-        interestLbl.textColor = Color.light_grey_color
-        interestRatioLbl.textColor = Color.App_theme_color
-        paymentsLbl.textColor = Color.light_grey_color
-        paymentsPriceLbl.textColor = Color.red_theme_color
-        thirdVehicleLbl.textColor = Color.App_theme_color
-        typeOfVehicleLbl.textColor = Color.App_theme_color
-        vehicleMakeLbl.textColor = Color.App_theme_color
-        vehicleYearLbl.textColor = Color.App_theme_color
-        Kilometers.textColor = Color.App_theme_color
-//        priceLbl.textColor = Color.App_theme_color
-        conditionLbl.textColor = Color.App_theme_color
-        financeStockLbl.textColor = Color.App_theme_color
-        stockFoundLbl.textColor = Color.App_theme_color
-        thirdPartySellerLbl.textColor = Color.App_theme_color
-//        sellerNameLbl.textColor = Color.App_theme_color
-        dealerNameLbl.textColor = Color.App_theme_color
-//        emailAddressLbl.textColor = Color.App_theme_color
-        telephone1Lbl.textColor = Color.App_theme_color
-        telephone2Lbl.textColor = Color.App_theme_color
-        faxNumberLbl.textColor = Color.App_theme_color
-        streetAddressLbl.textColor = Color.App_theme_color
-        provinceLbl.textColor = Color.App_theme_color
-        cityLbl.textColor = Color.App_theme_color
-        postalCodeLbl.textColor = Color.App_theme_color
-        financeSellerLbl.textColor = Color.App_theme_color
-        financesellerNameLbl.textColor = Color.App_theme_color
-        financeemailAddressLbl.textColor = Color.App_theme_color
-        financeTelephoneLbl.textColor = Color.App_theme_color
-        financePostal.textColor = Color.App_theme_color
-        documentsLbl.textColor = Color.App_theme_color
-        documentUpload.textColor = Color.App_theme_color
-        textView.textColor = Color.gray_theme_color
-        
         self.redDesign(btn: viewBtn)
         self.redDesign(btn: viewThirdPartyBtn)
         self.redDesign(btn: searchBtn)
@@ -185,7 +138,7 @@ class MyApplicationDetailViewController: UIViewController, UITableViewDelegate, 
     
     func selectDocumentTypeBtn(btn :UIButton)  {
         btn.setTitleColor(UIColor(red: 0.537, green: 0.475, blue: 0.6, alpha: 1), for: .normal)
-        btn.layer.backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1).cgColor
+//        btn.layer.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1).cgColor
         btn.layer.cornerRadius = 5
         btn.layer.borderWidth = 1
         btn.layer.borderColor = UIColor(red: 0.933, green: 0.933, blue: 0.941, alpha: 1).cgColor
