@@ -38,7 +38,7 @@ class Color {
 }
 
 class Constants {
-    
+    static var TESTING_BASE_URL = "http://18.219.178.49:5000/"
     static var BASE_URL = "http://24.227.130.19:8000/"
     static let DEALER_DETAIL = "dealer_details/create/"
     static let BUYER_DETAIL = "buyer_details/create/"
