@@ -93,6 +93,7 @@ class Post5ViewController: UIViewController {
     }
     
     @IBAction func conditionDropDownBtn(_ sender: Any) {
+        self.dropDown.show()
     }
     
 }
