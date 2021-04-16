@@ -20,6 +20,15 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This App accesses your location for ‘pick up and drop off’ services.
+    </string>
+	<key>NSLocationUsageDescription</key>
+	<string>This App accesses your location for ‘pick up and drop off’ services.
+    </string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This App accesses your location for ‘pick up and drop off’ services.
+    </string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>BasisGrotesquePro-Bold.ttf</string>

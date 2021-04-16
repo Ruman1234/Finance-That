@@ -20,13 +20,16 @@ class Post1ViewController: UIViewController {
     @IBOutlet weak var lastnameTextField: CustomTextField!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var dateTextField: CustomTextField!
-    @IBOutlet weak var opplicantLbl: UILabel!
-    @IBOutlet weak var yesRadioBtn: UIButton!
-    @IBOutlet weak var noRadioBtn: UIButton!
-    @IBOutlet weak var yesLbl: UILabel!
-    @IBOutlet weak var noLbl: UILabel!
+    
+    @IBOutlet weak var telephoneTxtField: CustomTextField!
+    //    @IBOutlet weak var opplicantLbl: UILabel!
+//    @IBOutlet weak var yesRadioBtn: UIButton!
+//    @IBOutlet weak var noRadioBtn: UIButton!
+//    @IBOutlet weak var yesLbl: UILabel!
+//    @IBOutlet weak var noLbl: UILabel!
     @IBOutlet weak var nextBtn: UIButton!
     
+    let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +38,10 @@ class Post1ViewController: UIViewController {
         firstNamelbl.textColor = Color.App_theme_color
         lastNameLbl.textColor = Color.App_theme_color
         dateLbl.textColor = Color.App_theme_color
-        opplicantLbl.textColor = Color.App_theme_color
-        yesLbl.textColor = Color.App_theme_color
-        noLbl.textColor = Color.App_theme_color
         
         nextBtn.setButtonTheme()
-
+        
+        showDatePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,17 +59,55 @@ class Post1ViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func yesRadioBtn(_ sender: Any) {
-        
-    }
-    
-    @IBAction func noRadioBtn(_ sender: Any) {
-    }
-    
     @IBAction func nextBtn(_ sender: Any) {
-        
+        if PostApplicaitonObject.IsCoApplicant{
+            self.setData(dict: &PostApplicaitonObject.coAppObject)
+        }else{
+            self.setData(dict: &PostApplicaitonObject.mainObject)
+        }
+        print(PostApplicaitonObject.mainObject)
         let main = self.storyboard?.instantiateViewController(withIdentifier: "Post2ViewController") as! Post2ViewController
         self.navigationController?.pushViewController(main, animated: true)
 
     }
+    
+    func setData(dict:inout [String : Any]) {
+        dict["first_name"]  = self.firstNameTextField.text  ?? ""
+        dict["last_name"]   = self.lastnameTextField.text   ?? ""
+        dict["dob"]         = self.dateTextField.text       ?? ""
+        dict["telephone"]   = self.telephoneTxtField.text   ?? ""
+    }
+    
+}
+
+extension Post1ViewController {
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
+
+       //ToolBar
+       let toolbar = UIToolbar();
+       toolbar.sizeToFit()
+       let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+      let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+
+     toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+
+        dateTextField.inputAccessoryView = toolbar
+        dateTextField.inputView = datePicker
+
+     }
+
+      @objc func donedatePicker(){
+
+       let formatter = DateFormatter()
+       formatter.dateFormat = "dd/MM/yyyy"
+        dateTextField.text = formatter.string(from: datePicker.date)
+       self.view.endEditing(true)
+     }
+
+     @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+      }
 }

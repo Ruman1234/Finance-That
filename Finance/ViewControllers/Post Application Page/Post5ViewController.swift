@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import DropDown
 
 class Post5ViewController: UIViewController {
 
     @IBOutlet weak var scroller: UIScrollView!
+    
     @IBOutlet weak var topLbl: UILabel!
     @IBOutlet weak var yearLbl: UILabel!
     @IBOutlet weak var makeLbl: UILabel!
@@ -24,24 +26,40 @@ class Post5ViewController: UIViewController {
     @IBOutlet weak var conditionLbl: UILabel!
     @IBOutlet weak var vinTextField: CustomTextField!
     @IBOutlet weak var conditionTextField: CustomTextField!
-    @IBOutlet weak var priceLbl: UILabel!
-    @IBOutlet weak var priceTextField: CustomTextField!
+    
+    @IBOutlet weak var conditionDropDownBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
+    
+    let datePicker = UIDatePicker()
+    let dropDown = DropDown()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topLbl.textColor = Color.App_theme_color
-        yearLbl.textColor = Color.App_theme_color
-        makeLbl.textColor = Color.App_theme_color
-        modelLbl.textColor = Color.App_theme_color
-        kmLbl.textColor = Color.App_theme_color
-        vinLbl.textColor = Color.App_theme_color
-        conditionLbl.textColor = Color.App_theme_color
-        priceLbl.textColor = Color.App_theme_color
-        
         nextBtn.setButtonTheme()
-
+        
+        showDatePicker()
+        
+        dropDown.anchorView = conditionDropDownBtn // UIView or UIBarButtonItem
+        DropDown.appearance().textColor = Color.App_theme_color
+        DropDown.appearance().selectedTextColor = Color.App_theme_color
+        DropDown.appearance().textFont = UIFont(name: "Basis Grotesque Pro Medium", size: 15)!
+        DropDown.appearance().backgroundColor = UIColor(red: 0.988, green: 0.988, blue: 0.988, alpha: 1)
+        DropDown.appearance().selectionBackgroundColor = UIColor(red: 0.98, green: 0.933, blue: 0.918, alpha: 1)
+        dropDown.width = self.conditionDropDownBtn.frame.width
+        // The list of items to display. Can be changed dynamically
+        dropDown.dataSource = ["New", "Used"]
+        
+        // Action triggered on selection
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+//            unhide()
+            if index == 0 {
+                self.conditionTextField.text = "New"
+            }else if index == 1 {
+                self.conditionTextField.text = "Used"
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,4 +91,40 @@ class Post5ViewController: UIViewController {
         self.navigationController?.pushViewController(main, animated: true)
 
     }
+    
+    @IBAction func conditionDropDownBtn(_ sender: Any) {
+    }
+    
+}
+
+extension Post5ViewController {
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
+
+       //ToolBar
+       let toolbar = UIToolbar();
+       toolbar.sizeToFit()
+       let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+      let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+
+     toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+
+        yearTextField.inputAccessoryView = toolbar
+        yearTextField.inputView = datePicker
+
+     }
+
+      @objc func donedatePicker(){
+
+       let formatter = DateFormatter()
+       formatter.dateFormat = "dd/MM/yyyy"
+        yearTextField.text = formatter.string(from: datePicker.date)
+       self.view.endEditing(true)
+     }
+
+     @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+      }
 }

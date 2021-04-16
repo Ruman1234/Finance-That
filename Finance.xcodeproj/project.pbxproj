@@ -122,6 +122,7 @@
 		1885D73F26039CAE0093B60E /* SearchByTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885D73D26039CAE0093B60E /* SearchByTypeTableViewCell.xib */; };
 		1885D7562603A0780093B60E /* SearchByTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D7542603A0780093B60E /* SearchByTypeCollectionViewCell.swift */; };
 		1885D7572603A0780093B60E /* SearchByTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885D7552603A0780093B60E /* SearchByTypeCollectionViewCell.xib */; };
+		18865FE426283A2B00D39845 /* DurationAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18865FE326283A2B00D39845 /* DurationAddressViewController.swift */; };
 		188F094026120C8F000D0E2D /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F093F26120C8F000D0E2D /* ChatPageViewController.swift */; };
 		188F094826121444000D0E2D /* ChatPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F094726121444000D0E2D /* ChatPageTableViewCell.swift */; };
 		188F094D26121B30000D0E2D /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F094C26121B30000D0E2D /* ActionSheetViewController.swift */; };
@@ -301,6 +302,7 @@
 		1885D73D26039CAE0093B60E /* SearchByTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchByTypeTableViewCell.xib; sourceTree = "<group>"; };
 		1885D7542603A0780093B60E /* SearchByTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1885D7552603A0780093B60E /* SearchByTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchByTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		18865FE326283A2B00D39845 /* DurationAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationAddressViewController.swift; sourceTree = "<group>"; };
 		188F093F26120C8F000D0E2D /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
 		188F094726121444000D0E2D /* ChatPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageTableViewCell.swift; sourceTree = "<group>"; };
 		188F094C26121B30000D0E2D /* ActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				18320E4925F300EA00F104E1 /* Post Application Page.storyboard */,
 				1852750C25F3B9A40018CD81 /* Post1ViewController.swift */,
 				1811920125F4368C00839599 /* Post2ViewController.swift */,
+				18865FE326283A2B00D39845 /* DurationAddressViewController.swift */,
 				1811920625F43CAD00839599 /* Post3ViewController.swift */,
 				1811920B25F453DF00839599 /* Post4ViewController.swift */,
 				1811921025F45D6800839599 /* Post5ViewController.swift */,
@@ -976,6 +979,7 @@
 				18A48A7E25E64DEE006F3097 /* Frameworks */,
 				18A48A7F25E64DEE006F3097 /* Resources */,
 				CF2FBF1437D0B4D9A6A69604 /* [CP] Embed Pods Frameworks */,
+				2D02B802C0F33197CA9F5494 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1014,6 +1018,7 @@
 				18A48A9F25E64DF3006F3097 /* Frameworks */,
 				18A48AA025E64DF3006F3097 /* Resources */,
 				98845111D463B17D4D7D0E3D /* [CP] Embed Pods Frameworks */,
+				F7CB997798871E4E4CE72A31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1134,6 +1139,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2D02B802C0F33197CA9F5494 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7CC4EB91C059CEED020AFA13 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1212,6 +1234,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7CB997798871E4E4CE72A31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1220,6 +1259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E397B026203DD2000D50AB /* CanadianCollectionViewCell.swift in Sources */,
+				18865FE426283A2B00D39845 /* DurationAddressViewController.swift in Sources */,
 				1860381025FA65D60093BC02 /* NetworkManager.swift in Sources */,
 				180D1347262022A6003539A1 /* SearchTextField.swift in Sources */,
 				181E7582261855AD0013CA5D /* DriveTrainViewController.swift in Sources */,
@@ -1528,12 +1568,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4KMVWMQG8;
 				INFOPLIST_FILE = Finance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ammar.Finance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EcoLogix.SnapToSell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1546,12 +1587,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4KMVWMQG8;
 				INFOPLIST_FILE = Finance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ammar.Finance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EcoLogix.SnapToSell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

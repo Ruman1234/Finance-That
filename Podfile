@@ -19,6 +19,10 @@ pod 'RangeSeekSlider'
 pod 'SwiftyStarRatingView'
 pod 'ImageViewer.swift'
 
+pod 'GoogleMaps'
+pod 'GooglePlacePicker'
+pod 'GooglePlaces'
+
   target 'FinanceTests' do
     inherit! :search_paths
     # Pods for testing
