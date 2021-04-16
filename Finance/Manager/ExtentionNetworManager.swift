@@ -153,7 +153,7 @@ extension NetworkManager {
                        success : @escaping (ResetPasswordModel) -> Void,
                        failure : @escaping (NSError) -> Void)  {
         
-        self.request(url: Constants.BASE_URL  + Constants.EMAIL, method: .post,parameters:["email" : email]) { (response) in
+        self.request(url: Constants.BASE_URL  + Constants.EMAIL, method: .post,parameters:["email" : email,"code_type":"password_reset"]) { (response) in
             if response.response?.statusCode == 200 {
                 do{
                     let value = try response.result.get()
