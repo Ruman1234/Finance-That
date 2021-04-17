@@ -52,25 +52,64 @@ class Post6ViewController: UIViewController {
         scroller.contentSize = CGSize(width: self.view.frame.width, height: 1000)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-
+    func validInput() -> Bool {
+        var flag = true
+        if firstNameTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter First Name")
+            flag = false
+        }else if lastNameTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Last Name")
+            flag = false
+        }else if streetTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if cityTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if provinceTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if postalTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if emailTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if telephoneTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }
+        return flag
+    }
+    
     @IBAction func backBtn(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func nextBtn(_ sender: Any) {
-        
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "Post7ViewController") as! Post7ViewController
-        self.navigationController?.pushViewController(main, animated: true)
+        self.setData(dict: &PostApplicaitonObject.seller)
+        if self.validInput() {
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post7ViewController") as! Post7ViewController
+            self.navigationController?.pushViewController(main, animated: true)
+        }
     }
+    
+    func setData(dict:inout [String : Any]) {
+        dict["first_name"]          = self.firstNameTextField.text      ?? ""
+        dict["last_name"]           = self.lastNameTextField.text       ?? ""
+        dict["street"]              = self.streetTextField.text         ?? ""
+        dict["city"]                = self.cityTextField.text           ?? ""
+        dict["province"]            = self.provinceTextField.text       ?? ""
+        dict["postal_code"]         = self.postalTextField.text         ?? ""
+        dict["email"]               = self.emailTextField.text          ?? ""
+        dict["telephone"]           = self.telephoneTextField.text      ?? ""
+        PostApplicaitonObject.mainObject["seller"] = dict
+    }
+    
+   
 }

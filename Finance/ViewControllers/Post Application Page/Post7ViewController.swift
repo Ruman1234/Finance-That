@@ -18,33 +18,38 @@ class Post7ViewController: UIViewController {
     @IBOutlet weak var agreeLbl: UILabel!
     @IBOutlet weak var radioBtn1: UIButton!
     @IBOutlet weak var radioBtn2: UIButton!
-    @IBOutlet weak var submitBtn: UIButton!
-    
+    @IBOutlet weak var nextBtn: UIButton!
+    var isHideAmountFields = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        topLbl.textColor = Color.App_theme_color
-        financingLbl.textColor = Color.App_theme_color
-        financingTextField.textColor = Color.App_theme_color
-        signUpLbl.textColor = Color.App_theme_color
-        haveReadLbl.textColor = Color.App_theme_color
-        agreeLbl.textColor = Color.App_theme_color
-        
-        submitBtn.setButtonTheme()
+                
+        if isHideAmountFields{
+            financingLbl.isHidden = true
+            financingTextField.isHidden = true
+        }
+        nextBtn.setButtonTheme()
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
-
+    func validInput() -> Bool {
+        var flag = true
+        if financingTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Finance Amount")
+            flag = false
+        }else if radioBtn1.isSelected == true {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }else if radioBtn2.isSelected == true {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }
+        return flag
+    }
+    
     @IBAction func backBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -67,11 +72,14 @@ class Post7ViewController: UIViewController {
         }
     }
     
-    @IBAction func submitBtn(_ sender: Any) {
+    @IBAction func nextBtn(_ sender: Any) {
         
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "Post8ViewController") as! Post8ViewController
-        self.navigationController?.pushViewController(main, animated: true)
+        if  self.validInput(){
+            PostApplicaitonObject.mainObject["financing_amount"] = financingTextField.text ?? ""
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "FinalizeApplicationViewController") as! FinalizeApplicationViewController
+            self.navigationController?.pushViewController(main, animated: true)
 
+        }
     }
     
 }

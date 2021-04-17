@@ -1,46 +1,77 @@
 PODS:
   - Alamofire (5.4.1)
   - DropDown (2.3.13)
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (3.1.0):
+    - GoogleMaps (= 3.1.0)
+    - GooglePlaces (= 3.1.0)
+  - GooglePlaces (3.1.0):
+    - GoogleMaps/Base (= 3.1.0)
+  - ImageViewer.swift (3.3.3)
   - IQKeyboardManagerSwift (6.5.6)
   - KRActivityIndicatorView (3.0.7)
   - KRProgressHUD (3.4.7):
     - KRActivityIndicatorView (= 3.0.7)
   - ObjectMapper (4.2.0)
+  - RangeSeekSlider (1.8.0)
   - SDWebImage (5.10.4):
     - SDWebImage/Core (= 5.10.4)
   - SDWebImage/Core (5.10.4)
   - SwiftyJSON (5.0.0)
+  - SwiftyStarRatingView (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
   - DropDown
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - ImageViewer.swift
   - IQKeyboardManagerSwift
   - KRProgressHUD
   - ObjectMapper
+  - RangeSeekSlider
   - SDWebImage
   - SwiftyJSON
+  - SwiftyStarRatingView
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - DropDown
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - ImageViewer.swift
     - IQKeyboardManagerSwift
     - KRActivityIndicatorView
     - KRProgressHUD
     - ObjectMapper
+    - RangeSeekSlider
     - SDWebImage
     - SwiftyJSON
+    - SwiftyStarRatingView
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
+  GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  ImageViewer.swift: 3dbb74a68ac4bdd6cdd585b3128dae17ccd733e5
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
   KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftyStarRatingView: a2b0057700e0adeb8e7442c55d99cb53b531d2f4
 
-PODFILE CHECKSUM: 3063d8e843e1c36c4bd9185ea94083e12cd8241c
+PODFILE CHECKSUM: 17974e62f6089afcf7a950e965896bc283a862fd
 
 COCOAPODS: 1.10.1

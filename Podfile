@@ -14,6 +14,14 @@ pod 'ObjectMapper'
 pod 'SDWebImage'
 pod "KRProgressHUD"
 pod 'IQKeyboardManagerSwift'
+pod 'RangeSeekSlider'
+pod 'RangeSeekSlider'
+pod 'SwiftyStarRatingView'
+pod 'ImageViewer.swift'
+
+pod 'GoogleMaps'
+pod 'GooglePlacePicker'
+pod 'GooglePlaces'
 
   target 'FinanceTests' do
     inherit! :search_paths

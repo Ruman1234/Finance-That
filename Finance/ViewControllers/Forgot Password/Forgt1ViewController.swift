@@ -54,46 +54,6 @@ class Forgt1ViewController: UIViewController {
     }
     
     
-    
-    func restEmail() {
-        var dict = Dictionary<String, Any>()
-
-            dict = ["email": emailTextField.text ?? "", "redirect_url": "http://24.227.130.19/"]
-            var  jsonData = NSData()
-
-           // var dataString2 :String = ""
-            do {
-                 jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) as NSData
-                // you can now cast it with the right type
-            } catch {
-                print(error.localizedDescription)
-            }
-
-            print(jsonData)
-            let url:URL = URL(string: "http://24.227.130.19:8000/request-reset-email/")!
-            let session = URLSession.shared
-
-
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("\(jsonData.length)", forHTTPHeaderField: "Content-Length")
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = jsonData as Data
-
-            let task = session.dataTask(with: request as URLRequest) {
-                (
-                data, response, error) in
-                guard let data = data, let _:URLResponse = response, error == nil else {
-                    print("error")
-                    return
-                }
-                let dataString =  String(data: data, encoding: String.Encoding.utf8)
-                print("no data",dataString ?? "no data")
-            }
-            task.resume()
-        
-    }
-    
     @IBAction func backBtn(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)

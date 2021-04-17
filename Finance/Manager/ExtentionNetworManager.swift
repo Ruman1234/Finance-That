@@ -90,6 +90,7 @@ extension NetworkManager {
             return true
         }
     }
+    
     func DealerDetails(images : [imageData],
                   params : Parameters,
                   viewcontroller : UIViewController = UIViewController(),
@@ -122,8 +123,6 @@ extension NetworkManager {
             debugPrint("SUCCESS RESPONSE: \(response)")
             success("success")
         }
-        
-        
     }
     
     
@@ -154,7 +153,7 @@ extension NetworkManager {
                        success : @escaping (ResetPasswordModel) -> Void,
                        failure : @escaping (NSError) -> Void)  {
         
-        self.request(url: Constants.BASE_URL  + Constants.EMAIL, method: .post,parameters:["email" : email]) { (response) in
+        self.request(url: Constants.BASE_URL  + Constants.EMAIL, method: .post,parameters:["email" : email,"code_type":"password_reset"]) { (response) in
             if response.response?.statusCode == 200 {
                 do{
                     let value = try response.result.get()
@@ -192,4 +191,131 @@ extension NetworkManager {
         }
     }
     
+    func AdPriceListing(viewcontroller : UIViewController = UIViewController(),
+                       
+                       success : @escaping (AdDetailsPriceListingModel) -> Void,
+                       failure : @escaping (NSError) -> Void)  {
+        
+        self.request(url: Constants.BASE_URL  + Constants.Price_Listing, method: .get) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<AdDetailsPriceListingModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
+    
+    func AdLatitudeAndLongitude(latitude:String,
+                                longitude:String,
+                                viewcontroller : UIViewController = UIViewController(),
+                       
+                       success : @escaping (ADLatitudeAndLongitudeModel) -> Void,
+                       failure : @escaping (NSError) -> Void)  {
+        
+        self.request(url: Constants.BASE_URL  + Constants.New_Listing, method: .get,parameters: ["latitude": latitude, "longitude": longitude]) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<ADLatitudeAndLongitudeModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
+    
+    func AdUnderListing(viewcontroller : UIViewController = UIViewController(),
+                       
+                       success : @escaping (ADUnderListingModel) -> Void,
+                       failure : @escaping (NSError) -> Void)  {
+        
+        self.request(url: Constants.BASE_URL  + Constants.Under_Listing, method: .get) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<ADUnderListingModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
+    
+    func AdFeatureListing(viewcontroller : UIViewController = UIViewController(),
+                       
+                       success : @escaping (ADFeatureListingModel) -> Void,
+                       failure : @escaping (NSError) -> Void)  {
+        
+        self.request(url: Constants.BASE_URL  + Constants.Feature_Listing, method: .get) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<ADFeatureListingModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
+    
+    func AdListingFilter(viewcontroller : UIViewController = UIViewController(),
+                       
+                       success : @escaping (ADListingFilterModel) -> Void,
+                       failure : @escaping (NSError) -> Void)  {
+        
+        self.request(url: Constants.BASE_URL  + Constants.Feature_Listing, method: .get) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<ADListingFilterModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
+    
+    func FindADs(viewcontroller : UIViewController = UIViewController(),
+                 add:String,
+                         success : @escaping (FindModel) -> Void,
+                         failure : @escaping (NSError) -> Void)  {
+          
+          self.request(url: Constants.BASE_URL  + Constants.FIND_ADS + "\(add)/", method: .get) { (response) in
+              
+              if response.response?.statusCode == 200 {
+                  do{
+                      let value = try response.result.get()
+                      success(Mapper<FindModel>().map(JSON: value as! [String : Any])!)
+                  }catch{
+                      failure(NSError())
+                  }
+                  
+              }else{
+                  failure(NSError())
+              }
+          }
+      }
 }

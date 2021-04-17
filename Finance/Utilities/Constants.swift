@@ -38,14 +38,28 @@ class Color {
 }
 
 class Constants {
-    
+//    static var BASE_URL = "http://18.219.178.49:8000/"
+    static var TESTING_BASE_URL = "http://18.219.178.49:5000/"
     static var BASE_URL = "http://24.227.130.19:8000/"
     static let DEALER_DETAIL = "dealer_details/create/"
     static let BUYER_DETAIL = "buyer_details/create/"
     static let LOGIN = "api/token/"
     static let EMAIL = "request-reset-email/"
     static let RESET_PASSWORD = "password-reset-complete/"
+    static let Price_Listing = "ad_details/rprice_listing/"
+    static let New_Listing = "ad_details/new_listing?latitude&longitude"
+    static let Under_Listing = "ad_details/under_listing/"
+    static let Feature_Listing = "ad_details/featured_listing"
+    static let Listing_Filter = "ad_details/listing_filter/"
+    static let FIND_ADS = "ads/"
+}
 
+class PostApplicaitonObject {
+    static var mainObject = [String : Any]()
+    static var coAppObject = [String : Any]()
+    static var vehicle = [String : Any]()
+    static var seller = [String : Any]()
+    static var IsCoApplicant = false
 }
 
 extension UIButton{

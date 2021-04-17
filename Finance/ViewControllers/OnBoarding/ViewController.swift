@@ -97,15 +97,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func skipBtn(_ sender: Any) {
-        let NotificationsStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
-        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "FilterViewController") as! FilterViewController
+//        let NotificationsStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "UserPage1ViewController") as! UserPage1ViewController
+//        self.navigationController?.pushViewController(NotificationsViewController, animated: true)
+        
+        let NotificationsStoryBoard = UIStoryboard(name: "Post Application Page", bundle: nil)
+        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "Post1ViewController") as! Post1ViewController
         self.navigationController?.pushViewController(NotificationsViewController, animated: true)
     }
     
     @IBAction func nextBtn(_ sender: Any) {
         self.onBoardCollectionview.scrollToNextItem {
             
-        }
+    }
         
         let visibleRect = CGRect(origin: onBoardCollectionview.contentOffset, size: onBoardCollectionview.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
