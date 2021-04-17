@@ -65,22 +65,22 @@ class Post5ViewController: UIViewController {
     func validInput() -> Bool {
         var flag = true
         if yearTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter First Name")
+            createAlert(title: nil, message: "Please enter Model Year")
             flag = false
         }else if makeTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Last Name")
+            createAlert(title: nil, message: "Please enter Make")
             flag = false
         }else if modelTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter Model")
             flag = false
         }else if kmTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter KiloMeter driven")
             flag = false
         }else if vinTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter VIN Number")
             flag = false
         }else if conditionTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please Select Condition")
             flag = false
         }
         return flag
@@ -150,7 +150,7 @@ extension Post5ViewController {
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = PostApplicaitonObject.dateFormate
         yearTextField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }

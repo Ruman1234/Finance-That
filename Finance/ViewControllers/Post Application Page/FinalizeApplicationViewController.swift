@@ -90,10 +90,23 @@ class FinalizeApplicationViewController: UIViewController {
     }
     
     @IBAction func applyBtn(_ sender: Any) {
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "Post8ViewController") as! Post8ViewController
-        self.navigationController?.pushViewController(main, animated: true)
+        ApplyLoan()
     }
     
+    func ApplyLoan()  {
+        PostApplicaitonObject.mainObject["user"] = defaults.userID
+        PostApplicaitonObject.mainObject["application_status"] = "Pending"
+        PostApplicaitonObject.mainObject["sin"] = "0"
+        NetworkManager.SharedInstance.PostApplication(parm: PostApplicaitonObject.mainObject) { (res) in
+            print(res)
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post8ViewController") as! Post8ViewController
+            self.navigationController?.pushViewController(main, animated: true)
+//            PostApplicaitonObject.removeAll()
+        } failure: { (err) in
+//            print("err.debugDescription")
+        }
+
+    }
     @IBAction func discardBtn(_ sender: Any) {
     }
 }

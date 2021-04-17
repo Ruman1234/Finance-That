@@ -37,14 +37,16 @@ class Post7ViewController: UIViewController {
     
     func validInput() -> Bool {
         var flag = true
-        if financingTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Finance Amount")
+        if !financingTextField.isHidden{
+            if financingTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please enter Finance Amount")
+                flag = false
+            }
+        }else if !radioBtn1.isSelected {
+            createAlert(title: nil, message: "Please Select Terms & conditions")
             flag = false
-        }else if radioBtn1.isSelected == true {
-            createAlert(title: nil, message: "Please enter Telephone Number")
-            flag = false
-        }else if radioBtn2.isSelected == true {
-            createAlert(title: nil, message: "Please enter Telephone Number")
+        }else if !radioBtn2.isSelected{
+            createAlert(title: nil, message: "Please Read credit Report and confirm it")
             flag = false
         }
         return flag

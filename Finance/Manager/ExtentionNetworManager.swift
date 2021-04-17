@@ -318,4 +318,26 @@ extension NetworkManager {
               }
           }
       }
+    
+    func PostApplication(viewcontroller : UIViewController = UIViewController(),
+                 parm:[String:Any],
+                         success : @escaping (FindModel) -> Void,
+                         failure : @escaping (NSError) -> Void)  {
+          
+          self.request(url: Constants.BASE_URL  + Constants.POST_APPLICATION , method: .post,parameters: parm) { (response) in
+              
+              if response.response?.statusCode == 200 {
+                  do{
+                      let value = try response.result.get()
+                      success(Mapper<FindModel>().map(JSON: value as! [String : Any])!)
+                  }catch{
+                      failure(NSError())
+                  }
+                  
+              }else{
+                  failure(NSError())
+              }
+          }
+      }
+    
 }

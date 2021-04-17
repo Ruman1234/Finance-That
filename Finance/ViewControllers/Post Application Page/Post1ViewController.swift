@@ -113,7 +113,7 @@ extension Post1ViewController {
       @objc func donedatePicker(){
 
        let formatter = DateFormatter()
-       formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = PostApplicaitonObject.dateFormate
         dateTextField.text = formatter.string(from: datePicker.date)
        self.view.endEditing(true)
      }

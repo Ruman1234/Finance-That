@@ -96,7 +96,7 @@ class Post4ViewController: UIViewController {
             }
         }
         
-        yesRadioBtn.isSelected = true
+        noRadioBtn.isSelected = true
     }
     
     override func viewWillLayoutSubviews() {
@@ -131,21 +131,25 @@ class Post4ViewController: UIViewController {
     
     func validInput() -> Bool {
         var flag = true
+        
+        if !noRadioBtn.isSelected && !yesRadioBtn.isSelected{
+            return false
+        }
+        if noRadioBtn.isSelected {
+            return flag
+        }
         if listingSourceTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter First Name")
+            createAlert(title: nil, message: "Please Select Listing Source")
             flag = false
-        }else if vehicleTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Last Name")
-            flag = false
-        }else if vehiclePriceTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
-            flag = false
-        }else if yesRadioBtn.isSelected == true {
-            createAlert(title: nil, message: "Please Number")
-            flag = false
-        }else if noRadioBtn.isSelected == true {
-            createAlert(title: nil, message: "Please enter Telephone Number")
-            flag = false
+        }
+        if yesRadioBtn.isSelected && listingSourceTextField.text == "Vehicle sold somewhere else"{
+            if vehicleTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please enter Type of vehicle")
+                flag = false
+            }else if vehiclePriceTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please enter Price")
+                flag = false
+            }
         }
         return flag
     }
@@ -155,7 +159,11 @@ class Post4ViewController: UIViewController {
         if yesRadioBtn.isSelected == true{
             yesRadioBtn.isSelected = false
         }else {
-            unhide()
+//            unhide()
+            listSourceDropDownBtn.isHidden = false
+            listingSourceTextField.isHidden = false
+            listingLbl.isHidden = false
+            img1.isHidden = false
             yesRadioBtn.isSelected = true
         }
     }

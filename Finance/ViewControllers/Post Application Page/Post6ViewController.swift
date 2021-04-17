@@ -65,22 +65,22 @@ class Post6ViewController: UIViewController {
             createAlert(title: nil, message: "Please enter Last Name")
             flag = false
         }else if streetTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter Street Address")
             flag = false
         }else if cityTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter City")
             flag = false
         }else if provinceTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter Province")
             flag = false
         }else if postalTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter Postal Code")
             flag = false
         }else if emailTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter Email")
             flag = false
         }else if telephoneTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Date")
+            createAlert(title: nil, message: "Please enter Telephone")
             flag = false
         }
         return flag

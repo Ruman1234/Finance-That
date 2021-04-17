@@ -195,11 +195,8 @@ class Post3ViewController: UIViewController {
                 flag = false
             }
         }
-        if yesRadioBtn.isSelected == false {
-            createAlert(title: nil, message: "Please enter Telephone Number")
-            flag = false
-        }else if noRadioBtn.isSelected == false {
-            createAlert(title: nil, message: "Please enter Telephone Number")
+        if !yesRadioBtn.isSelected && !noRadioBtn.isSelected{
+            createAlert(title: nil, message: "Please Select Option for Co-Applicant")
             flag = false
         }
         return flag
@@ -311,7 +308,7 @@ extension Post3ViewController {
     @objc func donedatePicker(){
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = PostApplicaitonObject.dateFormate
         empSinceTextField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }

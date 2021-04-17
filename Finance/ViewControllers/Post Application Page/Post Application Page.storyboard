@@ -1028,7 +1028,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Foc-AB-r2C" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="379" width="374" height="48"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -1397,7 +1397,7 @@
                                             <constraint firstAttribute="height" constant="48" id="sQq-kl-d8D"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIz-tO-SR5">
                                         <rect key="frame" x="20" y="284" width="374" height="48"/>
@@ -1567,7 +1567,7 @@
                                             <constraint firstAttribute="height" constant="48" id="9De-2F-nC4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Months" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnO-Nd-PYN" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
                                         <rect key="frame" x="20" y="292" width="374" height="48"/>
@@ -1575,7 +1575,7 @@
                                             <constraint firstAttribute="height" constant="48" id="fnW-4r-k04"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOk-Vc-0lw">
                                         <rect key="frame" x="20" y="360" width="44" height="19.666666666666686"/>
@@ -1603,7 +1603,7 @@
                                             <constraint firstAttribute="height" constant="48" id="9gR-Sn-5Sr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8Y-gR-qgg">
                                         <rect key="frame" x="20" y="655" width="374" height="48"/>
@@ -1741,7 +1741,7 @@
                                             <constraint firstAttribute="height" constant="48" id="0Wn-6M-S0H"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PostLine5" translatesAutoresizingMaskIntoConstraints="NO" id="NWF-zO-hcv">
                                         <rect key="frame" x="85" y="103.66666666666667" width="244" height="32.000000000000014"/>
@@ -2211,7 +2211,7 @@
                                             <constraint firstAttribute="width" constant="230" id="eZg-Mm-Uad"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-xI-jtR">
                                         <rect key="frame" x="265" y="283" width="90" height="32"/>
@@ -2406,7 +2406,7 @@
                                                     <constraint firstAttribute="height" constant="48" id="VFq-CS-mDv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2I-q9-796">
                                                 <rect key="frame" x="20" y="291.33333333333331" width="37" height="19.666666666666686"/>
@@ -2448,7 +2448,7 @@
                                                     <constraint firstAttribute="height" constant="48" id="I5C-7k-BAF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHs-uo-pKl">
                                                 <rect key="frame" x="20" y="584.33333333333337" width="24" height="19.666666666666629"/>
@@ -2462,7 +2462,7 @@
                                                     <constraint firstAttribute="height" constant="48" id="ehI-H2-nr8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRT-BY-5Xo">
                                                 <rect key="frame" x="20" y="682" width="68.666666666666671" height="19.666666666666629"/>
@@ -2750,7 +2750,7 @@
                                                     <constraint firstAttribute="height" constant="48" id="JSI-MI-s4T"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88s-Pq-cIb">
                                                 <rect key="frame" x="20" y="779.66666666666663" width="37" height="19.666666666666629"/>
@@ -2792,7 +2792,7 @@
                                                     <constraint firstAttribute="height" constant="48" id="PzU-Yk-YBo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

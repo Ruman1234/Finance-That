@@ -23,7 +23,7 @@ class NetworkManager {
                  method : Alamofire.HTTPMethod ,
                  parameters : [String : Any]? = nil ,
                  encoding : ParameterEncoding = JSONEncoding.default,
-                 header : HTTPHeaders? = nil,
+                 header : HTTPHeaders? = ["Authorization" : "Bearer \(defaults.token)","Content-Type" : "application/json"],
                  viewcontroller : UIViewController? = UIViewController(),
                  completionHandler :@escaping (AFDataResponse<Any>) -> Void
                  )  {

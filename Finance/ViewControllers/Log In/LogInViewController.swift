@@ -93,6 +93,8 @@ class LogInViewController: UIViewController {
         NetworkManager.SharedInstance.Login(email: emailTextField.text!, password: passwordTextField.text!,viewcontroller: self) { (res) in
             if res.success == true {
                 print(res.message ?? "")
+                defaults.token = res.data?.access ?? ""
+                defaults.userID = "\(res.data?.id ?? 0)"
 //                let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
 //                let main =
 //                    homePageStoryBoard.instantiateViewController(withIdentifier: "HomePage1ViewController") as! HomePage1ViewController
@@ -105,8 +107,6 @@ class LogInViewController: UIViewController {
                 let homePageStoryBoard = UIStoryboard(name: "HomePage", bundle: nil)
                 let main =
                     homePageStoryBoard.instantiateViewController(withIdentifier: "HomePage1ViewController") as! HomePage1ViewController
-
-
                 self.navigationController?.pushViewController(main, animated: true)
 
             }

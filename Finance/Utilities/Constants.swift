@@ -38,9 +38,9 @@ class Color {
 }
 
 class Constants {
-//    static var BASE_URL = "http://18.219.178.49:8000/"
+    static var BASE_URL = "http://18.219.178.49:8000/"
     static var TESTING_BASE_URL = "http://18.219.178.49:5000/"
-    static var BASE_URL = "http://24.227.130.19:8000/"
+//    static var BASE_URL = "http://24.227.130.19:8000/"
     static let DEALER_DETAIL = "dealer_details/create/"
     static let BUYER_DETAIL = "buyer_details/create/"
     static let LOGIN = "api/token/"
@@ -52,14 +52,40 @@ class Constants {
     static let Feature_Listing = "ad_details/featured_listing"
     static let Listing_Filter = "ad_details/listing_filter/"
     static let FIND_ADS = "ads/"
+    static let POST_APPLICATION = "application/"
+}
+
+class defaults  {
+    static var token : String{
+        get{
+            return UserDefaults.standard.string(forKey: "Token") ?? ""
+        }set{
+            UserDefaults.standard.set(newValue, forKey: "Token")
+        }
+    }
+    static var userID : String{
+        get{
+            return UserDefaults.standard.string(forKey: "userID") ?? ""
+        }set{
+            UserDefaults.standard.set(newValue, forKey: "userID")
+        }
+    }
 }
 
 class PostApplicaitonObject {
-    static var mainObject = [String : Any]()
-    static var coAppObject = [String : Any]()
-    static var vehicle = [String : Any]()
-    static var seller = [String : Any]()
-    static var IsCoApplicant = false
+    static var mainObject       = [String : Any]()
+    static var coAppObject      = [String : Any]()
+    static var vehicle          = [String : Any]()
+    static var seller           = [String : Any]()
+    static var IsCoApplicant    = false
+    static let dateFormate      = "yyyy-MM-dd"
+    static func removeAll(){
+        mainObject.removeAll()
+        coAppObject.removeAll()
+        vehicle.removeAll()
+        seller.removeAll()
+        IsCoApplicant = false
+    }
 }
 
 extension UIButton{
