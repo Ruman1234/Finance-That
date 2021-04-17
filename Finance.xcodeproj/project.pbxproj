@@ -84,6 +84,8 @@
 		183AC91426034E76003D1999 /* FeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AC91226034E76003D1999 /* FeaturedCell.xib */; };
 		183AC92E26035897003D1999 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AC92C26035897003D1999 /* FeaturedCollectionViewCell.swift */; };
 		183AC92F26035897003D1999 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AC92D26035897003D1999 /* FeaturedCollectionViewCell.xib */; };
+		1843DEEF2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843DEEE2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift */; };
+		1843DEF7262A06E700D1DB3F /* FindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843DEF6262A06E700D1DB3F /* FindModel.swift */; };
 		184BA19725FBDDED0045FCD3 /* ResetCompleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA19625FBDDED0045FCD3 /* ResetCompleteModel.swift */; };
 		1852750D25F3B9A40018CD81 /* Post1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852750C25F3B9A40018CD81 /* Post1ViewController.swift */; };
 		18550C032615FDF0003C4096 /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18550C022615FDF0003C4096 /* ReportProblemViewController.swift */; };
@@ -264,6 +266,8 @@
 		183AC91226034E76003D1999 /* FeaturedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCell.xib; sourceTree = "<group>"; };
 		183AC92C26035897003D1999 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		183AC92D26035897003D1999 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
+		1843DEEE2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalizeApplicationViewController.swift; sourceTree = "<group>"; };
+		1843DEF6262A06E700D1DB3F /* FindModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindModel.swift; sourceTree = "<group>"; };
 		184BA19625FBDDED0045FCD3 /* ResetCompleteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetCompleteModel.swift; sourceTree = "<group>"; };
 		1852750C25F3B9A40018CD81 /* Post1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post1ViewController.swift; sourceTree = "<group>"; };
 		18550C022615FDF0003C4096 /* ReportProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
@@ -616,6 +620,7 @@
 				1811921F25F45D9000839599 /* Post8ViewController.swift */,
 				1811922425F4691000839599 /* Post9ViewController.swift */,
 				1811922925F4691F00839599 /* Post10ViewController.swift */,
+				1843DEEE2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift */,
 				189CA4CB25F99F48007EAAF4 /* TableViewCell */,
 			);
 			path = "Post Application Page";
@@ -643,6 +648,7 @@
 				18151E00261C5CDD00691488 /* ADLatitudeAndLongitudeModel.swift */,
 				18151DF3261C5A0000691488 /* AdDetailsPriceListingModel.swift */,
 				18151E0F261C69A900691488 /* ADListingFilter.swift */,
+				1843DEF6262A06E700D1DB3F /* FindModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1293,6 +1299,7 @@
 				1859E257261895DE006888DF /* PayWithViewController.swift in Sources */,
 				1877A9BB260B395200712F91 /* ApplicationDetailTableViewCell.swift in Sources */,
 				1877A9CF260B53E700712F91 /* PrivateSellerViewController.swift in Sources */,
+				1843DEEF2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift in Sources */,
 				1811920225F4368C00839599 /* Post2ViewController.swift in Sources */,
 				180FC56B260CD0F500DEFBAA /* AllCategoriesCell.swift in Sources */,
 				1820EF182611C2CF00F8EDF6 /* MyAdsViewController.swift in Sources */,
@@ -1363,6 +1370,7 @@
 				180E8638261DAE94005A5151 /* ImageGalleryCollectionViewCell.swift in Sources */,
 				18151E0B261C67B700691488 /* ADFeaturedListing.swift in Sources */,
 				18151DE1261C4CEC00691488 /* BoostViewController.swift in Sources */,
+				1843DEF7262A06E700D1DB3F /* FindModel.swift in Sources */,
 				1811921125F45D6800839599 /* Post5ViewController.swift in Sources */,
 				1811922025F45D9000839599 /* Post8ViewController.swift in Sources */,
 				1859E25F26189E3B006888DF /* AddCardDetailsViewController.swift in Sources */,

@@ -95,16 +95,12 @@ class Post4ViewController: UIViewController {
                 self.vehicleTextField.text = "RV"
             }
         }
+        
+        yesRadioBtn.isSelected = true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     func hide() {
@@ -133,6 +129,27 @@ class Post4ViewController: UIViewController {
         img2.isHidden = false
     }
     
+    func validInput() -> Bool {
+        var flag = true
+        if listingSourceTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter First Name")
+            flag = false
+        }else if vehicleTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Last Name")
+            flag = false
+        }else if vehiclePriceTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if yesRadioBtn.isSelected == true {
+            createAlert(title: nil, message: "Please Number")
+            flag = false
+        }else if noRadioBtn.isSelected == true {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }
+        return flag
+    }
+    
     @IBAction func yesRadioBtn(_ sender: UIButton) {
         noRadioBtn.isSelected = false
         if yesRadioBtn.isSelected == true{
@@ -159,10 +176,22 @@ class Post4ViewController: UIViewController {
     }
     
     @IBAction func nextBtn(_ sender: Any) {
-        
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "Post5ViewController") as! Post5ViewController
-        self.navigationController?.pushViewController(main, animated: true)
+        if self.noRadioBtn.isSelected{
+//            Set no flow post 7
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post7ViewController") as! Post7ViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }else if self.listingSourceTextField.text == "Vehicle listed on Finance That"{
+//            push on post 10
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post10ViewController") as! Post10ViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }else if self.validInput(){
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post5ViewController") as! Post5ViewController
+            self.navigationController?.pushViewController(main, animated: true)
+        }
     }
+    
     
     @IBAction func listSourceDropDown(_ sender: Any) {
         self.dropDown.show()

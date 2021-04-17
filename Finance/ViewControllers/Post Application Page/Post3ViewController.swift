@@ -20,6 +20,9 @@ class Post3ViewController: UIViewController {
     @IBOutlet weak var occupationLbl: UILabel!
     @IBOutlet weak var grossIncomLbl: UILabel!
     @IBOutlet weak var empSinceLbl: UILabel!
+    @IBOutlet weak var coAppLbl: UILabel!
+    @IBOutlet weak var coAppYesLbl: UILabel!
+    @IBOutlet weak var coAppnoLBl: UILabel!
     
     @IBOutlet weak var statusTextField: CustomTextField!
     @IBOutlet weak var secondTextField: CustomTextField!
@@ -43,7 +46,16 @@ class Post3ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if PostApplicaitonObject.IsCoApplicant{
+            coAppLbl.isHidden = true
+            coAppYesLbl.isHidden = true
+            coAppnoLBl.isHidden = true
+            noRadioBtn.isHidden = true
+            yesRadioBtn.isHidden = true
+        }
+        
         nextBtn.setButtonTheme()
+        noRadioBtn.isSelected = true
         
         dropDown.anchorView = empStatusDropDownBtn // UIView or UIBarButtonItem
         DropDown.appearance().textColor = Color.App_theme_color
@@ -61,6 +73,7 @@ class Post3ViewController: UIViewController {
             unHide()
             if index == 0 {
                 self.statusTextField.text = "Employed"
+                
             }else if index == 1 {
                 self.statusTextField.text = "Self Employed"
                 occupationLbl.isHidden = true
@@ -78,13 +91,16 @@ class Post3ViewController: UIViewController {
                 empNameLbl.isHidden = true
                 occupationLbl.isHidden = true
                 typeOfEmpLbl.isHidden = true
-                grossIncomLbl.isHidden = true
+                grossIncomLbl.isHidden = false
                 typeOfEmpStatusDropDownBtn.isHidden = true
                 secondTextField.isHidden = true
                 thirdTextField.isHidden = true
                 fourthTextField.isHidden = true
                 empSinceTextField.isHidden = true
                 typeOfEmploymentView.isHidden = true
+                grossIncomeTextField.isHidden = false
+                empNameLbl.isHidden = true
+                empSinceLbl.isHidden = true
             }else if index == 3 {
                 self.statusTextField.text = "Unemployed"
                 empNameLbl.isHidden = true
@@ -98,7 +114,7 @@ class Post3ViewController: UIViewController {
                 grossIncomeTextField.isHidden = true
                 empSinceTextField.isHidden = true
                 empSinceLbl.isHidden = true
-                grossIncomLbl.isHidden = true
+                
                 typeOfEmploymentView.isHidden = true
                 
             }
@@ -145,19 +161,57 @@ class Post3ViewController: UIViewController {
         empSinceLbl.isHidden = false
         typeOfEmploymentView.isHidden = false
     }
+    
+    func validInput() -> Bool {
+        var flag = true
+        if statusTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter First Name")
+            flag = false
+        }else if secondTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Last Name")
+            flag = false
+        }
+        if thirdTextField.isHidden == false {
+            if thirdTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please \(self.thirdTextField.placeholder ?? "")")
+                flag = false
+            }
+        }
+        if fourthTextField.isHidden == false {
+            if fourthTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please \(self.fourthTextField.placeholder ?? "")")
+                flag = false
+            }
+        }
+        if empSinceTextField.isHidden == false {
+            if empSinceTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please \(self.empSinceTextField.placeholder ?? "")")
+                flag = false
+            }
+        }
+        if grossIncomeTextField.isHidden == false {
+            if grossIncomeTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please \(self.grossIncomeTextField.placeholder ?? "")")
+                flag = false
+            }
+        }
+        if yesRadioBtn.isSelected == false {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }else if noRadioBtn.isSelected == false {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }
+        return flag
+    }
+    
     override func viewDidLayoutSubviews() {
         scroller.isScrollEnabled = true
         scroller.contentSize = CGSize(width: self.view.frame.width, height: 831)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func backBtn(_ sender: Any) {
@@ -184,16 +238,23 @@ class Post3ViewController: UIViewController {
     }
     
     @IBAction func nextBtn(_ sender: Any) {
+        if !validInput(){return}
         if PostApplicaitonObject.IsCoApplicant{
             self.setData(dict: &PostApplicaitonObject.coAppObject)
         }else{
             self.setData(dict: &PostApplicaitonObject.mainObject)
         }
+        
+        
+        print(PostApplicaitonObject.mainObject)
         if yesRadioBtn.isSelected{
             PostApplicaitonObject.IsCoApplicant = true
             let main = self.storyboard?.instantiateViewController(withIdentifier: "Post1ViewController") as! Post1ViewController
             self.navigationController?.pushViewController(main, animated: true)
         }else{
+            if PostApplicaitonObject.IsCoApplicant{
+                PostApplicaitonObject.mainObject["co_applicant"] = PostApplicaitonObject.coAppObject
+            }
             let main = self.storyboard?.instantiateViewController(withIdentifier: "Post4ViewController") as! Post4ViewController
             self.navigationController?.pushViewController(main, animated: true)
         }
@@ -207,8 +268,16 @@ class Post3ViewController: UIViewController {
         dict["occupation"]                   = self.fourthTextField.text        ?? ""
         dict["employment_since"]             = self.empSinceTextField.text      ?? ""
         dict["gross_income"]                 = self.grossIncomeTextField.text   ?? ""
+        if self.secondTextField.text == "Self Employed"{
+            dict["type_of_business"]         = self.thirdTextField.text         ?? ""
+            dict["business_name"]            = self.secondTextField.text        ?? ""
+            dict["type_of_employment"]       = "Full Time"
+//    type_of_employment always full time is case of business as discussed
+        }else{
+            dict["type_of_employment"]       = self.secondTextField.text        ?? ""
+            dict["employer_name"]            = self.thirdTextField.text         ?? ""
+        }
     }
-    
     @IBAction func empStatusDropDownBtn(_ sender: Any) {
         self.dropDown.show()
     }

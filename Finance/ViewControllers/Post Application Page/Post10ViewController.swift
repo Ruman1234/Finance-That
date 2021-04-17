@@ -16,51 +16,90 @@ class Post10ViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var stockNumTextField: CustomTextField!
     @IBOutlet weak var attachBtn: UIButton!
     @IBOutlet weak var vehicleFoundLbl: UILabel!
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
-
     
-    let arr = ["Stock :","Make :","Model :","Trim :","Price :"]
-    let arr2 = ["102232","Honda","Accord","Exl","$18000"]
-
+    var tableData = [findModelTableData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        nextBtn.setButtonTheme()
+        findSetBtn()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
+    func findSetBtn() {
+        attachBtn.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        attachBtn.layer.cornerRadius = 5
+    }
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+
+    func findAd(ads:String)  {
+        NetworkManager.SharedInstance.FindADs(add: ads) { (res) in
+            guard let response = res.data else{
+                Utilities.ShowAlert(title: "Alert!!!", message: "detail: not found", view: self)
+                return
+            }
+            self.tableData.append(findModelTableData(nameLBl: "Stock", dataLbl: "\(response.stock_id ?? 0)"))
+            self.tableData.append(findModelTableData(nameLBl: "Make", dataLbl: response.make?.make_name ?? ""))
+            self.tableData.append(findModelTableData(nameLBl: "Model", dataLbl: response.model?.model_make ?? ""))
+            self.tableData.append(findModelTableData(nameLBl: "Trim", dataLbl: response.trim ?? ""))
+            self.tableData.append(findModelTableData(nameLBl: "Price", dataLbl: response.price ?? ""))
+            self.tableView.reloadData()
+        } failure: { (err) in
+            Utilities.ShowAlert(title: "Alert!!!", message: "Something went wrong", view: self)
+        }
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        return tableData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "post10cell") as! Post10TableViewCell
-        cell.lbl1.text = arr[indexPath.row]
-        cell.lbl2.text = arr2[indexPath.row]
+        cell.lbl1.text = tableData[indexPath.row].nameLBl
+        cell.lbl2.text = tableData[indexPath.row].dataLbl
+        cell.tbleview.layer.cornerRadius = 5
         return cell
     }
     
     @IBAction func backBtn(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)
-
     }
     
     @IBAction func attachBtn(_ sender: Any) {
+        self.findAd(ads: stockNumTextField.text ?? "")
+    }
+    
+    func validInput() -> Bool {
+        var flag = true
+        if stockNumTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Stock Amount")
+            flag = false
+        }
+        return flag
     }
     
     @IBAction func nextBtn(_ sender: Any) {
+        if self.validInput() {
+            PostApplicaitonObject.mainObject["stock"] = stockNumTextField.text
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post7ViewController") as! Post7ViewController
+            main.isHideAmountFields = true
+            self.navigationController?.pushViewController(main, animated: true)
+        }
     }
+}
+struct findModelTableData {
+    var nameLBl : String
+    var dataLbl : String
 }

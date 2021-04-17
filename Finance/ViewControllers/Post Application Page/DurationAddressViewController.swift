@@ -53,6 +53,8 @@ class DurationAddressViewController: UIViewController {
                         
                     }else if index == 3 {
                         self.statusTextField.text = "Other"
+                        mortageLbl.isHidden = true
+                        mortageTextField.isHidden = true
                     }
         }
     }
@@ -62,14 +64,25 @@ class DurationAddressViewController: UIViewController {
         mortageTextField.isHidden = false
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    func validInput() -> Bool {
+        var flag = true
+        if yearsTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Year")
+            flag = false
+        }else if monthsTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Month")
+            flag = false
+        }else if mortageTextField.isHidden == false {
+            if mortageTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please enter Mortage or Rent")
+                flag = false
+            }
+        }
+        return flag
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     @IBAction func backBtn(_ sender: Any) {
@@ -82,9 +95,10 @@ class DurationAddressViewController: UIViewController {
         }else{
             self.setData(dict: &PostApplicaitonObject.mainObject)
         }
-        
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "Post3ViewController") as! Post3ViewController
-        self.navigationController?.pushViewController(main, animated: true)
+        if self.validInput() {
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post3ViewController") as! Post3ViewController
+            self.navigationController?.pushViewController(main, animated: true)
+        }
     }
     
     func setData(dict:inout [String : Any]) {

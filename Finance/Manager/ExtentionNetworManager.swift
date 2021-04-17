@@ -297,4 +297,25 @@ extension NetworkManager {
             }
         }
     }
+    
+    func FindADs(viewcontroller : UIViewController = UIViewController(),
+                 add:String,
+                         success : @escaping (FindModel) -> Void,
+                         failure : @escaping (NSError) -> Void)  {
+          
+          self.request(url: Constants.BASE_URL  + Constants.FIND_ADS + "\(add)/", method: .get) { (response) in
+              
+              if response.response?.statusCode == 200 {
+                  do{
+                      let value = try response.result.get()
+                      success(Mapper<FindModel>().map(JSON: value as! [String : Any])!)
+                  }catch{
+                      failure(NSError())
+                  }
+                  
+              }else{
+                  failure(NSError())
+              }
+          }
+      }
 }

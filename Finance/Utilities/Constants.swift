@@ -51,7 +51,7 @@ class Constants {
     static let Under_Listing = "ad_details/under_listing/"
     static let Feature_Listing = "ad_details/featured_listing"
     static let Listing_Filter = "ad_details/listing_filter/"
-
+    static let FIND_ADS = "ads/"
 }
 
 class PostApplicaitonObject {

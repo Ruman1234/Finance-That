@@ -61,16 +61,34 @@ class Post2ViewController: UIViewController {
         scroller.contentSize = CGSize(width: self.view.frame.width, height: 820)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    
+    func validInput() -> Bool {
+        var flag = true
+        if houseTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter First Name")
+            flag = false
+        }else if streetTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Last Name")
+            flag = false
+        }else if cityTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if provinceTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }else if postalcodeTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }else if countryTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }
+        return flag
     }
-
+    
     @IBAction func backBtn(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)
@@ -82,11 +100,12 @@ class Post2ViewController: UIViewController {
         }else{
             self.setData(dict: &PostApplicaitonObject.mainObject)
         }
-        
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "DurationAddressViewController") as! DurationAddressViewController
-        self.navigationController?.pushViewController(main, animated: true)
-        
+        if self.validInput(){
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "DurationAddressViewController") as! DurationAddressViewController
+            self.navigationController?.pushViewController(main, animated: true)
+        }
     }
+    
     func setData(dict:inout [String : Any]) {
         dict["address"]         = self.houseTextField.text  ?? ""
         dict["street_address"]  = self.streetTextField.text   ?? ""

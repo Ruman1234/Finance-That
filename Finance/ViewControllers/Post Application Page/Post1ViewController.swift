@@ -20,7 +20,6 @@ class Post1ViewController: UIViewController {
     @IBOutlet weak var lastnameTextField: CustomTextField!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var dateTextField: CustomTextField!
-    
     @IBOutlet weak var telephoneTxtField: CustomTextField!
     //    @IBOutlet weak var opplicantLbl: UILabel!
 //    @IBOutlet weak var yesRadioBtn: UIButton!
@@ -44,19 +43,31 @@ class Post1ViewController: UIViewController {
         showDatePicker()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     @IBAction func backBtn(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func validInput() -> Bool {
+        var flag = true
+        if firstNameTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter First Name")
+            flag = false
+        }else if lastnameTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Last Name")
+            flag = false
+        }else if dateTextField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Date")
+            flag = false
+        }else if telephoneTxtField.text!.isEmpty {
+            createAlert(title: nil, message: "Please enter Telephone Number")
+            flag = false
+        }
+        return flag
     }
     
     @IBAction func nextBtn(_ sender: Any) {
@@ -65,10 +76,10 @@ class Post1ViewController: UIViewController {
         }else{
             self.setData(dict: &PostApplicaitonObject.mainObject)
         }
-        print(PostApplicaitonObject.mainObject)
-        let main = self.storyboard?.instantiateViewController(withIdentifier: "Post2ViewController") as! Post2ViewController
-        self.navigationController?.pushViewController(main, animated: true)
-
+        if self.validInput() {
+            let main = self.storyboard?.instantiateViewController(withIdentifier: "Post2ViewController") as! Post2ViewController
+            self.navigationController?.pushViewController(main, animated: true)
+        }
     }
     
     func setData(dict:inout [String : Any]) {

@@ -145,7 +145,7 @@
                                             <constraint firstAttribute="height" constant="48" id="PYd-Hf-ONm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -335,7 +335,7 @@
                                                     <constraint firstAttribute="height" constant="48" id="SSj-LC-qp5"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1F-ki-ZOi">
                                                 <rect key="frame" x="20.000000000000004" y="680.33333333333337" width="56.333333333333343" height="19.666666666666629"/>
@@ -478,10 +478,10 @@
             </objects>
             <point key="canvasLocation" x="1008.6956521739131" y="388.45108695652175"/>
         </scene>
-        <!--View Controller-->
+        <!--Finalize Application View Controller-->
         <scene sceneID="4va-eV-HIB">
             <objects>
-                <viewController id="w1v-J5-ERC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinalizeApplicationViewController" id="w1v-J5-ERC" customClass="FinalizeApplicationViewController" customModule="Finance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCY-wD-lxI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="806"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,7 +495,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalize application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NW9-dU-Ltb">
                                                 <rect key="frame" x="140.33333333333337" y="55.999999999999993" width="133.66666666666663" height="19.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post 5" translatesAutoresizingMaskIntoConstraints="NO" id="7zE-ZR-Vg3">
@@ -519,12 +519,13 @@
                                                     <action selector="backBtn:" destination="666-MP-uYE" eventType="touchUpInside" id="PVZ-H0-Lf4"/>
                                                     <action selector="backBtn:" destination="5X8-8z-z9F" eventType="touchUpInside" id="v70-sC-NZi"/>
                                                     <action selector="backBtn:" destination="wNv-FH-KR2" eventType="touchUpInside" id="wHt-em-3p8"/>
+                                                    <action selector="crossBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="Y48-BM-eLC"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalize application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yl-rq-vEI">
                                                 <rect key="frame" x="20" y="194" width="133.66666666666666" height="19.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sD-Kg-Wuu">
@@ -533,13 +534,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Applicant Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyQ-Wj-U5N">
                                                         <rect key="frame" x="16" y="14.000000000000002" width="149" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yie-wa-KlO">
                                                         <rect key="frame" x="16" y="35.666666666666657" width="79" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTick" translatesAutoresizingMaskIntoConstraints="NO" id="Xco-6m-V6a">
@@ -562,6 +563,9 @@
                                                         <state key="normal" title="Edit" image="Edit">
                                                             <color key="titleColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="applicantInfoEditBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="1ng-B0-l2q"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -583,13 +587,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-RO-gUS">
                                                         <rect key="frame" x="16" y="14.000000000000002" width="57" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0x-qp-Ke8">
                                                         <rect key="frame" x="16" y="35.666666666666686" width="88.333333333333329" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTick" translatesAutoresizingMaskIntoConstraints="NO" id="J4R-ah-aAl">
@@ -612,6 +616,9 @@
                                                         <state key="normal" title="Edit" image="Edit">
                                                             <color key="titleColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="addressEditBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="uci-JP-MU9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -632,13 +639,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydp-Va-jtt">
                                                         <rect key="frame" x="16" y="14.000000000000002" width="85.666666666666671" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Employment Status, Occupation, Name..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98e-rV-DMd">
-                                                        <rect key="frame" x="16.000000000000014" y="35.666666666666686" width="226.33333333333337" height="13"/>
+                                                        <rect key="frame" x="16" y="35.666666666666686" width="221.33333333333334" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTick" translatesAutoresizingMaskIntoConstraints="NO" id="b4i-7g-e0O">
@@ -661,6 +668,9 @@
                                                         <state key="normal" title="Edit" image="Edit">
                                                             <color key="titleColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="employmentEditBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="iOq-DL-6e2"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -681,13 +691,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVS-qX-zQh">
                                                         <rect key="frame" x="16" y="14.000000000000002" width="133" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Vehicle information, Type Including tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5f-Bv-Cnr">
-                                                        <rect key="frame" x="16" y="35.666666666666686" width="211" height="13"/>
+                                                        <rect key="frame" x="16" y="35.666666666666686" width="212.33333333333334" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTick" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-ia-Azx">
@@ -710,6 +720,9 @@
                                                         <state key="normal" title="Edit" image="Edit">
                                                             <color key="titleColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="vehicleInfoEditBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="ibp-0W-Gqd"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -730,13 +743,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seller information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWX-Ry-AB3">
                                                         <rect key="frame" x="16.000000000000007" y="14.000000000000002" width="122.66666666666669" height="19.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name, Address, Postal, Provincy, Email.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-e8-5y6">
-                                                        <rect key="frame" x="16" y="35.666666666666629" width="199.66666666666666" height="13"/>
+                                                        <rect key="frame" x="16" y="35.666666666666629" width="193" height="13"/>
                                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleTick" translatesAutoresizingMaskIntoConstraints="NO" id="3VH-28-UQ2">
@@ -759,6 +772,9 @@
                                                         <state key="normal" title="Edit" image="Edit">
                                                             <color key="titleColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="sellerInfoEditBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="mNA-TW-b83"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -783,6 +799,9 @@
                                                 <state key="normal" title="Apply">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="applyBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="05m-Rd-t3A"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTn-Kq-SRn">
                                                 <rect key="frame" x="0.0" y="682" width="414" height="1"/>
@@ -802,6 +821,9 @@
                                                 <state key="normal" title="Discard">
                                                     <color key="titleColor" red="0.18431372549019609" green="0.50196078431372548" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="discardBtn:" destination="w1v-J5-ERC" eventType="touchUpInside" id="18E-rm-1o4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -871,10 +893,25 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="806"/>
+                    <connections>
+                        <outlet property="AddressEditBtn" destination="2fB-2z-0Fo" id="4oh-Yr-FIp"/>
+                        <outlet property="ApplicantInfoEditBtn" destination="gaJ-Nb-K5n" id="o4O-4p-crj"/>
+                        <outlet property="applyBtn" destination="NvY-J9-96z" id="kMZ-Ex-8vi"/>
+                        <outlet property="discardBtn" destination="atN-Eq-cDE" id="u8e-UH-rRs"/>
+                        <outlet property="employmentEditBtn" destination="uzj-73-zVx" id="gkm-9N-JUq"/>
+                        <outlet property="scrolller" destination="pG5-zZ-yqA" id="jwd-15-AkA"/>
+                        <outlet property="sellerInfoEditBtn" destination="JnU-iH-Ggv" id="HQV-p6-P4w"/>
+                        <outlet property="vehicleInfoEditBtn" destination="eIL-Rk-JiY" id="bPL-cX-naW"/>
+                        <outlet property="view1" destination="8sD-Kg-Wuu" id="Az0-pw-Abr"/>
+                        <outlet property="view2" destination="IvE-sT-aFk" id="QCi-BK-8hp"/>
+                        <outlet property="view3" destination="0Tg-my-6C0" id="WO6-Ap-Qjr"/>
+                        <outlet property="view4" destination="hfh-aX-E0r" id="Fqj-E3-Dgf"/>
+                        <outlet property="view5" destination="Ecx-QM-9Dk" id="3i2-Y5-EZh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zlo-OY-dGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5045" y="1080"/>
+            <point key="canvasLocation" x="6310" y="342"/>
         </scene>
         <!--Post3 View Controller-->
         <scene sceneID="IkP-4w-LCP">
@@ -1037,13 +1074,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONa-73-sXM">
-                                                <rect key="frame" x="42" y="763.66666666666663" width="20.666666666666671" height="18"/>
+                                                <rect key="frame" x="42" y="763.66666666666663" width="19.666666666666671" height="18"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="13"/>
                                                 <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYo-uc-I9k">
-                                                <rect key="frame" x="92.666666666666671" y="764.66666666666663" width="16" height="16"/>
+                                                <rect key="frame" x="91.666666666666671" y="764.66666666666663" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="Ixu-Mk-Bxo"/>
                                                     <constraint firstAttribute="height" constant="16" id="UCM-cu-y5c"/>
@@ -1056,7 +1093,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJS-ju-BaV">
-                                                <rect key="frame" x="114.66666666666667" y="764.66666666666663" width="17.000000000000014" height="16"/>
+                                                <rect key="frame" x="113.66666666666667" y="764.66666666666663" width="17.000000000000014" height="16"/>
                                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="13"/>
                                                 <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1176,6 +1213,9 @@
                     </view>
                     <size key="freeformSize" width="414" height="928"/>
                     <connections>
+                        <outlet property="coAppLbl" destination="u7f-Mk-rni" id="b4P-BJ-c0Q"/>
+                        <outlet property="coAppYesLbl" destination="ONa-73-sXM" id="hKn-5i-HZb"/>
+                        <outlet property="coAppnoLBl" destination="cJS-ju-BaV" id="xIb-OX-5w1"/>
                         <outlet property="empNameLbl" destination="4Pt-Ss-z3c" id="G3z-mt-w0i"/>
                         <outlet property="empSinceLbl" destination="H4Y-0Z-jPt" id="Y4M-px-AHW"/>
                         <outlet property="empSinceTextField" destination="ugD-LK-o50" id="Y0E-ho-FcY"/>
@@ -1221,13 +1261,13 @@
                                             <action selector="backBtn:" destination="5X8-8z-z9F" eventType="touchUpInside" id="jGV-1W-8a6"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSA-eS-Wu4">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSA-eS-Wu4">
                                         <rect key="frame" x="20.000000000000007" y="351.66666666666669" width="105.66666666666669" height="19.666666666666686"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
                                         <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RiI-jf-T8B" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RiI-jf-T8B" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
                                         <rect key="frame" x="20" y="382.33333333333331" width="374" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="yyq-hX-dNy"/>
@@ -1324,20 +1364,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Down 24px-1" translatesAutoresizingMaskIntoConstraints="NO" id="4rE-6d-zOh">
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Down 24px-1" translatesAutoresizingMaskIntoConstraints="NO" id="4rE-6d-zOh">
                                         <rect key="frame" x="354" y="394.33333333333331" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="8Nj-6n-U0i"/>
                                             <constraint firstAttribute="width" constant="24" id="dpf-KW-e8t"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listing Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egk-uW-EtI">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listing Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egk-uW-EtI">
                                         <rect key="frame" x="20.000000000000007" y="253.99999999999997" width="99.666666666666686" height="19.666666666666657"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
                                         <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8TZ-zI-hSA" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8TZ-zI-hSA" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
                                         <rect key="frame" x="20" y="283.66666666666669" width="374" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="tha-NR-0fT"/>
@@ -1345,13 +1385,13 @@
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle price including tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zD2-DH-VdK">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle price including tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zD2-DH-VdK">
                                         <rect key="frame" x="20" y="451" width="181.66666666666666" height="19.666666666666686"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
                                         <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter the VIN here.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-3U-Ltz" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter the VIN here.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-3U-Ltz" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
                                         <rect key="frame" x="20" y="480.66666666666669" width="374" height="48.000000000000057"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="sQq-kl-d8D"/>
@@ -1359,20 +1399,20 @@
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIz-tO-SR5">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIz-tO-SR5">
                                         <rect key="frame" x="20" y="284" width="374" height="48"/>
                                         <connections>
                                             <action selector="listSourceDropDown:" destination="5X8-8z-z9F" eventType="touchUpInside" id="frJ-55-BwY"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Down 24px-1" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-Bn-gCP">
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Down 24px-1" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-Bn-gCP">
                                         <rect key="frame" x="354" y="296" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="saU-Ui-CVI"/>
                                             <constraint firstAttribute="height" constant="24" id="vEd-Rj-wns"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyK-r0-vvG">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyK-r0-vvG">
                                         <rect key="frame" x="20" y="382" width="374" height="48"/>
                                         <connections>
                                             <action selector="typeOfVehicleDropDown:" destination="5X8-8z-z9F" eventType="touchUpInside" id="86p-33-OaU"/>
@@ -1472,21 +1512,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="And-MF-EDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3037.68115942029" y="313.85869565217394"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vyb-At-VmA">
-            <objects>
-                <viewController id="eyD-pX-rGK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jtv-sN-anf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="GnC-TB-rVH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6jl-P6-126" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3674" y="1157"/>
         </scene>
         <!--Duration Address View Controller-->
         <scene sceneID="Uc0-i2-Yg3">
@@ -1707,7 +1732,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Financing Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBZ-h1-V19">
                                         <rect key="frame" x="20" y="195.66666666666666" width="126" height="19.666666666666657"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-pI-fdm" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -1750,23 +1775,23 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="submitBtn:" destination="666-MP-uYE" eventType="touchUpInside" id="fCh-mf-Bq5"/>
+                                            <action selector="nextBtn:" destination="666-MP-uYE" eventType="touchUpInside" id="Wq2-cX-nYF"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalize application" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-Pf-zF8">
                                         <rect key="frame" x="140.33333333333337" y="57.999999999999993" width="133.66666666666663" height="19.666666666666664"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.24705882352941178" green="0.13725490196078433" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up or Sign in to continue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QZ-rx-LcU">
-                                        <rect key="frame" x="16" y="305.33333333333331" width="172.33333333333334" height="15.333333333333314"/>
+                                        <rect key="frame" x="16" y="305.33333333333331" width="176.33333333333334" height="15"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="13"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phL-rG-hKv">
-                                        <rect key="frame" x="20" y="340.66666666666669" width="16" height="16"/>
+                                        <rect key="frame" x="20" y="340.33333333333331" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="ZdC-Pa-qxO"/>
                                             <constraint firstAttribute="width" constant="16" id="kfv-Jk-Ak9"/>
@@ -1778,13 +1803,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have read &amp; accept the borrower Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8E-Vf-rQY">
-                                        <rect key="frame" x="42" y="340.66666666666669" width="265.66666666666669" height="16"/>
+                                        <rect key="frame" x="42" y="340.33333333333331" width="269.33333333333331" height="16"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkE-rl-W2w">
-                                        <rect key="frame" x="20" y="368.66666666666669" width="16" height="16"/>
+                                        <rect key="frame" x="20" y="368.33333333333331" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="8TQ-iJ-19E"/>
                                             <constraint firstAttribute="height" constant="16" id="yHi-SB-TcM"/>
@@ -1796,9 +1821,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to the Credit Report Consent Terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpc-ia-KCY">
-                                        <rect key="frame" x="44.000000000000014" y="368.66666666666669" width="211.33333333333337" height="16"/>
+                                        <rect key="frame" x="44.000000000000014" y="368.33333333333331" width="215.33333333333337" height="16"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1852,10 +1877,10 @@
                         <outlet property="financingLbl" destination="SBZ-h1-V19" id="6Up-X2-KRP"/>
                         <outlet property="financingTextField" destination="fDe-pI-fdm" id="IiK-I8-MgO"/>
                         <outlet property="haveReadLbl" destination="u8E-Vf-rQY" id="6Hg-RG-hjO"/>
+                        <outlet property="nextBtn" destination="mGw-iH-Bph" id="sWe-6R-HP9"/>
                         <outlet property="radioBtn1" destination="phL-rG-hKv" id="YFp-YO-OFY"/>
                         <outlet property="radioBtn2" destination="kkE-rl-W2w" id="SBp-XB-gaa"/>
                         <outlet property="signUpLbl" destination="1QZ-rx-LcU" id="51B-mh-feb"/>
-                        <outlet property="submitBtn" destination="mGw-iH-Bph" id="QlV-on-mhe"/>
                         <outlet property="topLbl" destination="p2N-Pf-zF8" id="8m8-Qr-ocP"/>
                     </connections>
                 </viewController>
@@ -1938,7 +1963,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFd-Me-KgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5596" y="310"/>
+            <point key="canvasLocation" x="6933" y="310"/>
         </scene>
         <!--Post9 View Controller-->
         <scene sceneID="XqX-fb-NAw">
@@ -1961,7 +1986,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have the vehicle &amp; it’s seller information?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5m5-s4-Ihp">
-                                        <rect key="frame" x="20" y="191" width="324" height="17.666666666666657"/>
+                                        <rect key="frame" x="20" y="191" width="327.33333333333331" height="17.666666666666657"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2117,7 +2142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6s-At-nnr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6228" y="310"/>
+            <point key="canvasLocation" x="6383" y="-673"/>
         </scene>
         <!--Post10 View Controller-->
         <scene sceneID="V7P-yL-VRb">
@@ -2132,8 +2157,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BF9-Xk-pGN">
                                         <rect key="frame" x="140.33333333333331" y="58" width="133.33333333333331" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="133.33333333333331" id="6z8-Hd-viH"/>
+                                            <constraint firstAttribute="height" constant="20" id="77h-dY-Uc9"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enq-Ao-2o7">
@@ -2162,7 +2191,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle listed on Finance That" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyP-Cj-eWv">
                                         <rect key="frame" x="20" y="201" width="207.66666666666666" height="19.666666666666657"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the listing stock number so we can attach the vehicle with your application." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buW-b2-P3f">
@@ -2172,7 +2201,7 @@
                                             <constraint firstAttribute="width" constant="331" id="zmD-6y-cjX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Regular" family="Basis Grotesque Pro" pointSize="11"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter the stock number here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-bw-E3e" customClass="CustomTextField" customModule="Finance" customModuleProvider="target">
@@ -2192,7 +2221,7 @@
                                             <constraint firstAttribute="width" constant="90" id="VQT-uV-MKh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                        <state key="normal" title="Attach">
+                                        <state key="normal" title="Find">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -2202,15 +2231,12 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Found!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR5-4c-gA9">
                                         <rect key="frame" x="20.000000000000007" y="355" width="102.66666666666669" height="19.666666666666686"/>
                                         <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.2470588235" green="0.13725490200000001" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6aD-jA-6ix">
                                         <rect key="frame" x="0.0" y="380" width="414" height="250"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="oeT-MM-KY7"/>
-                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="post10cell" rowHeight="84" id="Ixa-PJ-Sq0" customClass="Post10TableViewCell" customModule="Finance" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="84"/>
@@ -2222,24 +2248,28 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTV-Df-Bxm">
                                                             <rect key="frame" x="16" y="17" width="382" height="30"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stock      :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9R-j1-S8b">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock      :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9R-j1-S8b">
                                                                     <rect key="frame" x="8" y="5" width="75" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="102232" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-6D-DZE">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="102232" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-6D-DZE">
                                                                     <rect key="frame" x="97" y="5" width="66" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                            <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
+                                                                <constraint firstItem="J9R-j1-S8b" firstAttribute="leading" secondItem="hTV-Df-Bxm" secondAttribute="leading" constant="8" id="7UM-BZ-fBk"/>
                                                                 <constraint firstAttribute="height" constant="30" id="8fz-JQ-99U"/>
+                                                                <constraint firstItem="J9R-j1-S8b" firstAttribute="top" secondItem="hTV-Df-Bxm" secondAttribute="top" constant="5" id="Uvf-fI-ni7"/>
+                                                                <constraint firstAttribute="bottom" secondItem="J9R-j1-S8b" secondAttribute="bottom" constant="4" id="amR-u0-9Ba"/>
+                                                                <constraint firstItem="vqK-6D-DZE" firstAttribute="bottom" secondItem="J9R-j1-S8b" secondAttribute="bottom" id="fdz-Pj-KVp"/>
+                                                                <constraint firstItem="vqK-6D-DZE" firstAttribute="top" secondItem="J9R-j1-S8b" secondAttribute="top" id="gLC-bi-lUx"/>
+                                                                <constraint firstItem="vqK-6D-DZE" firstAttribute="leading" secondItem="J9R-j1-S8b" secondAttribute="trailing" constant="14" id="nUR-Tf-i5i"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -2323,7 +2353,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="attachBtn" destination="Kda-xI-jtR" id="OGT-xl-Nvc"/>
+                        <outlet property="attachBtn" destination="Kda-xI-jtR" id="YaN-Ej-BkT"/>
+                        <outlet property="nextBtn" destination="Lra-yO-8ds" id="m8h-4e-x10"/>
                         <outlet property="pleaseLbl" destination="buW-b2-P3f" id="UxF-7c-dKM"/>
                         <outlet property="stockNumTextField" destination="xUI-bw-E3e" id="tGQ-qB-Y8S"/>
                         <outlet property="tableView" destination="6aD-jA-6ix" id="U3z-hD-qVN"/>
@@ -2334,7 +2365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l47-jD-FTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6983" y="314"/>
+            <point key="canvasLocation" x="5635" y="309"/>
         </scene>
         <!--Post5 View Controller-->
         <scene sceneID="jxj-Di-uKH">
@@ -2529,7 +2560,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Vaf-tc-aTA" secondAttribute="bottom" id="A0Q-dt-zkJ"/>
                                     <constraint firstItem="Vaf-tc-aTA" firstAttribute="width" secondItem="0Ea-x9-L3P" secondAttribute="width" id="Ymh-RE-ChK"/>
-                                    <constraint firstItem="Vaf-tc-aTA" firstAttribute="height" secondItem="0Ea-x9-L3P" secondAttribute="height" id="eCs-SU-fp0"/>
+                                    <constraint firstItem="Vaf-tc-aTA" firstAttribute="height" secondItem="0Ea-x9-L3P" secondAttribute="height" priority="250" id="eCs-SU-fp0"/>
                                     <constraint firstAttribute="trailing" secondItem="Vaf-tc-aTA" secondAttribute="trailing" id="ff9-Gr-bpz"/>
                                     <constraint firstItem="Vaf-tc-aTA" firstAttribute="top" secondItem="0Ea-x9-L3P" secondAttribute="top" id="ljc-1O-aFX"/>
                                     <constraint firstItem="Vaf-tc-aTA" firstAttribute="leading" secondItem="0Ea-x9-L3P" secondAttribute="leading" id="uge-MZ-qZy"/>
@@ -2619,10 +2650,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mo-Or-AFP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1069"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="968"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAD-cg-t17">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1069"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="968"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seller Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFi-r9-JRy">
                                                 <rect key="frame" x="165" y="55.999999999999993" width="84" height="19.666666666666664"/>
@@ -2763,51 +2794,26 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgN-h9-5Vj">
-                                                <rect key="frame" x="20" y="988" width="374" height="48"/>
-                                                <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="1UM-tM-Joc"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
-                                                <state key="normal" title="Next">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="nextBtn:" destination="x34-Nd-tLf" eventType="touchUpInside" id="4QG-bE-EL9"/>
-                                                </connections>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sto-2s-TtI">
-                                                <rect key="frame" x="0.0" y="967" width="414" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="wvZ-dl-p7u"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Sto-2s-TtI" firstAttribute="top" secondItem="jd5-dq-WZY" secondAttribute="bottom" constant="12" id="0Yc-ku-1z0"/>
                                             <constraint firstItem="ioM-Hq-AHI" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="1nG-KM-gSe"/>
                                             <constraint firstAttribute="trailing" secondItem="flz-Tb-Sim" secondAttribute="trailing" constant="20" id="1tO-7G-csr"/>
                                             <constraint firstItem="Q1A-zY-kGa" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="72l-OZ-6aL"/>
                                             <constraint firstAttribute="trailing" secondItem="WUp-Ln-wMG" secondAttribute="trailing" constant="20" id="9By-yi-elQ"/>
+                                            <constraint firstAttribute="height" constant="968" id="BcJ-An-JGb"/>
                                             <constraint firstItem="2Jq-Wr-8hY" firstAttribute="top" secondItem="88s-Pq-cIb" secondAttribute="bottom" constant="10" id="C3N-4g-weN"/>
                                             <constraint firstItem="ELB-dl-BuN" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="Cc9-uS-oeI"/>
                                             <constraint firstItem="aXu-20-8Yt" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="Dcc-21-JgS"/>
                                             <constraint firstItem="88s-Pq-cIb" firstAttribute="top" secondItem="flz-Tb-Sim" secondAttribute="bottom" constant="20" id="FG2-9N-ACR"/>
-                                            <constraint firstAttribute="height" constant="1069" id="FvL-KT-qFl"/>
                                             <constraint firstItem="OTr-59-VVl" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="G1E-DT-Iou"/>
                                             <constraint firstAttribute="trailing" secondItem="OTr-59-VVl" secondAttribute="trailing" constant="20" id="HEd-a3-SCa"/>
-                                            <constraint firstItem="LgN-h9-5Vj" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="HYh-VN-PvL"/>
                                             <constraint firstItem="fKw-Th-FjK" firstAttribute="top" secondItem="2Jq-Wr-8hY" secondAttribute="bottom" constant="20" id="Jf9-cJ-sEh"/>
                                             <constraint firstItem="flz-Tb-Sim" firstAttribute="top" secondItem="bnB-5g-XBs" secondAttribute="bottom" constant="10" id="Jol-lI-11r"/>
                                             <constraint firstItem="flz-Tb-Sim" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="K4P-Yb-BoF"/>
                                             <constraint firstItem="88s-Pq-cIb" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="KmB-Y6-Kqp"/>
                                             <constraint firstItem="bnB-5g-XBs" firstAttribute="top" secondItem="5Cb-qz-I5S" secondAttribute="bottom" constant="20" id="LPL-Hc-7LZ"/>
                                             <constraint firstItem="bnB-5g-XBs" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="NGq-jP-3Ft"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sto-2s-TtI" secondAttribute="trailing" id="NTB-DM-Wr6"/>
-                                            <constraint firstAttribute="bottom" secondItem="LgN-h9-5Vj" secondAttribute="bottom" constant="33" id="P1k-B2-n3Z"/>
                                             <constraint firstItem="MIe-Ue-Edj" firstAttribute="top" secondItem="kFi-r9-JRy" secondAttribute="bottom" constant="26" id="QIp-UG-0HG"/>
                                             <constraint firstAttribute="trailing" secondItem="Q1A-zY-kGa" secondAttribute="trailing" constant="20" id="R3s-PM-OhP"/>
                                             <constraint firstItem="Em3-rx-cj4" firstAttribute="top" secondItem="Q1A-zY-kGa" secondAttribute="bottom" constant="20" id="RTD-KM-T5j"/>
@@ -2822,15 +2828,12 @@
                                             <constraint firstAttribute="trailing" secondItem="5Cb-qz-I5S" secondAttribute="trailing" constant="20" id="bLy-Bg-MSD"/>
                                             <constraint firstItem="jd5-dq-WZY" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="dR7-I2-1CW"/>
                                             <constraint firstItem="Ql1-Gv-3Ih" firstAttribute="top" secondItem="kAD-cg-t17" secondAttribute="top" constant="55" id="efy-8B-Joa"/>
-                                            <constraint firstItem="Sto-2s-TtI" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" id="enZ-p9-FXi"/>
-                                            <constraint firstAttribute="trailing" secondItem="LgN-h9-5Vj" secondAttribute="trailing" constant="20" id="f9h-QR-ROj"/>
                                             <constraint firstItem="ukP-VM-NWE" firstAttribute="top" secondItem="OTr-59-VVl" secondAttribute="bottom" constant="20" id="fll-xB-0xA"/>
                                             <constraint firstItem="WSe-3E-07h" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="gFd-H1-32V"/>
                                             <constraint firstItem="WUp-Ln-wMG" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="gzD-YR-bRc"/>
                                             <constraint firstItem="MIe-Ue-Edj" firstAttribute="centerX" secondItem="kFi-r9-JRy" secondAttribute="centerX" id="h00-EX-7rk"/>
                                             <constraint firstItem="2Jq-Wr-8hY" firstAttribute="leading" secondItem="kAD-cg-t17" secondAttribute="leading" constant="20" id="h1g-Ti-Ex4"/>
                                             <constraint firstAttribute="trailing" secondItem="2Jq-Wr-8hY" secondAttribute="trailing" constant="20" id="l44-2R-9yk"/>
-                                            <constraint firstItem="LgN-h9-5Vj" firstAttribute="top" secondItem="Sto-2s-TtI" secondAttribute="bottom" constant="20" id="lE3-1e-dvv"/>
                                             <constraint firstItem="kFi-r9-JRy" firstAttribute="top" secondItem="kAD-cg-t17" secondAttribute="top" constant="56" id="mwT-3b-lda"/>
                                             <constraint firstItem="Q1A-zY-kGa" firstAttribute="top" secondItem="ukP-VM-NWE" secondAttribute="bottom" constant="10" id="pE8-iS-NeH"/>
                                             <constraint firstItem="9Vf-cK-4fA" firstAttribute="centerX" secondItem="MIe-Ue-Edj" secondAttribute="centerX" id="qLf-8n-wEo"/>
@@ -2850,19 +2853,58 @@
                                     <constraint firstItem="kAD-cg-t17" firstAttribute="leading" secondItem="1Mo-Or-AFP" secondAttribute="leading" id="1BN-Yj-xQD"/>
                                     <constraint firstAttribute="bottom" secondItem="kAD-cg-t17" secondAttribute="bottom" id="C7E-7j-Yhz"/>
                                     <constraint firstItem="kAD-cg-t17" firstAttribute="top" secondItem="1Mo-Or-AFP" secondAttribute="top" id="GDn-VS-Zzd"/>
-                                    <constraint firstItem="kAD-cg-t17" firstAttribute="height" secondItem="1Mo-Or-AFP" secondAttribute="height" multiplier="0.992" priority="250" constant="8" id="VOM-UY-gkh"/>
+                                    <constraint firstItem="kAD-cg-t17" firstAttribute="height" secondItem="1Mo-Or-AFP" secondAttribute="height" multiplier="0.992" priority="250" constant="7.7400000000000002" id="VOM-UY-gkh"/>
                                     <constraint firstItem="kAD-cg-t17" firstAttribute="width" secondItem="1Mo-Or-AFP" secondAttribute="width" id="dv1-XN-VJc"/>
                                     <constraint firstAttribute="trailing" secondItem="kAD-cg-t17" secondAttribute="trailing" id="nvL-mL-OHC"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGK-E1-2z1">
+                                <rect key="frame" x="0.0" y="969" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgN-h9-5Vj">
+                                        <rect key="frame" x="20" y="18" width="374" height="48"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="tg3-Pp-eH9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BasisGrotesquePro-Medium" family="Basis Grotesque Pro" pointSize="15"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextBtn:" destination="x34-Nd-tLf" eventType="touchUpInside" id="4QG-bE-EL9"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sto-2s-TtI">
+                                        <rect key="frame" x="0.0" y="1" width="414" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Uhb-p6-3Ly"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7hK-ex-ydC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sto-2s-TtI" secondAttribute="trailing" id="Fzk-Rg-x3C"/>
+                                    <constraint firstItem="Sto-2s-TtI" firstAttribute="top" secondItem="LGK-E1-2z1" secondAttribute="top" constant="1" id="N6F-VH-W9B"/>
+                                    <constraint firstItem="LgN-h9-5Vj" firstAttribute="top" secondItem="Sto-2s-TtI" secondAttribute="bottom" constant="16" id="TTx-Me-zhp"/>
+                                    <constraint firstItem="LgN-h9-5Vj" firstAttribute="leading" secondItem="LGK-E1-2z1" secondAttribute="leading" constant="20" symbolic="YES" id="fJw-BG-oMo"/>
+                                    <constraint firstItem="Sto-2s-TtI" firstAttribute="leading" secondItem="LGK-E1-2z1" secondAttribute="leading" id="jWo-WN-H0R"/>
+                                    <constraint firstAttribute="trailing" secondItem="LgN-h9-5Vj" secondAttribute="trailing" constant="20" symbolic="YES" id="nsL-cp-GBI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jKw-7T-R2u"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LGK-E1-2z1" firstAttribute="top" secondItem="1Mo-Or-AFP" secondAttribute="bottom" constant="1" id="3fs-3U-bjM"/>
                             <constraint firstItem="1Mo-Or-AFP" firstAttribute="trailing" secondItem="jKw-7T-R2u" secondAttribute="trailing" id="BvA-8g-6Fv"/>
-                            <constraint firstItem="1Mo-Or-AFP" firstAttribute="bottom" secondItem="jKw-7T-R2u" secondAttribute="bottom" id="L9u-NH-n42"/>
+                            <constraint firstItem="LGK-E1-2z1" firstAttribute="leading" secondItem="jKw-7T-R2u" secondAttribute="leading" id="Iiv-zc-jNj"/>
+                            <constraint firstItem="LGK-E1-2z1" firstAttribute="bottom" secondItem="jKw-7T-R2u" secondAttribute="bottom" id="beI-Q2-uwr"/>
                             <constraint firstItem="1Mo-Or-AFP" firstAttribute="top" secondItem="jKw-7T-R2u" secondAttribute="top" id="cEb-qr-i8V"/>
                             <constraint firstItem="1Mo-Or-AFP" firstAttribute="leading" secondItem="jKw-7T-R2u" secondAttribute="leading" id="qCb-Uv-3BS"/>
+                            <constraint firstItem="LGK-E1-2z1" firstAttribute="trailing" secondItem="jKw-7T-R2u" secondAttribute="trailing" id="r1f-kd-Ri3"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1069"/>
@@ -2890,7 +2932,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2c-Qz-jmV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4309" y="446"/>
+            <point key="canvasLocation" x="4307.2463768115949" y="445.51630434782612"/>
         </scene>
     </scenes>
     <resources>
@@ -2923,9 +2965,6 @@
         <image name="post1" width="275" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
