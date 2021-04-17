@@ -16,9 +16,25 @@ class UserPage2ViewController: UIViewController {
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var linkedinBtn: UIButton!
     @IBOutlet weak var continueBtn: UIButton!
+    @IBOutlet weak var privacyPolicyLbl: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         
+        let normalText = """
+By clicking "Create account", you agree to our 
+"""
+        let boldText  = "Terms of use &  privacy policy"
+
+        let attributedString = NSMutableAttributedString(string:normalText)
+        let fontBold = UIFont(name: "BasisGrotesquePro-Bold", size: 11)
+        let attrs = [NSAttributedString.Key.font :fontBold]
+        let boldString = NSMutableAttributedString(string: boldText, attributes:attrs as [NSAttributedString.Key : Any])
+
+        attributedString.append(boldString)
+        privacyPolicyLbl.attributedText = attributedString
         
         googleBtn.layer.cornerRadius = 10
         googleBtn.layer.borderWidth = 1
@@ -35,17 +51,15 @@ class UserPage2ViewController: UIViewController {
         continueBtn.layer.backgroundColor = UIColor(red: 0.984, green: 0.318, blue: 0, alpha: 1).cgColor
         continueBtn.layer.cornerRadius = 10
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    override func viewDidLayoutSubviews() {
+        scrollView.isScrollEnabled = true
+        // Do any additional setup after loading the view
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: 736)
+    }
+    override func viewWillLayoutSubviews() {
+        self.navigationController?.isNavigationBarHidden = true
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
     @IBAction func googleBtn(_ sender: Any) {
     }
     

@@ -3,24 +3,133 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1802AE772610FC6A00C32F63 /* UserPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1802AE762610FC6A00C32F63 /* UserPage.storyboard */; };
+		1802AE7C2610FC9E00C32F63 /* UserProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802AE7B2610FC9E00C32F63 /* UserProfilePageViewController.swift */; };
+		1802AE812611117500C32F63 /* SavedAdsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802AE802611117500C32F63 /* SavedAdsPageViewController.swift */; };
+		1802AE87261112C900C32F63 /* SavedAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1802AE86261112C900C32F63 /* SavedAdsTableViewCell.swift */; };
 		18076CFA25E74878003B9ABB /* UserPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CF925E74878003B9ABB /* UserPage1ViewController.swift */; };
 		18076CFC25E754A9003B9ABB /* UserPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFB25E754A9003B9ABB /* UserPage2ViewController.swift */; };
 		18076CFE25E75979003B9ABB /* UserPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFD25E75979003B9ABB /* UserPage3ViewController.swift */; };
 		18076D0025E77398003B9ABB /* UserPage4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076CFF25E77398003B9ABB /* UserPage4ViewController.swift */; };
 		18076D0325E77925003B9ABB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18076D0225E77925003B9ABB /* LogInViewController.swift */; };
+		18089D15261779DB00F049B6 /* TypeOfVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D14261779DB00F049B6 /* TypeOfVehicleViewController.swift */; };
+		18089D1D26177A9100F049B6 /* TypeOfVehicleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D1C26177A9100F049B6 /* TypeOfVehicleCollectionViewCell.swift */; };
+		18089D222617873C00F049B6 /* SelectMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D212617873C00F049B6 /* SelectMakeViewController.swift */; };
+		18089D272617877200F049B6 /* VehicleBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D262617877200F049B6 /* VehicleBrandsCollectionViewCell.swift */; };
+		18089D2F261798DD00F049B6 /* SelectModelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D2E261798DD00F049B6 /* SelectModelCollectionViewCell.swift */; };
+		18089D342617991500F049B6 /* SelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D332617991500F049B6 /* SelectModelViewController.swift */; };
+		180D1347262022A6003539A1 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D1346262022A6003539A1 /* SearchTextField.swift */; };
+		180D135026203C30003539A1 /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D134F26203C30003539A1 /* AboutPageViewController.swift */; };
+		180D51782611EAE50066C85A /* EditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D51772611EAE50066C85A /* EditPostViewController.swift */; };
+		180D51812611F8B60066C85A /* AddPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180D51802611F8B60066C85A /* AddPhotoCollectionViewCell.swift */; };
+		180E860D261D996E005A5151 /* BottomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E860C261D996E005A5151 /* BottomCardViewController.swift */; };
+		180E8628261DA880005A5151 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E8627261DA880005A5151 /* ThankYouViewController.swift */; };
+		180E8630261DAB85005A5151 /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E862F261DAB84005A5151 /* ImageGalleryViewController.swift */; };
+		180E8638261DAE94005A5151 /* ImageGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E8637261DAE94005A5151 /* ImageGalleryCollectionViewCell.swift */; };
+		180E8652261DF45F005A5151 /* NewlyListedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E8650261DF45F005A5151 /* NewlyListedTableViewCell.swift */; };
+		180E8653261DF45F005A5151 /* NewlyListedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E8651261DF45F005A5151 /* NewlyListedTableViewCell.xib */; };
+		180FC56B260CD0F500DEFBAA /* AllCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */; };
+		180FC571260CD15F00DEFBAA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FC570260CD15F00DEFBAA /* FilterViewController.swift */; };
+		1811920225F4368C00839599 /* Post2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811920125F4368C00839599 /* Post2ViewController.swift */; };
+		1811920725F43CAD00839599 /* Post3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811920625F43CAD00839599 /* Post3ViewController.swift */; };
+		1811920C25F453DF00839599 /* Post4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811920B25F453DF00839599 /* Post4ViewController.swift */; };
+		1811921125F45D6800839599 /* Post5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811921025F45D6800839599 /* Post5ViewController.swift */; };
+		1811921625F45D7400839599 /* Post6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811921525F45D7400839599 /* Post6ViewController.swift */; };
+		1811921B25F45D8200839599 /* Post7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811921A25F45D8200839599 /* Post7ViewController.swift */; };
+		1811922025F45D9000839599 /* Post8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811921F25F45D9000839599 /* Post8ViewController.swift */; };
+		1811922525F4691000839599 /* Post9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811922425F4691000839599 /* Post9ViewController.swift */; };
+		1811922A25F4691F00839599 /* Post10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811922925F4691F00839599 /* Post10ViewController.swift */; };
+		18151DD9261C4BC700691488 /* AllDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151DD8261C4BC700691488 /* AllDoneViewController.swift */; };
+		18151DE1261C4CEC00691488 /* BoostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151DE0261C4CEC00691488 /* BoostViewController.swift */; };
+		18151DF4261C5A0000691488 /* AdDetailsPriceListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151DF3261C5A0000691488 /* AdDetailsPriceListingModel.swift */; };
+		18151E01261C5CDD00691488 /* ADLatitudeAndLongitudeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151E00261C5CDD00691488 /* ADLatitudeAndLongitudeModel.swift */; };
+		18151E06261C5ED900691488 /* ADUnderListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151E05261C5ED800691488 /* ADUnderListingModel.swift */; };
+		18151E0B261C67B700691488 /* ADFeaturedListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151E0A261C67B700691488 /* ADFeaturedListing.swift */; };
+		18151E10261C69A900691488 /* ADListingFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151E0F261C69A900691488 /* ADListingFilter.swift */; };
+		18151E17261C6D7300691488 /* NewlyListedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18151E15261C6D7300691488 /* NewlyListedCollectionViewCell.xib */; };
+		18151E18261C6D7300691488 /* NewlyListedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151E16261C6D7300691488 /* NewlyListedCollectionViewCell.swift */; };
+		181A6CE126149AE000A783B8 /* PaymentCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A6CE026149AE000A783B8 /* PaymentCalculatorViewController.swift */; };
+		181AE700261BEB0700A3345A /* PostAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AE6FF261BEB0700A3345A /* PostAdViewController.swift */; };
+		181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */; };
 		181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D877F25E8B2CF002E116D /* CustomTextfield.swift */; };
-		18387E2725E71AF7000F67EB /* UserRegPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18387E2625E71AF7000F67EB /* UserRegPage2ViewController.swift */; };
-		18387E2925E71B2F000F67EB /* UserRegPg3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18387E2825E71B2F000F67EB /* UserRegPg3ViewController.swift */; };
+		181E756A26184E380013CA5D /* SeatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E756926184E380013CA5D /* SeatingViewController.swift */; };
+		181E75722618503A0013CA5D /* TransmisssionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E75712618503A0013CA5D /* TransmisssionViewController.swift */; };
+		181E757A2618542A0013CA5D /* FuelTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E75792618542A0013CA5D /* FuelTypeViewController.swift */; };
+		181E7582261855AD0013CA5D /* DriveTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7581261855AD0013CA5D /* DriveTrainViewController.swift */; };
+		181E7587261855C10013CA5D /* CylinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7586261855C10013CA5D /* CylinderViewController.swift */; };
+		181E758C261858660013CA5D /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E758B261858660013CA5D /* ColorViewController.swift */; };
+		181E759126185F2E0013CA5D /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E759026185F2E0013CA5D /* OwnerViewController.swift */; };
+		181E7596261860DF0013CA5D /* AccidentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7595261860DF0013CA5D /* AccidentsViewController.swift */; };
+		181E759E261862470013CA5D /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E759D261862470013CA5D /* FeaturesViewController.swift */; };
+		181E75A3261867210013CA5D /* FeaturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E75A2261867210013CA5D /* FeaturesTableViewCell.swift */; };
+		181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */; };
+		1820EF182611C2CF00F8EDF6 /* MyAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820EF172611C2CF00F8EDF6 /* MyAdsViewController.swift */; };
+		1820EF202611C50E00F8EDF6 /* MyAdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820EF1F2611C50E00F8EDF6 /* MyAdsTableViewCell.swift */; };
+		1823659D260E9DFE009117B3 /* CarNamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */; };
+		182365A2260E9E49009117B3 /* CarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */; };
+		18286A7E260DC3D6003C8706 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */; };
+		182D7DF32602177500B06657 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D7DF22602177500B06657 /* HomePage.storyboard */; };
+		183117642620508100EAEE95 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183117632620508100EAEE95 /* SettingViewController.swift */; };
+		1831176C2620510200EAEE95 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831176B2620510200EAEE95 /* SettingTableViewCell.swift */; };
+		18320E4A25F300EA00F104E1 /* Post Application Page.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18320E4925F300EA00F104E1 /* Post Application Page.storyboard */; };
+		1833B22E2610796A00543E3E /* CarInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1833B22D2610796A00543E3E /* CarInfoCollectionViewCell.swift */; };
 		18387E3025E7212F000F67EB /* BasisGrotesquePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18387E2D25E7212E000F67EB /* BasisGrotesquePro-Light.ttf */; };
 		18387E3125E7212F000F67EB /* BasisGrotesquePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18387E2E25E7212F000F67EB /* BasisGrotesquePro-Regular.ttf */; };
 		18387E3225E7212F000F67EB /* BasisGrotesquePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18387E2F25E7212F000F67EB /* BasisGrotesquePro-Bold.ttf */; };
+		183AC91326034E76003D1999 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AC91126034E76003D1999 /* FeaturedCell.swift */; };
+		183AC91426034E76003D1999 /* FeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AC91226034E76003D1999 /* FeaturedCell.xib */; };
+		183AC92E26035897003D1999 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AC92C26035897003D1999 /* FeaturedCollectionViewCell.swift */; };
+		183AC92F26035897003D1999 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183AC92D26035897003D1999 /* FeaturedCollectionViewCell.xib */; };
+		1843DEEF2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843DEEE2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift */; };
+		1843DEF7262A06E700D1DB3F /* FindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1843DEF6262A06E700D1DB3F /* FindModel.swift */; };
+		184BA19725FBDDED0045FCD3 /* ResetCompleteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BA19625FBDDED0045FCD3 /* ResetCompleteModel.swift */; };
+		1852750D25F3B9A40018CD81 /* Post1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852750C25F3B9A40018CD81 /* Post1ViewController.swift */; };
+		18550C032615FDF0003C4096 /* ReportProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18550C022615FDF0003C4096 /* ReportProblemViewController.swift */; };
+		18550C0C26161622003C4096 /* ReviewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18550C0B26161622003C4096 /* ReviewsCollectionViewCell.swift */; };
+		1859E23D26186F11006888DF /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E23C26186F11006888DF /* DescriptionViewController.swift */; };
+		1859E24226187E5C006888DF /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E24126187E5C006888DF /* PhotosViewController.swift */; };
+		1859E24A2618822C006888DF /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E2492618822C006888DF /* LocationViewController.swift */; };
+		1859E24F261886A7006888DF /* PaymentMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E24E261886A7006888DF /* PaymentMethodViewController.swift */; };
+		1859E257261895DE006888DF /* PayWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E256261895DE006888DF /* PayWithViewController.swift */; };
+		1859E25F26189E3B006888DF /* AddCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E25E26189E3B006888DF /* AddCardDetailsViewController.swift */; };
+		1860381025FA65D60093BC02 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860380F25FA65D60093BC02 /* NetworkManager.swift */; };
+		1860381525FA65F00093BC02 /* ExtentionNetworManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860381425FA65F00093BC02 /* ExtentionNetworManager.swift */; };
+		1863A5C526173DA00027ACF5 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863A5C426173DA00027ACF5 /* ShareViewController.swift */; };
+		1863A5CE261748E00027ACF5 /* PostAdPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1863A5CD261748E00027ACF5 /* PostAdPage.storyboard */; };
+		1863A5D6261749BF0027ACF5 /* PowerSportVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863A5D5261749BE0027ACF5 /* PowerSportVehicleViewController.swift */; };
+		1863A5DF261751FE0027ACF5 /* PowerSportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863A5DE261751FE0027ACF5 /* PowerSportCollectionViewCell.swift */; };
+		18683695260E171D00565444 /* SearchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18683694260E171D00565444 /* SearchScreenViewController.swift */; };
+		1868369B260E21E300565444 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1868369A260E21E300565444 /* RecentSearchTableViewCell.swift */; };
+		186F5B4E25FA76D700FB9AA6 /* DealerDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B4D25FA76D700FB9AA6 /* DealerDetailsModel.swift */; };
+		186F5B5325FA780B00FB9AA6 /* BuyerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B5225FA780B00FB9AA6 /* BuyerDetailModel.swift */; };
+		186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B5725FA78D600FB9AA6 /* LoginModel.swift */; };
+		186F5B5D25FA7D8A00FB9AA6 /* ResetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B5C25FA7D8A00FB9AA6 /* ResetPasswordModel.swift */; };
+		186F5B6A25FA957A00FB9AA6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F5B6925FA957A00FB9AA6 /* Utilities.swift */; };
+		1873ACFF2622BE210084F34A /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873ACFE2622BE210084F34A /* LogOutViewController.swift */; };
+		1873AD122622C2E60084F34A /* FourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873AD112622C2E60084F34A /* FourPageViewController.swift */; };
+		1873AD172622C59C0084F34A /* AppDeclinedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873AD162622C59C0084F34A /* AppDeclinedViewController.swift */; };
+		1877A9BB260B395200712F91 /* ApplicationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9BA260B395200712F91 /* ApplicationDetailTableViewCell.swift */; };
+		1877A9CF260B53E700712F91 /* PrivateSellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */; };
+		1877A9D7260B548000712F91 /* ListingsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1877A9D6260B548000712F91 /* ListingsPage.storyboard */; };
+		1877A9E0260B60ED00712F91 /* CarNamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9DF260B60ED00712F91 /* CarNamesCollectionViewCell.swift */; };
+		1877A9E8260B74AB00712F91 /* CarDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877A9E7260B74AB00712F91 /* CarDetailCollectionViewCell.swift */; };
 		187B405525ED4AA3003EC979 /* Dealer6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B405425ED4AA3003EC979 /* Dealer6ViewController.swift */; };
 		187B405725ED5153003EC979 /* Dealer7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B405625ED5152003EC979 /* Dealer7ViewController.swift */; };
 		187B405925ED5829003EC979 /* Dealer8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B405825ED5829003EC979 /* Dealer8ViewController.swift */; };
+		1885D73E26039CAE0093B60E /* SearchByTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D73C26039CAE0093B60E /* SearchByTypeTableViewCell.swift */; };
+		1885D73F26039CAE0093B60E /* SearchByTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885D73D26039CAE0093B60E /* SearchByTypeTableViewCell.xib */; };
+		1885D7562603A0780093B60E /* SearchByTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D7542603A0780093B60E /* SearchByTypeCollectionViewCell.swift */; };
+		1885D7572603A0780093B60E /* SearchByTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1885D7552603A0780093B60E /* SearchByTypeCollectionViewCell.xib */; };
+		18865FE426283A2B00D39845 /* DurationAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18865FE326283A2B00D39845 /* DurationAddressViewController.swift */; };
+		188F094026120C8F000D0E2D /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F093F26120C8F000D0E2D /* ChatPageViewController.swift */; };
+		188F094826121444000D0E2D /* ChatPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F094726121444000D0E2D /* ChatPageTableViewCell.swift */; };
+		188F094D26121B30000D0E2D /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F094C26121B30000D0E2D /* ActionSheetViewController.swift */; };
+		188F095526121D27000D0E2D /* ActionSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F095426121D27000D0E2D /* ActionSheetTableViewCell.swift */; };
+		189CA4D825F99F9A007EAAF4 /* Post10TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CA4D725F99F9A007EAAF4 /* Post10TableViewCell.swift */; };
 		18A0426F25ECFBC9001B09F2 /* Dealer1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0426E25ECFBC9001B09F2 /* Dealer1ViewController.swift */; };
 		18A0427125ECFEFA001B09F2 /* Dealer2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0427025ECFEFA001B09F2 /* Dealer2ViewController.swift */; };
 		18A0427325ED1E26001B09F2 /* Dealer3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0427225ED1E26001B09F2 /* Dealer3ViewController.swift */; };
@@ -34,11 +143,32 @@
 		18A48A9125E64DF3006F3097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A48A8F25E64DF3006F3097 /* LaunchScreen.storyboard */; };
 		18A48A9C25E64DF3006F3097 /* FinanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A48A9B25E64DF3006F3097 /* FinanceTests.swift */; };
 		18A48AA725E64DF3006F3097 /* FinanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A48AA625E64DF3006F3097 /* FinanceUITests.swift */; };
+		18A4D82A2614CA23002D185B /* ReviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4D8292614CA23002D185B /* ReviewPageViewController.swift */; };
+		18A4D82F2614CF31002D185B /* ReviewPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4D82E2614CF31002D185B /* ReviewPageTableViewCell.swift */; };
+		18A54CB425F6806500B96D46 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A54CB325F6806400B96D46 /* Constants.swift */; };
+		18C043B5260DE2D90002181A /* RangeSliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C043B4260DE2D90002181A /* RangeSliderTableViewCell.swift */; };
 		18C782CD25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18C782CC25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf */; };
+		18E397AB26203DA2000D50AB /* AboutusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E397AA26203DA2000D50AB /* AboutusTableViewCell.swift */; };
+		18E397B026203DD2000D50AB /* CanadianCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E397AF26203DD2000D50AB /* CanadianCollectionViewCell.swift */; };
 		18EDAC5525E939130096AFD4 /* Forgt1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5425E939130096AFD4 /* Forgt1ViewController.swift */; };
 		18EDAC5725E9392F0096AFD4 /* Forgot2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5625E9392F0096AFD4 /* Forgot2ViewController.swift */; };
 		18EDAC5925E939410096AFD4 /* Forgot3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5825E939410096AFD4 /* Forgot3ViewController.swift */; };
 		18EDAC5B25E954130096AFD4 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDAC5A25E954130096AFD4 /* OTPTextField.swift */; };
+		18F5723F26135B670038880C /* BlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5723E26135B670038880C /* BlockViewController.swift */; };
+		18F5724B26136C6D0038880C /* ListDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5724A26136C6D0038880C /* ListDetailsViewController.swift */; };
+		18F5725326136CBD0038880C /* ListDetailsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F5725226136CBD0038880C /* ListDetailsPage.storyboard */; };
+		18F82EAB2617A07E0052E48F /* SelectTrimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82EAA2617A07E0052E48F /* SelectTrimViewController.swift */; };
+		18F82EC22617A7190052E48F /* SelectConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82EC12617A7190052E48F /* SelectConditionViewController.swift */; };
+		18F82ECA2617AC160052E48F /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82EC92617AC160052E48F /* PriceViewController.swift */; };
+		18F82ED22617AD8A0052E48F /* BodyTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82ED12617AD8A0052E48F /* BodyTypeViewController.swift */; };
+		18FAAA18260886E60041B897 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA17260886E60041B897 /* NotificationsViewController.swift */; };
+		18FAAA1D260893F70041B897 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA1C260893F70041B897 /* NotificationCell.swift */; };
+		18FAAA262608A1E00041B897 /* MyApplicationsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA252608A1E00041B897 /* MyApplicationsPageViewController.swift */; };
+		18FAAA2C2608AB860041B897 /* MyApplicationPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA2B2608AB860041B897 /* MyApplicationPageTableViewCell.swift */; };
+		18FAAA342608E7FA0041B897 /* MyApplicationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FAAA332608E7FA0041B897 /* MyApplicationDetailViewController.swift */; };
+		84016DF54AE835E3836B2F37 /* Pods_Finance_FinanceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEC4CA3DF9FE42B555A5C6A /* Pods_Finance_FinanceUITests.framework */; };
+		AD6069C412257A6E1FF37A43 /* Pods_FinanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE16D1C0C831DD5D523E767 /* Pods_FinanceTests.framework */; };
+		E4BB68CD7F530A2B7B7D95BC /* Pods_Finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99D5FED40E03898177B25AAA /* Pods_Finance.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,20 +189,129 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1802AE762610FC6A00C32F63 /* UserPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserPage.storyboard; sourceTree = "<group>"; };
+		1802AE7B2610FC9E00C32F63 /* UserProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePageViewController.swift; sourceTree = "<group>"; };
+		1802AE802611117500C32F63 /* SavedAdsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsPageViewController.swift; sourceTree = "<group>"; };
+		1802AE86261112C900C32F63 /* SavedAdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsTableViewCell.swift; sourceTree = "<group>"; };
 		18076CF925E74878003B9ABB /* UserPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage1ViewController.swift; sourceTree = "<group>"; };
 		18076CFB25E754A9003B9ABB /* UserPage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage2ViewController.swift; sourceTree = "<group>"; };
 		18076CFD25E75979003B9ABB /* UserPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage3ViewController.swift; sourceTree = "<group>"; };
 		18076CFF25E77398003B9ABB /* UserPage4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage4ViewController.swift; sourceTree = "<group>"; };
 		18076D0225E77925003B9ABB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		18089D14261779DB00F049B6 /* TypeOfVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfVehicleViewController.swift; sourceTree = "<group>"; };
+		18089D1C26177A9100F049B6 /* TypeOfVehicleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfVehicleCollectionViewCell.swift; sourceTree = "<group>"; };
+		18089D212617873C00F049B6 /* SelectMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMakeViewController.swift; sourceTree = "<group>"; };
+		18089D262617877200F049B6 /* VehicleBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
+		18089D2E261798DD00F049B6 /* SelectModelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelCollectionViewCell.swift; sourceTree = "<group>"; };
+		18089D332617991500F049B6 /* SelectModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelViewController.swift; sourceTree = "<group>"; };
+		180D1346262022A6003539A1 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		180D134F26203C30003539A1 /* AboutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageViewController.swift; sourceTree = "<group>"; };
+		180D51772611EAE50066C85A /* EditPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostViewController.swift; sourceTree = "<group>"; };
+		180D51802611F8B60066C85A /* AddPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		180E860C261D996E005A5151 /* BottomCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardViewController.swift; sourceTree = "<group>"; };
+		180E8627261DA880005A5151 /* ThankYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouViewController.swift; sourceTree = "<group>"; };
+		180E862F261DAB84005A5151 /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
+		180E8637261DAE94005A5151 /* ImageGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		180E8650261DF45F005A5151 /* NewlyListedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewlyListedTableViewCell.swift; sourceTree = "<group>"; };
+		180E8651261DF45F005A5151 /* NewlyListedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewlyListedTableViewCell.xib; sourceTree = "<group>"; };
+		180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesCell.swift; sourceTree = "<group>"; };
+		180FC570260CD15F00DEFBAA /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		1811920125F4368C00839599 /* Post2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post2ViewController.swift; sourceTree = "<group>"; };
+		1811920625F43CAD00839599 /* Post3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post3ViewController.swift; sourceTree = "<group>"; };
+		1811920B25F453DF00839599 /* Post4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post4ViewController.swift; sourceTree = "<group>"; };
+		1811921025F45D6800839599 /* Post5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post5ViewController.swift; sourceTree = "<group>"; };
+		1811921525F45D7400839599 /* Post6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post6ViewController.swift; sourceTree = "<group>"; };
+		1811921A25F45D8200839599 /* Post7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post7ViewController.swift; sourceTree = "<group>"; };
+		1811921F25F45D9000839599 /* Post8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post8ViewController.swift; sourceTree = "<group>"; };
+		1811922425F4691000839599 /* Post9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post9ViewController.swift; sourceTree = "<group>"; };
+		1811922925F4691F00839599 /* Post10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post10ViewController.swift; sourceTree = "<group>"; };
+		18151DD8261C4BC700691488 /* AllDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDoneViewController.swift; sourceTree = "<group>"; };
+		18151DE0261C4CEC00691488 /* BoostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostViewController.swift; sourceTree = "<group>"; };
+		18151DF3261C5A0000691488 /* AdDetailsPriceListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailsPriceListingModel.swift; sourceTree = "<group>"; };
+		18151E00261C5CDD00691488 /* ADLatitudeAndLongitudeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADLatitudeAndLongitudeModel.swift; sourceTree = "<group>"; };
+		18151E05261C5ED800691488 /* ADUnderListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADUnderListingModel.swift; sourceTree = "<group>"; };
+		18151E0A261C67B700691488 /* ADFeaturedListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADFeaturedListing.swift; sourceTree = "<group>"; };
+		18151E0F261C69A900691488 /* ADListingFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADListingFilter.swift; sourceTree = "<group>"; };
+		18151E15261C6D7300691488 /* NewlyListedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewlyListedCollectionViewCell.xib; sourceTree = "<group>"; };
+		18151E16261C6D7300691488 /* NewlyListedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewlyListedCollectionViewCell.swift; sourceTree = "<group>"; };
+		181A6CE026149AE000A783B8 /* PaymentCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCalculatorViewController.swift; sourceTree = "<group>"; };
+		181AE6FF261BEB0700A3345A /* PostAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdViewController.swift; sourceTree = "<group>"; };
+		181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		181D877F25E8B2CF002E116D /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
-		18387E2625E71AF7000F67EB /* UserRegPage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegPage2ViewController.swift; sourceTree = "<group>"; };
-		18387E2825E71B2F000F67EB /* UserRegPg3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegPg3ViewController.swift; sourceTree = "<group>"; };
+		181E756926184E380013CA5D /* SeatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatingViewController.swift; sourceTree = "<group>"; };
+		181E75712618503A0013CA5D /* TransmisssionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransmisssionViewController.swift; sourceTree = "<group>"; };
+		181E75792618542A0013CA5D /* FuelTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTypeViewController.swift; sourceTree = "<group>"; };
+		181E7581261855AD0013CA5D /* DriveTrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveTrainViewController.swift; sourceTree = "<group>"; };
+		181E7586261855C10013CA5D /* CylinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CylinderViewController.swift; sourceTree = "<group>"; };
+		181E758B261858660013CA5D /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		181E759026185F2E0013CA5D /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
+		181E7595261860DF0013CA5D /* AccidentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccidentsViewController.swift; sourceTree = "<group>"; };
+		181E759D261862470013CA5D /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
+		181E75A2261867210013CA5D /* FeaturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTableViewCell.swift; sourceTree = "<group>"; };
+		181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage1ViewController.swift; sourceTree = "<group>"; };
+		1820EF172611C2CF00F8EDF6 /* MyAdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAdsViewController.swift; sourceTree = "<group>"; };
+		1820EF1F2611C50E00F8EDF6 /* MyAdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAdsTableViewCell.swift; sourceTree = "<group>"; };
+		1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNamesTableViewCell.swift; sourceTree = "<group>"; };
+		182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailTableViewCell.swift; sourceTree = "<group>"; };
+		18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		182D7DF22602177500B06657 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		183117632620508100EAEE95 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1831176B2620510200EAEE95 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		18320E4925F300EA00F104E1 /* Post Application Page.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Post Application Page.storyboard"; sourceTree = "<group>"; };
+		1833B22D2610796A00543E3E /* CarInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		18387E2D25E7212E000F67EB /* BasisGrotesquePro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Light.ttf"; sourceTree = "<group>"; };
 		18387E2E25E7212F000F67EB /* BasisGrotesquePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Regular.ttf"; sourceTree = "<group>"; };
 		18387E2F25E7212F000F67EB /* BasisGrotesquePro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Bold.ttf"; sourceTree = "<group>"; };
+		183AC91126034E76003D1999 /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
+		183AC91226034E76003D1999 /* FeaturedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCell.xib; sourceTree = "<group>"; };
+		183AC92C26035897003D1999 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		183AC92D26035897003D1999 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
+		1843DEEE2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalizeApplicationViewController.swift; sourceTree = "<group>"; };
+		1843DEF6262A06E700D1DB3F /* FindModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindModel.swift; sourceTree = "<group>"; };
+		184BA19625FBDDED0045FCD3 /* ResetCompleteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetCompleteModel.swift; sourceTree = "<group>"; };
+		1852750C25F3B9A40018CD81 /* Post1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post1ViewController.swift; sourceTree = "<group>"; };
+		18550C022615FDF0003C4096 /* ReportProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportProblemViewController.swift; sourceTree = "<group>"; };
+		18550C0B26161622003C4096 /* ReviewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1859E23C26186F11006888DF /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		1859E24126187E5C006888DF /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		1859E2492618822C006888DF /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		1859E24E261886A7006888DF /* PaymentMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodViewController.swift; sourceTree = "<group>"; };
+		1859E256261895DE006888DF /* PayWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWithViewController.swift; sourceTree = "<group>"; };
+		1859E25E26189E3B006888DF /* AddCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardDetailsViewController.swift; sourceTree = "<group>"; };
+		1860380F25FA65D60093BC02 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1860381425FA65F00093BC02 /* ExtentionNetworManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtentionNetworManager.swift; sourceTree = "<group>"; };
+		1863A5C426173DA00027ACF5 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		1863A5CD261748E00027ACF5 /* PostAdPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostAdPage.storyboard; sourceTree = "<group>"; };
+		1863A5D5261749BE0027ACF5 /* PowerSportVehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSportVehicleViewController.swift; sourceTree = "<group>"; };
+		1863A5DE261751FE0027ACF5 /* PowerSportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSportCollectionViewCell.swift; sourceTree = "<group>"; };
+		18683694260E171D00565444 /* SearchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewController.swift; sourceTree = "<group>"; };
+		1868369A260E21E300565444 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
+		186F5B4D25FA76D700FB9AA6 /* DealerDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerDetailsModel.swift; sourceTree = "<group>"; };
+		186F5B5225FA780B00FB9AA6 /* BuyerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerDetailModel.swift; sourceTree = "<group>"; };
+		186F5B5725FA78D600FB9AA6 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		186F5B5C25FA7D8A00FB9AA6 /* ResetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordModel.swift; sourceTree = "<group>"; };
+		186F5B6925FA957A00FB9AA6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		1873ACFE2622BE210084F34A /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
+		1873AD112622C2E60084F34A /* FourPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPageViewController.swift; sourceTree = "<group>"; };
+		1873AD162622C59C0084F34A /* AppDeclinedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDeclinedViewController.swift; sourceTree = "<group>"; };
+		1877A9BA260B395200712F91 /* ApplicationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateSellerViewController.swift; sourceTree = "<group>"; };
+		1877A9D6260B548000712F91 /* ListingsPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingsPage.storyboard; sourceTree = "<group>"; };
+		1877A9DF260B60ED00712F91 /* CarNamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNamesCollectionViewCell.swift; sourceTree = "<group>"; };
+		1877A9E7260B74AB00712F91 /* CarDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		187B405425ED4AA3003EC979 /* Dealer6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer6ViewController.swift; sourceTree = "<group>"; };
 		187B405625ED5152003EC979 /* Dealer7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer7ViewController.swift; sourceTree = "<group>"; };
 		187B405825ED5829003EC979 /* Dealer8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer8ViewController.swift; sourceTree = "<group>"; };
+		1885D73C26039CAE0093B60E /* SearchByTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByTypeTableViewCell.swift; sourceTree = "<group>"; };
+		1885D73D26039CAE0093B60E /* SearchByTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchByTypeTableViewCell.xib; sourceTree = "<group>"; };
+		1885D7542603A0780093B60E /* SearchByTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1885D7552603A0780093B60E /* SearchByTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchByTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		18865FE326283A2B00D39845 /* DurationAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationAddressViewController.swift; sourceTree = "<group>"; };
+		188F093F26120C8F000D0E2D /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
+		188F094726121444000D0E2D /* ChatPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageTableViewCell.swift; sourceTree = "<group>"; };
+		188F094C26121B30000D0E2D /* ActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
+		188F095426121D27000D0E2D /* ActionSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetTableViewCell.swift; sourceTree = "<group>"; };
+		189CA4D725F99F9A007EAAF4 /* Post10TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post10TableViewCell.swift; sourceTree = "<group>"; };
 		18A0426E25ECFBC9001B09F2 /* Dealer1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer1ViewController.swift; sourceTree = "<group>"; };
 		18A0427025ECFEFA001B09F2 /* Dealer2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer2ViewController.swift; sourceTree = "<group>"; };
 		18A0427225ED1E26001B09F2 /* Dealer3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer3ViewController.swift; sourceTree = "<group>"; };
@@ -92,11 +331,38 @@
 		18A48AA225E64DF3006F3097 /* FinanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A48AA625E64DF3006F3097 /* FinanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceUITests.swift; sourceTree = "<group>"; };
 		18A48AA825E64DF3006F3097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A4D8292614CA23002D185B /* ReviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageViewController.swift; sourceTree = "<group>"; };
+		18A4D82E2614CF31002D185B /* ReviewPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPageTableViewCell.swift; sourceTree = "<group>"; };
+		18A54CB325F6806400B96D46 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18C043B4260DE2D90002181A /* RangeSliderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTableViewCell.swift; sourceTree = "<group>"; };
 		18C782CC25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Basis Grotesque Pro Medium.ttf"; sourceTree = "<group>"; };
+		18E397AA26203DA2000D50AB /* AboutusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutusTableViewCell.swift; sourceTree = "<group>"; };
+		18E397AF26203DD2000D50AB /* CanadianCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadianCollectionViewCell.swift; sourceTree = "<group>"; };
 		18EDAC5425E939130096AFD4 /* Forgt1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgt1ViewController.swift; sourceTree = "<group>"; };
 		18EDAC5625E9392F0096AFD4 /* Forgot2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot2ViewController.swift; sourceTree = "<group>"; };
 		18EDAC5825E939410096AFD4 /* Forgot3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forgot3ViewController.swift; sourceTree = "<group>"; };
 		18EDAC5A25E954130096AFD4 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		18F5723E26135B670038880C /* BlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockViewController.swift; sourceTree = "<group>"; };
+		18F5724A26136C6D0038880C /* ListDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsViewController.swift; sourceTree = "<group>"; };
+		18F5725226136CBD0038880C /* ListDetailsPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListDetailsPage.storyboard; sourceTree = "<group>"; };
+		18F82EAA2617A07E0052E48F /* SelectTrimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTrimViewController.swift; sourceTree = "<group>"; };
+		18F82EC12617A7190052E48F /* SelectConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectConditionViewController.swift; sourceTree = "<group>"; };
+		18F82EC92617AC160052E48F /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
+		18F82ED12617AD8A0052E48F /* BodyTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTypeViewController.swift; sourceTree = "<group>"; };
+		18FAAA17260886E60041B897 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		18FAAA1C260893F70041B897 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		18FAAA252608A1E00041B897 /* MyApplicationsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationsPageViewController.swift; sourceTree = "<group>"; };
+		18FAAA2B2608AB860041B897 /* MyApplicationPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationPageTableViewCell.swift; sourceTree = "<group>"; };
+		18FAAA332608E7FA0041B897 /* MyApplicationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApplicationDetailViewController.swift; sourceTree = "<group>"; };
+		4FB5B725CB10DCE2BCAE0255 /* Pods-Finance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finance.release.xcconfig"; path = "Target Support Files/Pods-Finance/Pods-Finance.release.xcconfig"; sourceTree = "<group>"; };
+		4FEC4CA3DF9FE42B555A5C6A /* Pods_Finance_FinanceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finance_FinanceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB906258C6EF57CD32DE260 /* Pods-Finance-FinanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finance-FinanceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		71B0452AE243E799AE6FEB75 /* Pods-Finance-FinanceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finance-FinanceUITests.release.xcconfig"; path = "Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		99D5FED40E03898177B25AAA /* Pods_Finance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75FD106DD58B39A1B3325A4 /* Pods-FinanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceTests.release.xcconfig"; path = "Target Support Files/Pods-FinanceTests/Pods-FinanceTests.release.xcconfig"; sourceTree = "<group>"; };
+		B14CC5BFC760AAC23408007C /* Pods-FinanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceTests.debug.xcconfig"; path = "Target Support Files/Pods-FinanceTests/Pods-FinanceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFE16D1C0C831DD5D523E767 /* Pods_FinanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8AEAA048628E52F6ECD8CAE /* Pods-Finance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finance.debug.xcconfig"; path = "Target Support Files/Pods-Finance/Pods-Finance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +370,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4BB68CD7F530A2B7B7D95BC /* Pods_Finance.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +378,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6069C412257A6E1FF37A43 /* Pods_FinanceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,12 +386,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84016DF54AE835E3836B2F37 /* Pods_Finance_FinanceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1802AE752610FC4500C32F63 /* User Page */ = {
+			isa = PBXGroup;
+			children = (
+				1802AE762610FC6A00C32F63 /* UserPage.storyboard */,
+				1802AE7B2610FC9E00C32F63 /* UserProfilePageViewController.swift */,
+				1802AE802611117500C32F63 /* SavedAdsPageViewController.swift */,
+				1820EF172611C2CF00F8EDF6 /* MyAdsViewController.swift */,
+				180D51772611EAE50066C85A /* EditPostViewController.swift */,
+				188F093F26120C8F000D0E2D /* ChatPageViewController.swift */,
+				180E860C261D996E005A5151 /* BottomCardViewController.swift */,
+				18F5723E26135B670038880C /* BlockViewController.swift */,
+				180D134F26203C30003539A1 /* AboutPageViewController.swift */,
+				183117632620508100EAEE95 /* SettingViewController.swift */,
+				1873ACFE2622BE210084F34A /* LogOutViewController.swift */,
+				1873AD112622C2E60084F34A /* FourPageViewController.swift */,
+				1873AD162622C59C0084F34A /* AppDeclinedViewController.swift */,
+				1802AE852611129A00C32F63 /* TableViewCell */,
+				180D517F2611F8690066C85A /* CollectionViewCell */,
+			);
+			path = "User Page";
+			sourceTree = "<group>";
+		};
+		1802AE852611129A00C32F63 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1802AE86261112C900C32F63 /* SavedAdsTableViewCell.swift */,
+				1820EF1F2611C50E00F8EDF6 /* MyAdsTableViewCell.swift */,
+				188F094726121444000D0E2D /* ChatPageTableViewCell.swift */,
+				18E397AA26203DA2000D50AB /* AboutusTableViewCell.swift */,
+				1831176B2620510200EAEE95 /* SettingTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		18076CF825E747F8003B9ABB /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +434,6 @@
 				18076CFB25E754A9003B9ABB /* UserPage2ViewController.swift */,
 				18076CFD25E75979003B9ABB /* UserPage3ViewController.swift */,
 				18076CFF25E77398003B9ABB /* UserPage4ViewController.swift */,
-				18076D0125E77908003B9ABB /* Log In */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -140,9 +442,77 @@
 			isa = PBXGroup;
 			children = (
 				18076D0225E77925003B9ABB /* LogInViewController.swift */,
-				18EDAC5325E938E20096AFD4 /* Forgot Password */,
 			);
 			path = "Log In";
+			sourceTree = "<group>";
+		};
+		180D517F2611F8690066C85A /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				180D51802611F8B60066C85A /* AddPhotoCollectionViewCell.swift */,
+				18E397AF26203DD2000D50AB /* CanadianCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		180E8657261DF46D005A5151 /* Newly Listed Cell */ = {
+			isa = PBXGroup;
+			children = (
+				180E8651261DF45F005A5151 /* NewlyListedTableViewCell.xib */,
+				180E8650261DF45F005A5151 /* NewlyListedTableViewCell.swift */,
+			);
+			path = "Newly Listed Cell";
+			sourceTree = "<group>";
+		};
+		180FC56F260CD11D00DEFBAA /* AllCategoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				180FC56A260CD0F500DEFBAA /* AllCategoriesCell.swift */,
+			);
+			path = AllCategoriesCell;
+			sourceTree = "<group>";
+		};
+		18151E14261C6D7300691488 /* NewlyListedCell */ = {
+			isa = PBXGroup;
+			children = (
+				18151E15261C6D7300691488 /* NewlyListedCollectionViewCell.xib */,
+				18151E16261C6D7300691488 /* NewlyListedCollectionViewCell.swift */,
+			);
+			path = NewlyListedCell;
+			sourceTree = "<group>";
+		};
+		181C89732606354A002EE22F /* OnBoardingCell */ = {
+			isa = PBXGroup;
+			children = (
+				181C89742606354A002EE22F /* OnBoardingCollectionViewCell.swift */,
+			);
+			path = OnBoardingCell;
+			sourceTree = "<group>";
+		};
+		181E75A7261867340013CA5D /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				181E75A2261867210013CA5D /* FeaturesTableViewCell.swift */,
+			);
+			path = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		181ECFA12600C57D002FCC9E /* Home Page */ = {
+			isa = PBXGroup;
+			children = (
+				183AC91F260355E1003D1999 /* HomePageViewControllers */,
+				183AC90826034AB3003D1999 /* TableViewCell */,
+				183AC92326035856003D1999 /* CollectionView */,
+			);
+			path = "Home Page";
+			sourceTree = "<group>";
+		};
+		18286A7C260DC3B2003C8706 /* CategoriesCell */ = {
+			isa = PBXGroup;
+			children = (
+				18286A7D260DC3D6003C8706 /* CategoriesTableViewCell.swift */,
+			);
+			path = CategoriesCell;
 			sourceTree = "<group>";
 		};
 		18387E2A25E71E7D000F67EB /* Fonts */ = {
@@ -156,11 +526,73 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		183AC90826034AB3003D1999 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				182365A1260E9E49009117B3 /* CarDetailTableViewCell.swift */,
+				1823659C260E9DFE009117B3 /* CarNamesTableViewCell.swift */,
+				18683699260E21B700565444 /* RecentSearchesCell */,
+				18C043B3260DE2B30002181A /* RangeSeekSliderCell */,
+				18286A7C260DC3B2003C8706 /* CategoriesCell */,
+				180FC56F260CD11D00DEFBAA /* AllCategoriesCell */,
+				1877A9B9260B391500712F91 /* ApplicatonDetailCell */,
+				18FAAA2A2608AB4A0041B897 /* MyApplicationPageCell */,
+				18FAAA212608940E0041B897 /* Notification Cell */,
+				1885D73B260397640093B60E /* SearchByTypeCell */,
+				183AC91826035422003D1999 /* HomeFeaturedCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		183AC91826035422003D1999 /* HomeFeaturedCell */ = {
+			isa = PBXGroup;
+			children = (
+				183AC91126034E76003D1999 /* FeaturedCell.swift */,
+				183AC91226034E76003D1999 /* FeaturedCell.xib */,
+			);
+			path = HomeFeaturedCell;
+			sourceTree = "<group>";
+		};
+		183AC91F260355E1003D1999 /* HomePageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				182D7DF22602177500B06657 /* HomePage.storyboard */,
+				181ECFA22600C5A4002FCC9E /* HomePage1ViewController.swift */,
+				18FAAA17260886E60041B897 /* NotificationsViewController.swift */,
+				18FAAA252608A1E00041B897 /* MyApplicationsPageViewController.swift */,
+				18FAAA332608E7FA0041B897 /* MyApplicationDetailViewController.swift */,
+				180FC570260CD15F00DEFBAA /* FilterViewController.swift */,
+				18683694260E171D00565444 /* SearchScreenViewController.swift */,
+			);
+			path = HomePageViewControllers;
+			sourceTree = "<group>";
+		};
+		183AC92326035856003D1999 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				18151E14261C6D7300691488 /* NewlyListedCell */,
+				186836A7260E232900565444 /* CarDetailCell */,
+				181C89732606354A002EE22F /* OnBoardingCell */,
+				1885D75C2603A2330093B60E /* FeaturedCell */,
+				1885D75B2603A20C0093B60E /* SearchByTypeCell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		183F88E225E7115E00EFD168 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				18076CF825E747F8003B9ABB /* Registration */,
+				1863A5CC2617488D0027ACF5 /* Post Ad page */,
+				18F5724926136C3D0038880C /* List Details Page */,
+				181ECFA12600C57D002FCC9E /* Home Page */,
+				1802AE752610FC4500C32F63 /* User Page */,
+				1877A9CD260B53B900712F91 /* Listings Page */,
+				1852750B25F3B9760018CD81 /* Post Application Page */,
 				183F88E325E7117E00EFD168 /* OnBoarding */,
+				18076CF825E747F8003B9ABB /* Registration */,
+				18076D0125E77908003B9ABB /* Log In */,
+				18EDAC5325E938E20096AFD4 /* Forgot Password */,
+				18A0426D25ECFB9C001B09F2 /* Dealer Registration */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,10 +601,201 @@
 			isa = PBXGroup;
 			children = (
 				18A48A8825E64DEE006F3097 /* ViewController.swift */,
-				18387E2625E71AF7000F67EB /* UserRegPage2ViewController.swift */,
-				18387E2825E71B2F000F67EB /* UserRegPg3ViewController.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		1852750B25F3B9760018CD81 /* Post Application Page */ = {
+			isa = PBXGroup;
+			children = (
+				18320E4925F300EA00F104E1 /* Post Application Page.storyboard */,
+				1852750C25F3B9A40018CD81 /* Post1ViewController.swift */,
+				1811920125F4368C00839599 /* Post2ViewController.swift */,
+				18865FE326283A2B00D39845 /* DurationAddressViewController.swift */,
+				1811920625F43CAD00839599 /* Post3ViewController.swift */,
+				1811920B25F453DF00839599 /* Post4ViewController.swift */,
+				1811921025F45D6800839599 /* Post5ViewController.swift */,
+				1811921525F45D7400839599 /* Post6ViewController.swift */,
+				1811921A25F45D8200839599 /* Post7ViewController.swift */,
+				1811921F25F45D9000839599 /* Post8ViewController.swift */,
+				1811922425F4691000839599 /* Post9ViewController.swift */,
+				1811922925F4691F00839599 /* Post10ViewController.swift */,
+				1843DEEE2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift */,
+				189CA4CB25F99F48007EAAF4 /* TableViewCell */,
+			);
+			path = "Post Application Page";
+			sourceTree = "<group>";
+		};
+		18550C0A261615DC003C4096 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18550C0B26161622003C4096 /* ReviewsCollectionViewCell.swift */,
+				180E8637261DAE94005A5151 /* ImageGalleryCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		1860380A25FA5F130093BC02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				186F5B4D25FA76D700FB9AA6 /* DealerDetailsModel.swift */,
+				186F5B5225FA780B00FB9AA6 /* BuyerDetailModel.swift */,
+				186F5B5725FA78D600FB9AA6 /* LoginModel.swift */,
+				186F5B5C25FA7D8A00FB9AA6 /* ResetPasswordModel.swift */,
+				184BA19625FBDDED0045FCD3 /* ResetCompleteModel.swift */,
+				18151E0A261C67B700691488 /* ADFeaturedListing.swift */,
+				18151E05261C5ED800691488 /* ADUnderListingModel.swift */,
+				18151E00261C5CDD00691488 /* ADLatitudeAndLongitudeModel.swift */,
+				18151DF3261C5A0000691488 /* AdDetailsPriceListingModel.swift */,
+				18151E0F261C69A900691488 /* ADListingFilter.swift */,
+				1843DEF6262A06E700D1DB3F /* FindModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1860380E25FA65510093BC02 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1860380F25FA65D60093BC02 /* NetworkManager.swift */,
+				1860381425FA65F00093BC02 /* ExtentionNetworManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1863A5CC2617488D0027ACF5 /* Post Ad page */ = {
+			isa = PBXGroup;
+			children = (
+				1863A5CD261748E00027ACF5 /* PostAdPage.storyboard */,
+				1863A5D5261749BE0027ACF5 /* PowerSportVehicleViewController.swift */,
+				18089D14261779DB00F049B6 /* TypeOfVehicleViewController.swift */,
+				18089D212617873C00F049B6 /* SelectMakeViewController.swift */,
+				18089D332617991500F049B6 /* SelectModelViewController.swift */,
+				18F82EAA2617A07E0052E48F /* SelectTrimViewController.swift */,
+				18F82EC12617A7190052E48F /* SelectConditionViewController.swift */,
+				18F82EC92617AC160052E48F /* PriceViewController.swift */,
+				18F82ED12617AD8A0052E48F /* BodyTypeViewController.swift */,
+				181E756926184E380013CA5D /* SeatingViewController.swift */,
+				181E75712618503A0013CA5D /* TransmisssionViewController.swift */,
+				181E75792618542A0013CA5D /* FuelTypeViewController.swift */,
+				181E7581261855AD0013CA5D /* DriveTrainViewController.swift */,
+				181E7586261855C10013CA5D /* CylinderViewController.swift */,
+				181E758B261858660013CA5D /* ColorViewController.swift */,
+				181E759026185F2E0013CA5D /* OwnerViewController.swift */,
+				181E7595261860DF0013CA5D /* AccidentsViewController.swift */,
+				181E759D261862470013CA5D /* FeaturesViewController.swift */,
+				1859E23C26186F11006888DF /* DescriptionViewController.swift */,
+				1859E24126187E5C006888DF /* PhotosViewController.swift */,
+				1859E2492618822C006888DF /* LocationViewController.swift */,
+				1859E24E261886A7006888DF /* PaymentMethodViewController.swift */,
+				1859E256261895DE006888DF /* PayWithViewController.swift */,
+				1859E25E26189E3B006888DF /* AddCardDetailsViewController.swift */,
+				181AE6FF261BEB0700A3345A /* PostAdViewController.swift */,
+				18151DD8261C4BC700691488 /* AllDoneViewController.swift */,
+				18151DE0261C4CEC00691488 /* BoostViewController.swift */,
+				1863A5DA261751D80027ACF5 /* Collection View Cell */,
+				181E75A7261867340013CA5D /* Table View Cell */,
+			);
+			path = "Post Ad page";
+			sourceTree = "<group>";
+		};
+		1863A5DA261751D80027ACF5 /* Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1863A5DE261751FE0027ACF5 /* PowerSportCollectionViewCell.swift */,
+				18089D1C26177A9100F049B6 /* TypeOfVehicleCollectionViewCell.swift */,
+				18089D262617877200F049B6 /* VehicleBrandsCollectionViewCell.swift */,
+				18089D2E261798DD00F049B6 /* SelectModelCollectionViewCell.swift */,
+			);
+			path = "Collection View Cell";
+			sourceTree = "<group>";
+		};
+		18683699260E21B700565444 /* RecentSearchesCell */ = {
+			isa = PBXGroup;
+			children = (
+				1868369A260E21E300565444 /* RecentSearchTableViewCell.swift */,
+			);
+			path = RecentSearchesCell;
+			sourceTree = "<group>";
+		};
+		186836A7260E232900565444 /* CarDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				1833B22D2610796A00543E3E /* CarInfoCollectionViewCell.swift */,
+			);
+			path = CarDetailCell;
+			sourceTree = "<group>";
+		};
+		1877A9B9260B391500712F91 /* ApplicatonDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				1877A9BA260B395200712F91 /* ApplicationDetailTableViewCell.swift */,
+			);
+			path = ApplicatonDetailCell;
+			sourceTree = "<group>";
+		};
+		1877A9CD260B53B900712F91 /* Listings Page */ = {
+			isa = PBXGroup;
+			children = (
+				1877A9D6260B548000712F91 /* ListingsPage.storyboard */,
+				188F094C26121B30000D0E2D /* ActionSheetViewController.swift */,
+				1877A9CE260B53E700712F91 /* PrivateSellerViewController.swift */,
+				1877A9DE260B60C300712F91 /* CollectionView */,
+				188F095926121D30000D0E2D /* TableViewCell */,
+			);
+			path = "Listings Page";
+			sourceTree = "<group>";
+		};
+		1877A9DE260B60C300712F91 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1877A9DF260B60ED00712F91 /* CarNamesCollectionViewCell.swift */,
+				1877A9E7260B74AB00712F91 /* CarDetailCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		1885D73B260397640093B60E /* SearchByTypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				1885D73D26039CAE0093B60E /* SearchByTypeTableViewCell.xib */,
+				1885D73C26039CAE0093B60E /* SearchByTypeTableViewCell.swift */,
+				180E8657261DF46D005A5151 /* Newly Listed Cell */,
+			);
+			path = SearchByTypeCell;
+			sourceTree = "<group>";
+		};
+		1885D75B2603A20C0093B60E /* SearchByTypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				1885D7542603A0780093B60E /* SearchByTypeCollectionViewCell.swift */,
+				1885D7552603A0780093B60E /* SearchByTypeCollectionViewCell.xib */,
+			);
+			path = SearchByTypeCell;
+			sourceTree = "<group>";
+		};
+		1885D75C2603A2330093B60E /* FeaturedCell */ = {
+			isa = PBXGroup;
+			children = (
+				183AC92C26035897003D1999 /* FeaturedCollectionViewCell.swift */,
+				183AC92D26035897003D1999 /* FeaturedCollectionViewCell.xib */,
+			);
+			path = FeaturedCell;
+			sourceTree = "<group>";
+		};
+		188F095926121D30000D0E2D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				188F095426121D27000D0E2D /* ActionSheetTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		189CA4CB25F99F48007EAAF4 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				189CA4D725F99F9A007EAAF4 /* Post10TableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		18A0426D25ECFB9C001B09F2 /* Dealer Registration */ = {
@@ -197,6 +820,8 @@
 				18A48A9A25E64DF3006F3097 /* FinanceTests */,
 				18A48AA525E64DF3006F3097 /* FinanceUITests */,
 				18A48A8225E64DEE006F3097 /* Products */,
+				45E090331E7C0A7AD8E53611 /* Pods */,
+				77101BE17F00A64E430E293E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,12 +838,14 @@
 		18A48A8325E64DEE006F3097 /* Finance */ = {
 			isa = PBXGroup;
 			children = (
-				18A48A8425E64DEE006F3097 /* AppDelegate.swift */,
-				18A48A8625E64DEE006F3097 /* SceneDelegate.swift */,
-				181D877F25E8B2CF002E116D /* CustomTextfield.swift */,
-				18EDAC5A25E954130096AFD4 /* OTPTextField.swift */,
+				1860380A25FA5F130093BC02 /* Model */,
+				1860380E25FA65510093BC02 /* Manager */,
+				18A54CB825F6808500B96D46 /* Textfields */,
+				18A54CB225F6804F00B96D46 /* Utilities */,
 				18387E2A25E71E7D000F67EB /* Fonts */,
 				183F88E225E7115E00EFD168 /* ViewControllers */,
+				18A48A8425E64DEE006F3097 /* AppDelegate.swift */,
+				18A48A8625E64DEE006F3097 /* SceneDelegate.swift */,
 				18A48A8A25E64DEE006F3097 /* Main.storyboard */,
 				18A48A8D25E64DF3006F3097 /* Assets.xcassets */,
 				18A48A8F25E64DF3006F3097 /* LaunchScreen.storyboard */,
@@ -245,15 +872,105 @@
 			path = FinanceUITests;
 			sourceTree = "<group>";
 		};
+		18A4D8332614CF3B002D185B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18A4D82E2614CF31002D185B /* ReviewPageTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		18A54CB225F6804F00B96D46 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				18A54CB325F6806400B96D46 /* Constants.swift */,
+				186F5B6925FA957A00FB9AA6 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		18A54CB825F6808500B96D46 /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				181D877F25E8B2CF002E116D /* CustomTextfield.swift */,
+				18EDAC5A25E954130096AFD4 /* OTPTextField.swift */,
+				180D1346262022A6003539A1 /* SearchTextField.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+		18C043B3260DE2B30002181A /* RangeSeekSliderCell */ = {
+			isa = PBXGroup;
+			children = (
+				18C043B4260DE2D90002181A /* RangeSliderTableViewCell.swift */,
+			);
+			path = RangeSeekSliderCell;
+			sourceTree = "<group>";
+		};
 		18EDAC5325E938E20096AFD4 /* Forgot Password */ = {
 			isa = PBXGroup;
 			children = (
 				18EDAC5425E939130096AFD4 /* Forgt1ViewController.swift */,
 				18EDAC5625E9392F0096AFD4 /* Forgot2ViewController.swift */,
 				18EDAC5825E939410096AFD4 /* Forgot3ViewController.swift */,
-				18A0426D25ECFB9C001B09F2 /* Dealer Registration */,
 			);
 			path = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		18F5724926136C3D0038880C /* List Details Page */ = {
+			isa = PBXGroup;
+			children = (
+				18F5725226136CBD0038880C /* ListDetailsPage.storyboard */,
+				18F5724A26136C6D0038880C /* ListDetailsViewController.swift */,
+				180E862F261DAB84005A5151 /* ImageGalleryViewController.swift */,
+				181A6CE026149AE000A783B8 /* PaymentCalculatorViewController.swift */,
+				18A4D8292614CA23002D185B /* ReviewPageViewController.swift */,
+				18550C022615FDF0003C4096 /* ReportProblemViewController.swift */,
+				1863A5C426173DA00027ACF5 /* ShareViewController.swift */,
+				180E8627261DA880005A5151 /* ThankYouViewController.swift */,
+				18A4D8332614CF3B002D185B /* TableViewCell */,
+				18550C0A261615DC003C4096 /* CollectionViewCell */,
+			);
+			path = "List Details Page";
+			sourceTree = "<group>";
+		};
+		18FAAA212608940E0041B897 /* Notification Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18FAAA1C260893F70041B897 /* NotificationCell.swift */,
+			);
+			path = "Notification Cell";
+			sourceTree = "<group>";
+		};
+		18FAAA2A2608AB4A0041B897 /* MyApplicationPageCell */ = {
+			isa = PBXGroup;
+			children = (
+				18FAAA2B2608AB860041B897 /* MyApplicationPageTableViewCell.swift */,
+			);
+			path = MyApplicationPageCell;
+			sourceTree = "<group>";
+		};
+		45E090331E7C0A7AD8E53611 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8AEAA048628E52F6ECD8CAE /* Pods-Finance.debug.xcconfig */,
+				4FB5B725CB10DCE2BCAE0255 /* Pods-Finance.release.xcconfig */,
+				5AB906258C6EF57CD32DE260 /* Pods-Finance-FinanceUITests.debug.xcconfig */,
+				71B0452AE243E799AE6FEB75 /* Pods-Finance-FinanceUITests.release.xcconfig */,
+				B14CC5BFC760AAC23408007C /* Pods-FinanceTests.debug.xcconfig */,
+				A75FD106DD58B39A1B3325A4 /* Pods-FinanceTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		77101BE17F00A64E430E293E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99D5FED40E03898177B25AAA /* Pods_Finance.framework */,
+				4FEC4CA3DF9FE42B555A5C6A /* Pods_Finance_FinanceUITests.framework */,
+				CFE16D1C0C831DD5D523E767 /* Pods_FinanceTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +980,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A48AAB25E64DF3006F3097 /* Build configuration list for PBXNativeTarget "Finance" */;
 			buildPhases = (
+				7CC4EB91C059CEED020AFA13 /* [CP] Check Pods Manifest.lock */,
 				18A48A7D25E64DEE006F3097 /* Sources */,
 				18A48A7E25E64DEE006F3097 /* Frameworks */,
 				18A48A7F25E64DEE006F3097 /* Resources */,
+				CF2FBF1437D0B4D9A6A69604 /* [CP] Embed Pods Frameworks */,
+				2D02B802C0F33197CA9F5494 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +1000,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A48AAE25E64DF3006F3097 /* Build configuration list for PBXNativeTarget "FinanceTests" */;
 			buildPhases = (
+				0AE15EBB706DC606BD5B3235 /* [CP] Check Pods Manifest.lock */,
 				18A48A9325E64DF3006F3097 /* Sources */,
 				18A48A9425E64DF3006F3097 /* Frameworks */,
 				18A48A9525E64DF3006F3097 /* Resources */,
@@ -298,9 +1019,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A48AB125E64DF3006F3097 /* Build configuration list for PBXNativeTarget "FinanceUITests" */;
 			buildPhases = (
+				D096C6809AF2B16F4905C060 /* [CP] Check Pods Manifest.lock */,
 				18A48A9E25E64DF3006F3097 /* Sources */,
 				18A48A9F25E64DF3006F3097 /* Frameworks */,
 				18A48AA025E64DF3006F3097 /* Resources */,
+				98845111D463B17D4D7D0E3D /* [CP] Embed Pods Frameworks */,
+				F7CB997798871E4E4CE72A31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,13 +1084,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1863A5CE261748E00027ACF5 /* PostAdPage.storyboard in Resources */,
+				18F5725326136CBD0038880C /* ListDetailsPage.storyboard in Resources */,
 				18387E3025E7212F000F67EB /* BasisGrotesquePro-Light.ttf in Resources */,
 				18A48A9125E64DF3006F3097 /* LaunchScreen.storyboard in Resources */,
+				183AC92F26035897003D1999 /* FeaturedCollectionViewCell.xib in Resources */,
 				18387E3125E7212F000F67EB /* BasisGrotesquePro-Regular.ttf in Resources */,
+				18151E17261C6D7300691488 /* NewlyListedCollectionViewCell.xib in Resources */,
 				18C782CD25E8DDC500813A0D /* Basis Grotesque Pro Medium.ttf in Resources */,
+				1802AE772610FC6A00C32F63 /* UserPage.storyboard in Resources */,
+				182D7DF32602177500B06657 /* HomePage.storyboard in Resources */,
+				1877A9D7260B548000712F91 /* ListingsPage.storyboard in Resources */,
+				183AC91426034E76003D1999 /* FeaturedCell.xib in Resources */,
+				18320E4A25F300EA00F104E1 /* Post Application Page.storyboard in Resources */,
+				180E8653261DF45F005A5151 /* NewlyListedTableViewCell.xib in Resources */,
 				18387E3225E7212F000F67EB /* BasisGrotesquePro-Bold.ttf in Resources */,
 				18A48A8E25E64DF3006F3097 /* Assets.xcassets in Resources */,
+				1885D73F26039CAE0093B60E /* SearchByTypeTableViewCell.xib in Resources */,
 				18A48A8C25E64DEE006F3097 /* Main.storyboard in Resources */,
+				1885D7572603A0780093B60E /* SearchByTypeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,33 +1122,285 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AE15EBB706DC606BD5B3235 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinanceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02B802C0F33197CA9F5494 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CC4EB91C059CEED020AFA13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Finance-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98845111D463B17D4D7D0E3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF2FBF1437D0B4D9A6A69604 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finance/Pods-Finance-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D096C6809AF2B16F4905C060 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Finance-FinanceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7CB997798871E4E4CE72A31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finance-FinanceUITests/Pods-Finance-FinanceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18A48A7D25E64DEE006F3097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E397B026203DD2000D50AB /* CanadianCollectionViewCell.swift in Sources */,
+				18865FE426283A2B00D39845 /* DurationAddressViewController.swift in Sources */,
+				1860381025FA65D60093BC02 /* NetworkManager.swift in Sources */,
+				180D1347262022A6003539A1 /* SearchTextField.swift in Sources */,
+				181E7582261855AD0013CA5D /* DriveTrainViewController.swift in Sources */,
+				18F82EC22617A7190052E48F /* SelectConditionViewController.swift in Sources */,
 				18076CFA25E74878003B9ABB /* UserPage1ViewController.swift in Sources */,
-				18387E2725E71AF7000F67EB /* UserRegPage2ViewController.swift in Sources */,
+				18089D222617873C00F049B6 /* SelectMakeViewController.swift in Sources */,
+				1859E24A2618822C006888DF /* LocationViewController.swift in Sources */,
+				18550C032615FDF0003C4096 /* ReportProblemViewController.swift in Sources */,
+				18A54CB425F6806500B96D46 /* Constants.swift in Sources */,
+				181C897E2606354B002EE22F /* OnBoardingCollectionViewCell.swift in Sources */,
+				180E8628261DA880005A5151 /* ThankYouViewController.swift in Sources */,
+				1873AD172622C59C0084F34A /* AppDeclinedViewController.swift in Sources */,
+				188F094826121444000D0E2D /* ChatPageTableViewCell.swift in Sources */,
 				18076CFC25E754A9003B9ABB /* UserPage2ViewController.swift in Sources */,
+				180FC571260CD15F00DEFBAA /* FilterViewController.swift in Sources */,
+				18151E10261C69A900691488 /* ADListingFilter.swift in Sources */,
+				18FAAA18260886E60041B897 /* NotificationsViewController.swift in Sources */,
+				18F5724B26136C6D0038880C /* ListDetailsViewController.swift in Sources */,
+				186F5B5825FA78D600FB9AA6 /* LoginModel.swift in Sources */,
+				18F82EAB2617A07E0052E48F /* SelectTrimViewController.swift in Sources */,
+				18A4D82F2614CF31002D185B /* ReviewPageTableViewCell.swift in Sources */,
 				187B405725ED5153003EC979 /* Dealer7ViewController.swift in Sources */,
+				180D51812611F8B60066C85A /* AddPhotoCollectionViewCell.swift in Sources */,
+				1863A5DF261751FE0027ACF5 /* PowerSportCollectionViewCell.swift in Sources */,
+				1877A9E8260B74AB00712F91 /* CarDetailCollectionViewCell.swift in Sources */,
+				18FAAA262608A1E00041B897 /* MyApplicationsPageViewController.swift in Sources */,
 				18A0426F25ECFBC9001B09F2 /* Dealer1ViewController.swift in Sources */,
-				18387E2925E71B2F000F67EB /* UserRegPg3ViewController.swift in Sources */,
+				181E756A26184E380013CA5D /* SeatingViewController.swift in Sources */,
+				181E758C261858660013CA5D /* ColorViewController.swift in Sources */,
+				18089D272617877200F049B6 /* VehicleBrandsCollectionViewCell.swift in Sources */,
+				1859E257261895DE006888DF /* PayWithViewController.swift in Sources */,
+				1877A9BB260B395200712F91 /* ApplicationDetailTableViewCell.swift in Sources */,
+				1877A9CF260B53E700712F91 /* PrivateSellerViewController.swift in Sources */,
+				1843DEEF2629EFBE00D1DB3F /* FinalizeApplicationViewController.swift in Sources */,
+				1811920225F4368C00839599 /* Post2ViewController.swift in Sources */,
+				180FC56B260CD0F500DEFBAA /* AllCategoriesCell.swift in Sources */,
+				1820EF182611C2CF00F8EDF6 /* MyAdsViewController.swift in Sources */,
 				181D878025E8B2CF002E116D /* CustomTextfield.swift in Sources */,
 				18A48A8925E64DEE006F3097 /* ViewController.swift in Sources */,
+				188F094026120C8F000D0E2D /* ChatPageViewController.swift in Sources */,
 				18A48A8525E64DEE006F3097 /* AppDelegate.swift in Sources */,
+				181E7587261855C10013CA5D /* CylinderViewController.swift in Sources */,
 				18EDAC5525E939130096AFD4 /* Forgt1ViewController.swift in Sources */,
+				18089D1D26177A9100F049B6 /* TypeOfVehicleCollectionViewCell.swift in Sources */,
+				18A4D82A2614CA23002D185B /* ReviewPageViewController.swift in Sources */,
 				18A0427525ED2589001B09F2 /* Dealer4ViewController.swift in Sources */,
+				1885D73E26039CAE0093B60E /* SearchByTypeTableViewCell.swift in Sources */,
+				182365A2260E9E49009117B3 /* CarDetailTableViewCell.swift in Sources */,
+				18F82ECA2617AC160052E48F /* PriceViewController.swift in Sources */,
+				180D135026203C30003539A1 /* AboutPageViewController.swift in Sources */,
+				180E8630261DAB85005A5151 /* ImageGalleryViewController.swift in Sources */,
+				18089D342617991500F049B6 /* SelectModelViewController.swift in Sources */,
+				18FAAA342608E7FA0041B897 /* MyApplicationDetailViewController.swift in Sources */,
+				1885D7562603A0780093B60E /* SearchByTypeCollectionViewCell.swift in Sources */,
+				181E759126185F2E0013CA5D /* OwnerViewController.swift in Sources */,
+				189CA4D825F99F9A007EAAF4 /* Post10TableViewCell.swift in Sources */,
+				1811922A25F4691F00839599 /* Post10ViewController.swift in Sources */,
 				18076CFE25E75979003B9ABB /* UserPage3ViewController.swift in Sources */,
+				18151E18261C6D7300691488 /* NewlyListedCollectionViewCell.swift in Sources */,
+				18089D15261779DB00F049B6 /* TypeOfVehicleViewController.swift in Sources */,
+				1820EF202611C50E00F8EDF6 /* MyAdsTableViewCell.swift in Sources */,
+				181E75722618503A0013CA5D /* TransmisssionViewController.swift in Sources */,
+				18F5723F26135B670038880C /* BlockViewController.swift in Sources */,
+				181ECFA32600C5A4002FCC9E /* HomePage1ViewController.swift in Sources */,
+				180E8652261DF45F005A5151 /* NewlyListedTableViewCell.swift in Sources */,
+				18286A7E260DC3D6003C8706 /* CategoriesTableViewCell.swift in Sources */,
+				18151E06261C5ED900691488 /* ADUnderListingModel.swift in Sources */,
+				1831176C2620510200EAEE95 /* SettingTableViewCell.swift in Sources */,
+				184BA19725FBDDED0045FCD3 /* ResetCompleteModel.swift in Sources */,
+				183117642620508100EAEE95 /* SettingViewController.swift in Sources */,
+				180D51782611EAE50066C85A /* EditPostViewController.swift in Sources */,
+				18151DF4261C5A0000691488 /* AdDetailsPriceListingModel.swift in Sources */,
+				18151DD9261C4BC700691488 /* AllDoneViewController.swift in Sources */,
+				18151E01261C5CDD00691488 /* ADLatitudeAndLongitudeModel.swift in Sources */,
+				1811920C25F453DF00839599 /* Post4ViewController.swift in Sources */,
+				1860381525FA65F00093BC02 /* ExtentionNetworManager.swift in Sources */,
+				188F094D26121B30000D0E2D /* ActionSheetViewController.swift in Sources */,
+				1873ACFF2622BE210084F34A /* LogOutViewController.swift in Sources */,
 				18EDAC5925E939410096AFD4 /* Forgot3ViewController.swift in Sources */,
+				1823659D260E9DFE009117B3 /* CarNamesTableViewCell.swift in Sources */,
 				187B405525ED4AA3003EC979 /* Dealer6ViewController.swift in Sources */,
+				183AC91326034E76003D1999 /* FeaturedCell.swift in Sources */,
+				181AE700261BEB0700A3345A /* PostAdViewController.swift in Sources */,
 				18A48A8725E64DEE006F3097 /* SceneDelegate.swift in Sources */,
+				1802AE7C2610FC9E00C32F63 /* UserProfilePageViewController.swift in Sources */,
 				18A0427125ECFEFA001B09F2 /* Dealer2ViewController.swift in Sources */,
+				1811922525F4691000839599 /* Post9ViewController.swift in Sources */,
+				1859E24F261886A7006888DF /* PaymentMethodViewController.swift in Sources */,
+				1873AD122622C2E60084F34A /* FourPageViewController.swift in Sources */,
+				1859E23D26186F11006888DF /* DescriptionViewController.swift in Sources */,
+				1811921625F45D7400839599 /* Post6ViewController.swift in Sources */,
+				188F095526121D27000D0E2D /* ActionSheetTableViewCell.swift in Sources */,
 				18EDAC5725E9392F0096AFD4 /* Forgot2ViewController.swift in Sources */,
+				18089D2F261798DD00F049B6 /* SelectModelCollectionViewCell.swift in Sources */,
 				187B405925ED5829003EC979 /* Dealer8ViewController.swift in Sources */,
+				1852750D25F3B9A40018CD81 /* Post1ViewController.swift in Sources */,
+				18C043B5260DE2D90002181A /* RangeSliderTableViewCell.swift in Sources */,
 				18076D0325E77925003B9ABB /* LogInViewController.swift in Sources */,
+				1877A9E0260B60ED00712F91 /* CarNamesCollectionViewCell.swift in Sources */,
+				186F5B6A25FA957A00FB9AA6 /* Utilities.swift in Sources */,
+				186F5B4E25FA76D700FB9AA6 /* DealerDetailsModel.swift in Sources */,
+				180E8638261DAE94005A5151 /* ImageGalleryCollectionViewCell.swift in Sources */,
+				18151E0B261C67B700691488 /* ADFeaturedListing.swift in Sources */,
+				18151DE1261C4CEC00691488 /* BoostViewController.swift in Sources */,
+				1843DEF7262A06E700D1DB3F /* FindModel.swift in Sources */,
+				1811921125F45D6800839599 /* Post5ViewController.swift in Sources */,
+				1811922025F45D9000839599 /* Post8ViewController.swift in Sources */,
+				1859E25F26189E3B006888DF /* AddCardDetailsViewController.swift in Sources */,
+				18550C0C26161622003C4096 /* ReviewsCollectionViewCell.swift in Sources */,
+				1863A5C526173DA00027ACF5 /* ShareViewController.swift in Sources */,
+				18E397AB26203DA2000D50AB /* AboutusTableViewCell.swift in Sources */,
+				181E75A3261867210013CA5D /* FeaturesTableViewCell.swift in Sources */,
+				1863A5D6261749BF0027ACF5 /* PowerSportVehicleViewController.swift in Sources */,
+				1811921B25F45D8200839599 /* Post7ViewController.swift in Sources */,
 				18A0427325ED1E26001B09F2 /* Dealer3ViewController.swift in Sources */,
+				186F5B5D25FA7D8A00FB9AA6 /* ResetPasswordModel.swift in Sources */,
+				181E757A2618542A0013CA5D /* FuelTypeViewController.swift in Sources */,
+				1811920725F43CAD00839599 /* Post3ViewController.swift in Sources */,
+				18FAAA2C2608AB860041B897 /* MyApplicationPageTableViewCell.swift in Sources */,
+				1859E24226187E5C006888DF /* PhotosViewController.swift in Sources */,
+				18F82ED22617AD8A0052E48F /* BodyTypeViewController.swift in Sources */,
+				1802AE87261112C900C32F63 /* SavedAdsTableViewCell.swift in Sources */,
+				186F5B5325FA780B00FB9AA6 /* BuyerDetailModel.swift in Sources */,
+				181E7596261860DF0013CA5D /* AccidentsViewController.swift in Sources */,
+				1868369B260E21E300565444 /* RecentSearchTableViewCell.swift in Sources */,
+				181A6CE126149AE000A783B8 /* PaymentCalculatorViewController.swift in Sources */,
+				181E759E261862470013CA5D /* FeaturesViewController.swift in Sources */,
 				18076D0025E77398003B9ABB /* UserPage4ViewController.swift in Sources */,
 				18EDAC5B25E954130096AFD4 /* OTPTextField.swift in Sources */,
+				18683695260E171D00565444 /* SearchScreenViewController.swift in Sources */,
+				183AC92E26035897003D1999 /* FeaturedCollectionViewCell.swift in Sources */,
+				180E860D261D996E005A5151 /* BottomCardViewController.swift in Sources */,
+				1802AE812611117500C32F63 /* SavedAdsPageViewController.swift in Sources */,
+				1833B22E2610796A00543E3E /* CarInfoCollectionViewCell.swift in Sources */,
+				18FAAA1D260893F70041B897 /* NotificationCell.swift in Sources */,
 				18A0427725ED31DC001B09F2 /* Dealer5ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,15 +1572,17 @@
 		};
 		18A48AAC25E64DF3006F3097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8AEAA048628E52F6ECD8CAE /* Pods-Finance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4KMVWMQG8;
 				INFOPLIST_FILE = Finance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ammar.Finance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EcoLogix.SnapToSell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -601,15 +1591,17 @@
 		};
 		18A48AAD25E64DF3006F3097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FB5B725CB10DCE2BCAE0255 /* Pods-Finance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4KMVWMQG8;
 				INFOPLIST_FILE = Finance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ammar.Finance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.EcoLogix.SnapToSell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -618,6 +1610,7 @@
 		};
 		18A48AAF25E64DF3006F3097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14CC5BFC760AAC23408007C /* Pods-FinanceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -639,6 +1632,7 @@
 		};
 		18A48AB025E64DF3006F3097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A75FD106DD58B39A1B3325A4 /* Pods-FinanceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,6 +1654,7 @@
 		};
 		18A48AB225E64DF3006F3097 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB906258C6EF57CD32DE260 /* Pods-Finance-FinanceUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -679,6 +1674,7 @@
 		};
 		18A48AB325E64DF3006F3097 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71B0452AE243E799AE6FEB75 /* Pods-Finance-FinanceUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

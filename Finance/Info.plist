@@ -2,15 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>BasisGrotesquePro-Bold.ttf</string>
-		<string>BasisGrotesquePro-Light.ttf</string>
-		<string>BasisGrotesquePro-Regular.ttf</string>
-		<string>Basis Grotesque Pro Medium.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,6 +22,22 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This App accesses your location for ‘pick up and drop off’ services.
+    </string>
+	<key>NSLocationUsageDescription</key>
+	<string>This App accesses your location for ‘pick up and drop off’ services.
+    </string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This App accesses your location for ‘pick up and drop off’ services.
+    </string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BasisGrotesquePro-Bold.ttf</string>
+		<string>BasisGrotesquePro-Light.ttf</string>
+		<string>BasisGrotesquePro-Regular.ttf</string>
+		<string>Basis Grotesque Pro Medium.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
