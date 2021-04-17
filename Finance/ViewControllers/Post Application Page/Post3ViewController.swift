@@ -73,6 +73,17 @@ class Post3ViewController: UIViewController {
             unHide()
             if index == 0 {
                 self.statusTextField.text = "Employed"
+                occupationLbl.isHidden = false
+                fourthTextField.isHidden = false
+                typeOfEmpStatusDropDownBtn.isHidden = false
+                typeOfEmpLbl.text = "Type of Employment"
+                secondTextField.placeholder = "Select Type of Employment"
+                empNameLbl.text = "Employer Name"
+                thirdTextField.placeholder = "Employer Name"
+                empSinceLbl.text = "Employment Since"
+                empSinceTextField.placeholder = "YYYY-MM-DD"
+                grossIncomLbl.text = "Gross Income"
+                grossIncomeTextField.placeholder = "Gross Income"
                 
             }else if index == 1 {
                 self.statusTextField.text = "Self Employed"
@@ -165,11 +176,18 @@ class Post3ViewController: UIViewController {
     func validInput() -> Bool {
         var flag = true
         if statusTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter First Name")
+            createAlert(title: nil, message: "Please enter Employment Status")
             flag = false
-        }else if secondTextField.text!.isEmpty {
-            createAlert(title: nil, message: "Please enter Last Name")
-            flag = false
+        }
+//        else if secondTextField.text!.isEmpty {
+//            createAlert(title: nil, message: "Please \(self.secondTextField.placeholder ?? "")")
+//            flag = false
+//        }
+        if typeOfEmpLbl.isHidden == false {
+            if secondTextField.text!.isEmpty {
+                createAlert(title: nil, message: "Please \(self.secondTextField.placeholder ?? "")")
+                flag = false
+            }
         }
         if thirdTextField.isHidden == false {
             if thirdTextField.text!.isEmpty {
@@ -185,7 +203,7 @@ class Post3ViewController: UIViewController {
         }
         if empSinceTextField.isHidden == false {
             if empSinceTextField.text!.isEmpty {
-                createAlert(title: nil, message: "Please \(self.empSinceTextField.placeholder ?? "")")
+                createAlert(title: nil, message: "Please enter \(self.empSinceTextField.placeholder ?? "")")
                 flag = false
             }
         }

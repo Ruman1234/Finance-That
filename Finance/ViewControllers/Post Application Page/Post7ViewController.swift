@@ -42,10 +42,12 @@ class Post7ViewController: UIViewController {
                 createAlert(title: nil, message: "Please enter Finance Amount")
                 flag = false
             }
-        }else if !radioBtn1.isSelected {
+        }
+        if !radioBtn1.isSelected {
             createAlert(title: nil, message: "Please Select Terms & conditions")
             flag = false
-        }else if !radioBtn2.isSelected{
+        }
+        if !radioBtn2.isSelected{
             createAlert(title: nil, message: "Please Read credit Report and confirm it")
             flag = false
         }
@@ -80,7 +82,6 @@ class Post7ViewController: UIViewController {
             PostApplicaitonObject.mainObject["financing_amount"] = financingTextField.text ?? ""
             let main = self.storyboard?.instantiateViewController(withIdentifier: "FinalizeApplicationViewController") as! FinalizeApplicationViewController
             self.navigationController?.pushViewController(main, animated: true)
-
         }
     }
     

@@ -61,7 +61,6 @@ class Post9ViewController: UIViewController {
 }
     
     @IBAction func backBtn(_ sender: Any) {
-        
         self.navigationController?.popViewController(animated: true)
 
     }
