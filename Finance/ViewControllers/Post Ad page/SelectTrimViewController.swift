@@ -41,6 +41,13 @@ extension SelectTrimViewController: UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "SelectYearViewController") as! SelectYearViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }
+    }
     
 }
 

@@ -46,7 +46,7 @@ extension PowerSportVehicleViewController: UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "TypeOfVehicleViewController") as! TypeOfVehicleViewController
+            let main = storyboard?.instantiateViewController(withIdentifier: "SelectMakeViewController") as! SelectMakeViewController
             self.navigationController?.pushViewController(main, animated: true)
         }
     }

@@ -13,12 +13,25 @@ class FuelTypeViewController: UIViewController {
     @IBOutlet weak var fuelCollectionView: UICollectionView!
     
     let lblArr = ["Gasoline","Diesel","Electric","CNC","Hybrid","Other"]
-
+    
+    var fuelTypeArray = [FuelTypeData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fuelCollectionView.delegate = self
         fuelCollectionView.dataSource = self
+        
+        PostAdNetworkManager.SharedInstance.FuelType(viewcontroller: self) { (res) in
+            print(res)
+            guard let arr = res.data else{return}
+            self.fuelTypeArray = arr
+            self.fuelCollectionView.reloadData()
+
+        } failure: { (err) in
+            print("Failed")
+        }
+
     }
     
     func setCollecView(view: UIView) {
@@ -35,14 +48,24 @@ class FuelTypeViewController: UIViewController {
 extension FuelTypeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lblArr.count
+        return fuelTypeArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = fuelTypeArray[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectModelCollectionViewCell", for: indexPath) as! SelectModelCollectionViewCell
         setCollecView(view: cell.mainview)
-        cell.modelLbl.text = lblArr[indexPath.row]
+        cell.modelLbl.text = index.fuel_type
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "DriveTrainViewController") as! DriveTrainViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }
     }
 }
 

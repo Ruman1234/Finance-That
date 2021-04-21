@@ -55,7 +55,10 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
 //        if indexPath.row == 1{
             openGallery()
 //        }
-        
+        if indexPath.row == 1 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
+            self.navigationController?.pushViewController(main, animated: true)
+        }
     }
     
 }

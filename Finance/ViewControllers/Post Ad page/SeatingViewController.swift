@@ -30,6 +30,9 @@ class SeatingViewController: UIViewController {
                     
                     if index == 0 {
                         self.seatingTxtField.text = "1"
+                        let main = storyboard?.instantiateViewController(withIdentifier: "TransmisssionViewController") as! TransmisssionViewController
+                        self.navigationController?.pushViewController(main, animated: true)
+
                     }else if index == 1 {
                         self.seatingTxtField.text = "2"
 

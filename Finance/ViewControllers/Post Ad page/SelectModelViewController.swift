@@ -13,12 +13,24 @@ class SelectModelViewController: UIViewController {
     @IBOutlet weak var selectModelCollectionView: UICollectionView!
     
     let lblArr = ["Amaze","Brio","City","Civic"]
-
+    
+    var selectModelArray = [SelectModelData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         selectModelCollectionView.delegate = self
         selectModelCollectionView.dataSource = self
+        
+        PostAdNetworkManager.SharedInstance.SelectModel(viewcontroller: self) { (res) in
+            print(res)
+            guard let arr = res.data else{return}
+            self.selectModelArray = arr
+            self.selectModelCollectionView.reloadData()
+        } failure: { (err) in
+            print("Failed")
+        }
+
     }
     
     func setCollecView(view: UIView) {
@@ -35,17 +47,24 @@ class SelectModelViewController: UIViewController {
 extension SelectModelViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lblArr.count
+        return selectModelArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = selectModelArray[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectModelCollectionViewCell", for: indexPath) as! SelectModelCollectionViewCell
         setCollecView(view: cell.mainview)
-        cell.modelLbl.text = lblArr[indexPath.row]
+        cell.modelLbl.text = index.model_make
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "SelectTrimViewController") as! SelectTrimViewController
+            self.navigationController?.pushViewController(main, animated: true)
+        }
+    }
 }
 
 extension SelectModelViewController: UICollectionViewDelegateFlowLayout {

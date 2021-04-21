@@ -41,6 +41,13 @@ extension TransmisssionViewController: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "FuelTypeViewController") as! FuelTypeViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }
+    }
     
 }
 

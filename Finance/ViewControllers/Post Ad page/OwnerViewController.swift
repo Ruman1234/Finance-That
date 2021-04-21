@@ -44,6 +44,14 @@ extension OwnerViewController: UICollectionViewDelegate, UICollectionViewDataSou
         cell.modelLbl.text = lblArr[indexPath.row]
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "AccidentsViewController") as! AccidentsViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }
+    }
 }
 
 extension OwnerViewController: UICollectionViewDelegateFlowLayout {

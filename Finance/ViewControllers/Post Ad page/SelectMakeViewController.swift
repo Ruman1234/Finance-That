@@ -16,11 +16,22 @@ class SelectMakeViewController: UIViewController {
     
     let imagesArr = [UIImage(named: "Honda"),UIImage(named: "Toyota"),UIImage(named: "Nisan"),UIImage(named: "Hyundai"),UIImage(named: "Mazda"),UIImage(named: "Ford"),UIImage(named: "Chevrolet"),UIImage(named: "Volkswagcn"),UIImage(named: "Audi"),UIImage(named: "Lexus"),UIImage(named: "Mercedes"),UIImage(named: "Porsche")]
     
+    var selectMakeArray = [SelectMakeData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         vehicleBrandCollectionView.delegate = self
         vehicleBrandCollectionView.dataSource = self
+        
+        PostAdNetworkManager.SharedInstance.SelectMake(viewcontroller: self) { (res) in
+            guard let arr = res.data else{return}
+            self.selectMakeArray = arr
+            self.vehicleBrandCollectionView.reloadData()
+        } failure: { (err) in
+            print("Failed")
+        }
+
     }
     
     func setCollecView(view: UIView) {
@@ -37,13 +48,18 @@ class SelectMakeViewController: UIViewController {
 extension SelectMakeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagesArr.count
+        return selectMakeArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = selectMakeArray[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VehicleBrandsCollectionViewCell", for: indexPath) as! VehicleBrandsCollectionViewCell
         setCollecView(view: cell.mainView)
-        cell.brandImg.image = imagesArr[indexPath.row]
+        
+        cell.brandImg.sd_setImage(with: URL(string: Constants.BASE_URL_Images + (index.image_path!)), placeholderImage:UIImage(contentsOfFile:"placeholder.png"))
+        print(Constants.BASE_URL_Images + index.image_path!)
+
         return cell
     }
     

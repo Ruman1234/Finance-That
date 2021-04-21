@@ -13,11 +13,23 @@ class DriveTrainViewController: UIViewController {
     @IBOutlet weak var driveTrainCollectionView: UICollectionView!
     
     let lblArr = ["AWD","FWD","RWD","4x4","4x2","Other"]
-
+    var driveTrainArray = [DriveTrainData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         driveTrainCollectionView.delegate = self
         driveTrainCollectionView.dataSource = self
+        
+        PostAdNetworkManager.SharedInstance.DriveTrain(viewcontroller: self) { (res) in
+            print(res)
+            guard let arr = res.data else{return}
+            self.driveTrainArray = arr
+            self.driveTrainCollectionView.reloadData()
+
+        } failure: { (err) in
+            print("Failed")
+        }
+
     }
 
     func setCollecView(view: UIView) {
@@ -26,20 +38,33 @@ class DriveTrainViewController: UIViewController {
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor(red: 0.933, green: 0.933, blue: 0.941, alpha: 1).cgColor
     }
+    
 }
+    
 
 extension DriveTrainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lblArr.count
+        return driveTrainArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = driveTrainArray[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectModelCollectionViewCell", for: indexPath) as! SelectModelCollectionViewCell
         setCollecView(view: cell.mainview)
-        cell.modelLbl.text = lblArr[indexPath.row]
+        cell.modelLbl.text = index.drive_train
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "CylinderViewController") as! CylinderViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }
+    }
+
 }
 
 extension DriveTrainViewController: UICollectionViewDelegateFlowLayout {

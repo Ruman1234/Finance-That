@@ -41,6 +41,7 @@ class Constants {
     static var BASE_URL = "http://18.219.178.49:8000/"
     static var TESTING_BASE_URL = "http://18.219.178.49:5000/"
 //    static var BASE_URL = "http://24.227.130.19:8000/"
+    static var BASE_URL_Images = "http://18.219.178.49:5000"
     static let DEALER_DETAIL = "dealer_details/create/"
     static let BUYER_DETAIL = "buyer_details/create/"
     static let LOGIN = "api/token/"
@@ -53,6 +54,16 @@ class Constants {
     static let Listing_Filter = "ad_details/listing_filter/"
     static let FIND_ADS = "ads/"
     static let POST_APPLICATION = "application/"
+    static let TYPE_OF_VEHICLE = "type_of_vehicle/list/"
+    static let FUEL_TYPE = "fuel_type/list/"
+    static let DRIVE_TRAIN = "drive_train/list/"
+    static let FEATURE = "v_features/list/7/"
+    static let SELECT_MAKE = "v_make/retrieve_by_type/7/"
+    static let BODY_TYPE = "body_type/retrieve_by_type/7/"
+    static let SELECT_MODEL = "v_model/retrieve_by_make/1119/"
+    
+    static var URL_Images = "/assets/image/automotive.svg"
+
 }
 
 class defaults  {

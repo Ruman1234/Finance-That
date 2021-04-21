@@ -13,12 +13,24 @@ class BodyTypeViewController: UIViewController {
     @IBOutlet weak var bodyTypeCollectionView: UICollectionView!
     
     let lblArr = ["Sedan","Suv","Sports Car","Coupe","Pickup Truck","Wagon"]
-
+    
+    var bodyTypeArray = [BodyTypeData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bodyTypeCollectionView.delegate = self
         bodyTypeCollectionView.dataSource = self
+        
+        PostAdNetworkManager.SharedInstance.BodyType(viewcontroller: self) { (res) in
+            print(res)
+            guard let arr = res.data else{return}
+            self.bodyTypeArray = arr
+            self.bodyTypeCollectionView.reloadData()
+        } failure: { (err) in
+            print("Failed")
+        }
+
     }
     
     func setCollecView(view: UIView) {
@@ -35,16 +47,25 @@ class BodyTypeViewController: UIViewController {
 extension BodyTypeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lblArr.count
+        return bodyTypeArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = bodyTypeArray[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectModelCollectionViewCell", for: indexPath) as! SelectModelCollectionViewCell
         setCollecView(view: cell.mainview)
-        cell.modelLbl.text = lblArr[indexPath.row]
+        cell.modelLbl.text = index.body_type
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "SeatingViewController") as! SeatingViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }
+    }
     
 }
 

@@ -32,5 +32,8 @@ class DescriptionViewController: UIViewController {
     }
     
     @IBAction func nextBtn(_ sender: Any) {
+        let main = storyboard?.instantiateViewController(withIdentifier: "PhotosViewController") as! PhotosViewController
+        self.navigationController?.pushViewController(main, animated: true)
+
     }
 }

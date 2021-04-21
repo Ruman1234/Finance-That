@@ -101,8 +101,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "UserPage1ViewController") as! UserPage1ViewController
 //        self.navigationController?.pushViewController(NotificationsViewController, animated: true)
         
-        let NotificationsStoryBoard = UIStoryboard(name: "Post Application Page", bundle: nil)
-        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "Post1ViewController") as! Post1ViewController
+        let NotificationsStoryBoard = UIStoryboard(name: "PostAdPage", bundle: nil)
+        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "TypeOfVehicleViewController") as! TypeOfVehicleViewController
         self.navigationController?.pushViewController(NotificationsViewController, animated: true)
     }
     

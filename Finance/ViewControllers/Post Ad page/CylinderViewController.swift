@@ -43,6 +43,15 @@ extension CylinderViewController: UICollectionViewDelegate, UICollectionViewData
         cell.modelLbl.text = lblArr[indexPath.row]
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let main = storyboard?.instantiateViewController(withIdentifier: "ColorViewController") as! ColorViewController
+            self.navigationController?.pushViewController(main, animated: true)
+
+        }
+    }
+
 }
 
 extension CylinderViewController: UICollectionViewDelegateFlowLayout {
