@@ -58,9 +58,9 @@ class Constants {
 class defaults  {
     static var token : String{
         get{
-            return UserDefaults.standard.string(forKey: "Token") ?? ""
+            return _get(valueForKay: .Token) as! String
         }set{
-            UserDefaults.standard.set(newValue, forKey: "Token")
+            _set(value: newValue, key: .Token)
         }
     }
     static var userID : String{
@@ -69,6 +69,16 @@ class defaults  {
         }set{
             UserDefaults.standard.set(newValue, forKey: "userID")
         }
+    }
+    private static func _set(value: Any?, key: Defaults) {
+        UserDefaults.standard.set(value, forKey: key.rawValue)
+    }
+    private static func _get(valueForKay key: Defaults)-> Any? {
+        return UserDefaults.standard.value(forKey: key.rawValue)
+    }
+    private enum Defaults: String {
+        case Token
+        case userID
     }
 }
 
