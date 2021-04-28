@@ -23,7 +23,6 @@
 		18089D2F261798DD00F049B6 /* SelectModelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D2E261798DD00F049B6 /* SelectModelCollectionViewCell.swift */; };
 		18089D342617991500F049B6 /* SelectModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18089D332617991500F049B6 /* SelectModelViewController.swift */; };
 		180BB28A262F340D001EDEF4 /* TypeOfVehicleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BB289262F340D001EDEF4 /* TypeOfVehicleModel.swift */; };
-		180BB293262F3526001EDEF4 /* PostAdNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BB292262F3526001EDEF4 /* PostAdNetworkManager.swift */; };
 		180BB29B262F3588001EDEF4 /* PostAdExtensionNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BB29A262F3588001EDEF4 /* PostAdExtensionNetworkManager.swift */; };
 		180BB2A0262F3739001EDEF4 /* FuelTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BB29F262F3739001EDEF4 /* FuelTypeModel.swift */; };
 		180BB2A5262F386F001EDEF4 /* DriveTrainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BB2A4262F386F001EDEF4 /* DriveTrainModel.swift */; };
@@ -220,7 +219,6 @@
 		18089D2E261798DD00F049B6 /* SelectModelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelCollectionViewCell.swift; sourceTree = "<group>"; };
 		18089D332617991500F049B6 /* SelectModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectModelViewController.swift; sourceTree = "<group>"; };
 		180BB289262F340D001EDEF4 /* TypeOfVehicleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfVehicleModel.swift; sourceTree = "<group>"; };
-		180BB292262F3526001EDEF4 /* PostAdNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdNetworkManager.swift; sourceTree = "<group>"; };
 		180BB29A262F3588001EDEF4 /* PostAdExtensionNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdExtensionNetworkManager.swift; sourceTree = "<group>"; };
 		180BB29F262F3739001EDEF4 /* FuelTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTypeModel.swift; sourceTree = "<group>"; };
 		180BB2A4262F386F001EDEF4 /* DriveTrainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveTrainModel.swift; sourceTree = "<group>"; };
@@ -494,7 +492,6 @@
 		180BB291262F34F7001EDEF4 /* PostAdPage */ = {
 			isa = PBXGroup;
 			children = (
-				180BB292262F3526001EDEF4 /* PostAdNetworkManager.swift */,
 				180BB29A262F3588001EDEF4 /* PostAdExtensionNetworkManager.swift */,
 			);
 			path = PostAdPage;
@@ -722,9 +719,10 @@
 		1863A5CC2617488D0027ACF5 /* Post Ad page */ = {
 			isa = PBXGroup;
 			children = (
+				7349D95A26307C1300D5E5D0 /* PostAdPadesRequest */,
 				1863A5CD261748E00027ACF5 /* PostAdPage.storyboard */,
-				1863A5D5261749BE0027ACF5 /* PowerSportVehicleViewController.swift */,
 				18089D14261779DB00F049B6 /* TypeOfVehicleViewController.swift */,
+				1863A5D5261749BE0027ACF5 /* PowerSportVehicleViewController.swift */,
 				18089D212617873C00F049B6 /* SelectMakeViewController.swift */,
 				18089D332617991500F049B6 /* SelectModelViewController.swift */,
 				18F82EAA2617A07E0052E48F /* SelectTrimViewController.swift */,
@@ -1022,6 +1020,13 @@
 				A75FD106DD58B39A1B3325A4 /* Pods-FinanceTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7349D95A26307C1300D5E5D0 /* PostAdPadesRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostAdPadesRequest;
 			sourceTree = "<group>";
 		};
 		77101BE17F00A64E430E293E /* Frameworks */ = {
@@ -1460,7 +1465,6 @@
 				180BB2B9262F44F6001EDEF4 /* ModelRetrieveModel.swift in Sources */,
 				1811920725F43CAD00839599 /* Post3ViewController.swift in Sources */,
 				18FAAA2C2608AB860041B897 /* MyApplicationPageTableViewCell.swift in Sources */,
-				180BB293262F3526001EDEF4 /* PostAdNetworkManager.swift in Sources */,
 				1859E24226187E5C006888DF /* PhotosViewController.swift in Sources */,
 				18F82ED22617AD8A0052E48F /* BodyTypeViewController.swift in Sources */,
 				1802AE87261112C900C32F63 /* SavedAdsTableViewCell.swift in Sources */,

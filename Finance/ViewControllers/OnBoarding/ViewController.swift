@@ -102,7 +102,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        self.navigationController?.pushViewController(NotificationsViewController, animated: true)
         
         let NotificationsStoryBoard = UIStoryboard(name: "PostAdPage", bundle: nil)
-        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "TypeOfVehicleViewController") as! TypeOfVehicleViewController
+        let NotificationsViewController = NotificationsStoryBoard.instantiateViewController(identifier: "BoostYourAdViewController") as! BoostYourAdViewController
         self.navigationController?.pushViewController(NotificationsViewController, animated: true)
     }
     

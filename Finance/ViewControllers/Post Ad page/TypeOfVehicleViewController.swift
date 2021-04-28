@@ -8,13 +8,11 @@
 
 import UIKit
 import SDWebImage
+import SVGKit
 
 class TypeOfVehicleViewController: UIViewController {
-
-    @IBOutlet weak var typeOfVehicleCollectionView: UICollectionView!
     
-    let imagesArr = [UIImage(named: "Automotive"),UIImage(named: "Motorcycle"),UIImage(named: "Powersport"),UIImage(named: "RV"),UIImage(named: "Boat"),UIImage(named: "Trailer"),UIImage(named: "Small Equipment")]
-    let lblArr = ["Automotive","Motorcycle","Powersport","RV","Boat","Trailer","Small Equipment"]
+    @IBOutlet weak var typeOfVehicleCollectionView: UICollectionView!
     
     var typeVehicleArray = [TypeOfVehicleData]()
     
@@ -23,16 +21,20 @@ class TypeOfVehicleViewController: UIViewController {
         
         typeOfVehicleCollectionView.delegate = self
         typeOfVehicleCollectionView.dataSource = self
-        
-        PostAdNetworkManager.SharedInstance.TypeOfVehicle(viewcontroller: self) { (res) in
-//            print(res)
+        getVehicle()
+      
+    }
+    
+    func getVehicle(){
+        NetworkManager.SharedInstance.TypeOfVehicle(viewcontroller: self) { (res) in
+            //            print(res)
             guard let arr = res.data else{return}
             self.typeVehicleArray = arr
             self.typeOfVehicleCollectionView.reloadData()
         } failure: { (err) in
             print("Failed")
+            Utilities.ShowAlert(title: "Alert!!!", message: "something went wrong", view: self)
         }
-
     }
     
     func setCollecView(view: UIView) {
@@ -51,29 +53,26 @@ extension TypeOfVehicleViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let index = typeVehicleArray[indexPath.row]
-
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TypeOfVehicleCollectionViewCell", for: indexPath) as! TypeOfVehicleCollectionViewCell
         setCollecView(view: cell.mainView)
-        
-        cell.vehicleImg.sd_setImage(with: URL(string: (index.image_path ?? "")), placeholderImage:UIImage(contentsOfFile:"placeholder.png"))
-        print(index.image_path!)
+        let mySVGImage: SVGKImage = SVGKImage(contentsOf: URL(string: index.image_path ?? "")!)
+        cell.vehicleImg.image = mySVGImage.uiImage
         cell.vehicleNameLbl.text = index.name
-
+        
         return cell
     }
-            
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "SelectMakeViewController") as! SelectMakeViewController
-            self.navigationController?.pushViewController(main, animated: true)
-        }else if indexPath.row == 1 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "SelectMakeViewController") as! SelectMakeViewController
-            self.navigationController?.pushViewController(main, animated: true)
-        }else if indexPath.row == 2 {
+        let index = typeOfVehicleCollectionView.cellForItem(at: indexPath)  as! TypeOfVehicleCollectionViewCell
+        let indexData = typeVehicleArray[indexPath.row]
+        POSTAd.vehicleTypeID = indexData.id?.toString()
+        if index.vehicleNameLbl.text == ""{
             let main = storyboard?.instantiateViewController(withIdentifier: "PowerSportVehicleViewController") as! PowerSportVehicleViewController
+            main.collectionArray = indexData.typeofvehicle_id!
             self.navigationController?.pushViewController(main, animated: true)
-        }else if indexPath.row == 3 {
+        }else{
             let main = storyboard?.instantiateViewController(withIdentifier: "SelectMakeViewController") as! SelectMakeViewController
+            main.id = indexData.id
             self.navigationController?.pushViewController(main, animated: true)
         }
     }

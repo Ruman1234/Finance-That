@@ -14,15 +14,18 @@ class FeaturesViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     
     var featuresArraay = [FeaturesData]()
-    
+    var id : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         featuresTableView.delegate = self
         featuresTableView.dataSource = self
         
         nextBtn.setButtonTheme()
-        
-        PostAdNetworkManager.SharedInstance.Features(viewcontroller: self) { (res) in
+        self.getFeature(id: POSTAd.vehicleTypeID)
+    }
+    
+    func getFeature(id:String)  {
+        NetworkManager.SharedInstance.Features(viewcontroller: self , id: id) { (res) in
             print(res)
             guard let arr = res.data else{return}
             self.featuresArraay = arr
@@ -30,7 +33,6 @@ class FeaturesViewController: UIViewController {
         } failure: { (err) in
             print("Failed")
         }
-
     }
     
     @IBAction func crossBtn(_ sender: Any) {

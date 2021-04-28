@@ -12,48 +12,6 @@ import Alamofire
 
 extension NetworkManager {
     
-//    func DealerDetails(user_type:String,
-//                       business_name:String,
-//                       operating_name:String,
-//                       street_address:String,
-//                       city:String,
-//                       province:String,
-//                       postal_code:String,
-//                       phone:String,
-//                       fax:String,
-//                       full_name:String,
-//                       password:String,
-//                       email:String,
-//                       owner:String,
-//                       years_in_business:String,
-//                       no_of_owner:String,
-//                       void_check_path:String,
-//                       interior_business_path:String,
-//                       exterior_business_path:String,
-//                       license_path:String,
-//                       utillityBillDoc:String,
-//                       dealerAgreement:String,
-//                       
-//                       
-//                       success : @escaping (DealerDetailModel) -> Void,
-//                       failure : @escaping (NSError) -> Void)  {
-//
-//        self.request(url: Constants.BASE_URL  + Constants.DEALER_DETAIL, method: .post,parameters:["user_type" : user_type,"business_name": business_name,"operating_name": operating_name,"street_address": street_address,"city": city,"province": province,"postal_code": postal_code,"phone": phone,"fax": fax,"full_name": full_name,"password": password,"email": email,"owner": owner,"years_in_business": years_in_business,"no_of_owner": no_of_owner,"void_check_path": void_check_path,"interior_business_path": interior_business_path,"exterior_business_path": exterior_business_path,"license_path": license_path,"utillityBillDoc": utillityBillDoc,"dealerAgreement": dealerAgreement]) { (response) in
-//
-//            if response.response?.statusCode == 200 {
-//                do{
-//                    let value = try response.result.get()
-//                    success(Mapper<DealerDetailModel>().map(JSON: value as! [String : Any])!)
-//                }catch{
-//                    failure(NSError())
-//                }
-//
-//            }else{
-//                failure(NSError())
-//            }
-//        }
-//    }
-    
     func BuyerDetail(full_name:String,
                      email:String,
                      password:String,
@@ -79,9 +37,9 @@ extension NetworkManager {
     }
     func imageIsNullOrNot(imageName : UIImage)-> Bool
     {
-
-       let size = CGSize(width: 0, height: 0)
-       if (imageName.size.width == size.width)
+        
+        let size = CGSize(width: 0, height: 0)
+        if (imageName.size.width == size.width)
         {
             return false
         }
@@ -92,11 +50,11 @@ extension NetworkManager {
     }
     
     func DealerDetails(images : [imageData],
-                  params : Parameters,
-                  viewcontroller : UIViewController = UIViewController(),
-                  
-                  success : @escaping (String) -> Void,
-                  failure : @escaping (NSError) -> Void)  {
+                       params : Parameters,
+                       viewcontroller : UIViewController = UIViewController(),
+                       
+                       success : @escaping (String) -> Void,
+                       failure : @escaping (NSError) -> Void)  {
         
         
         
@@ -133,7 +91,7 @@ extension NetworkManager {
                failure : @escaping (NSError) -> Void)  {
         
         self.request(url: Constants.BASE_URL  + Constants.LOGIN, method: .post,parameters:["email" : email, "password": password],encoding: JSONEncoding.default) { (response) in
-//            success(Mapper<LoginModel>().map(JSON: response as! [String : Any])!)
+            //            success(Mapper<LoginModel>().map(JSON: response as! [String : Any])!)
             if response.response?.statusCode == 200 {
                 do{
                     let value = try response.result.get()
@@ -192,9 +150,9 @@ extension NetworkManager {
     }
     
     func AdPriceListing(viewcontroller : UIViewController = UIViewController(),
-                       
-                       success : @escaping (AdDetailsPriceListingModel) -> Void,
-                       failure : @escaping (NSError) -> Void)  {
+                        
+                        success : @escaping (AdDetailsPriceListingModel) -> Void,
+                        failure : @escaping (NSError) -> Void)  {
         
         self.request(url: Constants.BASE_URL  + Constants.Price_Listing, method: .get) { (response) in
             
@@ -215,9 +173,9 @@ extension NetworkManager {
     func AdLatitudeAndLongitude(latitude:String,
                                 longitude:String,
                                 viewcontroller : UIViewController = UIViewController(),
-                       
-                       success : @escaping (ADLatitudeAndLongitudeModel) -> Void,
-                       failure : @escaping (NSError) -> Void)  {
+                                
+                                success : @escaping (ADLatitudeAndLongitudeModel) -> Void,
+                                failure : @escaping (NSError) -> Void)  {
         
         self.request(url: Constants.BASE_URL  + Constants.New_Listing, method: .get,parameters: ["latitude": latitude, "longitude": longitude]) { (response) in
             
@@ -236,9 +194,9 @@ extension NetworkManager {
     }
     
     func AdUnderListing(viewcontroller : UIViewController = UIViewController(),
-                       
-                       success : @escaping (ADUnderListingModel) -> Void,
-                       failure : @escaping (NSError) -> Void)  {
+                        
+                        success : @escaping (ADUnderListingModel) -> Void,
+                        failure : @escaping (NSError) -> Void)  {
         
         self.request(url: Constants.BASE_URL  + Constants.Under_Listing, method: .get) { (response) in
             
@@ -257,9 +215,9 @@ extension NetworkManager {
     }
     
     func AdFeatureListing(viewcontroller : UIViewController = UIViewController(),
-                       
-                       success : @escaping (ADFeatureListingModel) -> Void,
-                       failure : @escaping (NSError) -> Void)  {
+                          
+                          success : @escaping (ADFeatureListingModel) -> Void,
+                          failure : @escaping (NSError) -> Void)  {
         
         self.request(url: Constants.BASE_URL  + Constants.Feature_Listing, method: .get) { (response) in
             
@@ -278,9 +236,9 @@ extension NetworkManager {
     }
     
     func AdListingFilter(viewcontroller : UIViewController = UIViewController(),
-                       
-                       success : @escaping (ADListingFilterModel) -> Void,
-                       failure : @escaping (NSError) -> Void)  {
+                         
+                         success : @escaping (ADListingFilterModel) -> Void,
+                         failure : @escaping (NSError) -> Void)  {
         
         self.request(url: Constants.BASE_URL  + Constants.Feature_Listing, method: .get) { (response) in
             
@@ -300,44 +258,49 @@ extension NetworkManager {
     
     func FindADs(viewcontroller : UIViewController = UIViewController(),
                  add:String,
-                         success : @escaping (FindModel) -> Void,
-                         failure : @escaping (NSError) -> Void)  {
-          
-          self.request(url: Constants.BASE_URL  + Constants.FIND_ADS + "\(add)/", method: .get) { (response) in
-              
-              if response.response?.statusCode == 200 {
-                  do{
-                      let value = try response.result.get()
-                      success(Mapper<FindModel>().map(JSON: value as! [String : Any])!)
-                  }catch{
-                      failure(NSError())
-                  }
-                  
-              }else{
-                  failure(NSError())
-              }
-          }
-      }
+                 success : @escaping (FindModel) -> Void,
+                 failure : @escaping (NSError) -> Void)  {
+        
+        self.request(url: Constants.BASE_URL  + Constants.FIND_ADS + "\(add)/", method: .get) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<FindModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
     
+//    MARK:- Post Application Page
     func PostApplication(viewcontroller : UIViewController = UIViewController(),
-                 parm:[String:Any],
+                         parm:[String:Any],
                          success : @escaping (FindModel) -> Void,
                          failure : @escaping (NSError) -> Void)  {
-          
-          self.request(url: Constants.BASE_URL  + Constants.POST_APPLICATION , method: .post,parameters: parm) { (response) in
-              
-              if response.response?.statusCode == 200 {
-                  do{
-                      let value = try response.result.get()
-                      success(Mapper<FindModel>().map(JSON: value as! [String : Any])!)
-                  }catch{
-                      failure(NSError())
-                  }
-                  
-              }else{
-                  failure(NSError())
-              }
-          }
-      }
+        
+        self.request(url: Constants.BASE_URL  + Constants.POST_APPLICATION , method: .post,parameters: parm) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<FindModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
+    
+    
+    
+    
     
 }

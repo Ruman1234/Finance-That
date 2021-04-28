@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVGKit
 
 class PowerSportVehicleViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class PowerSportVehicleViewController: UIViewController {
     
     let imagesArr = [UIImage(named: "snowmobile"),UIImage(named: "jetski"),UIImage(named: "motorbike")]
     let lblArr = ["Snowmobile","WaterCraft","ATV/UTV"]
-    
+    var collectionArray = [TypeofVehicle_id]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,20 +34,24 @@ class PowerSportVehicleViewController: UIViewController {
 extension PowerSportVehicleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagesArr.count
+        return collectionArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = collectionArray[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PowerSportCollectionViewCell", for: indexPath) as! PowerSportCollectionViewCell
         setCollecView(view: cell.mainview)
-        cell.vehicleimg.image = imagesArr[indexPath.row]
-        cell.vehicleLbl.text = lblArr[indexPath.row]
+        let mySVGImage: SVGKImage = SVGKImage(contentsOf: URL(string: index.image_path ?? "")!)
+        cell.vehicleimg.image = mySVGImage.uiImage
+        cell.vehicleLbl.text = index.name
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = collectionArray[indexPath.row]
         if indexPath.row == 0 {
             let main = storyboard?.instantiateViewController(withIdentifier: "SelectMakeViewController") as! SelectMakeViewController
+            main.id = index.type_id
             self.navigationController?.pushViewController(main, animated: true)
         }
     }

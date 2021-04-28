@@ -12,7 +12,6 @@ class FuelTypeViewController: UIViewController {
 
     @IBOutlet weak var fuelCollectionView: UICollectionView!
     
-    let lblArr = ["Gasoline","Diesel","Electric","CNC","Hybrid","Other"]
     
     var fuelTypeArray = [FuelTypeData]()
     
@@ -21,8 +20,11 @@ class FuelTypeViewController: UIViewController {
         
         fuelCollectionView.delegate = self
         fuelCollectionView.dataSource = self
-        
-        PostAdNetworkManager.SharedInstance.FuelType(viewcontroller: self) { (res) in
+        getFuleType()
+    }
+    
+    func getFuleType()  {
+        NetworkManager.SharedInstance.FuelType(viewcontroller: self) { (res) in
             print(res)
             guard let arr = res.data else{return}
             self.fuelTypeArray = arr
@@ -31,7 +33,6 @@ class FuelTypeViewController: UIViewController {
         } failure: { (err) in
             print("Failed")
         }
-
     }
     
     func setCollecView(view: UIView) {

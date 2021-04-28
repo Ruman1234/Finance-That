@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.4.1)
+  - CocoaLumberjack (3.7.2):
+    - CocoaLumberjack/Core (= 3.7.2)
+  - CocoaLumberjack/Core (3.7.2)
   - DropDown (2.3.13)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
@@ -21,6 +24,8 @@ PODS:
   - SDWebImage (5.10.4):
     - SDWebImage/Core (= 5.10.4)
   - SDWebImage/Core (5.10.4)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
   - SwiftyJSON (5.0.0)
   - SwiftyStarRatingView (1.0.4)
 
@@ -36,12 +41,14 @@ DEPENDENCIES:
   - ObjectMapper
   - RangeSeekSlider
   - SDWebImage
+  - SVGKit
   - SwiftyJSON
   - SwiftyStarRatingView
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CocoaLumberjack
     - DropDown
     - GoogleMaps
     - GooglePlacePicker
@@ -53,11 +60,13 @@ SPEC REPOS:
     - ObjectMapper
     - RangeSeekSlider
     - SDWebImage
+    - SVGKit
     - SwiftyJSON
     - SwiftyStarRatingView
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
@@ -69,9 +78,10 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyStarRatingView: a2b0057700e0adeb8e7442c55d99cb53b531d2f4
 
-PODFILE CHECKSUM: 17974e62f6089afcf7a950e965896bc283a862fd
+PODFILE CHECKSUM: 7999d7422d216c5087351cd28bb756727f0403e2
 
 COCOAPODS: 1.10.1

@@ -12,26 +12,25 @@ class DriveTrainViewController: UIViewController {
 
     @IBOutlet weak var driveTrainCollectionView: UICollectionView!
     
-    let lblArr = ["AWD","FWD","RWD","4x4","4x2","Other"]
     var driveTrainArray = [DriveTrainData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         driveTrainCollectionView.delegate = self
         driveTrainCollectionView.dataSource = self
-        
-        PostAdNetworkManager.SharedInstance.DriveTrain(viewcontroller: self) { (res) in
+        getTrain()
+    }
+
+    func getTrain() {
+        NetworkManager.SharedInstance.DriveTrain(viewcontroller: self) { (res) in
             print(res)
             guard let arr = res.data else{return}
             self.driveTrainArray = arr
             self.driveTrainCollectionView.reloadData()
-
         } failure: { (err) in
             print("Failed")
         }
-
     }
-
     func setCollecView(view: UIView) {
         view.layer.backgroundColor = UIColor(red: 0.984, green: 0.988, blue: 0.992, alpha: 1).cgColor
         view.layer.cornerRadius = 5

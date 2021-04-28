@@ -9,17 +9,29 @@
 import UIKit
 
 class SelectTrimViewController: UIViewController {
-
+    
     @IBOutlet weak var selectTrimCollectionView: UICollectionView!
     
     let lblArr = ["1.5 EMT I DTEC","1.5 S CVT Diesel","1.5 S CVT Diesel","1.5 EMT I DTEC","1.5 S CVT Diesel","1.5 EMT I DTEC"]
-
+    var selectModelArray = [SelectModelData]()
+    var id  : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         selectTrimCollectionView.delegate = self
         selectTrimCollectionView.dataSource = self
+        getTrim(id: "\(id ?? 0)")
     }
-    
+    func getTrim(id:String) {
+        NetworkManager.SharedInstance.SelectTrim(viewcontroller: self,id: id) { (res) in
+            print(res)
+            guard let arr = res.data else{return}
+            self.selectModelArray = arr
+            self.selectTrimCollectionView.reloadData()
+        } failure: { (err) in
+            print("Failed")
+            Utilities.ShowAlert(title: "ALert!!!", message: "Something went wrong", view: self)
+        }
+    }
     func setCollecView(view: UIView) {
         view.layer.backgroundColor = UIColor(red: 0.984, green: 0.988, blue: 0.992, alpha: 1).cgColor
         view.layer.cornerRadius = 5
@@ -31,22 +43,21 @@ class SelectTrimViewController: UIViewController {
 extension SelectTrimViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return lblArr.count
+        return selectModelArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = selectModelArray[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectModelCollectionViewCell", for: indexPath) as! SelectModelCollectionViewCell
         setCollecView(view: cell.mainview)
-        cell.modelLbl.text = lblArr[indexPath.row]
+        cell.modelLbl.text = index.v_trim
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "SelectYearViewController") as! SelectYearViewController
-            self.navigationController?.pushViewController(main, animated: true)
-
-        }
+        let main = storyboard?.instantiateViewController(withIdentifier: "SelectYearViewController") as! SelectYearViewController
+        self.navigationController?.pushViewController(main, animated: true)
     }
     
 }

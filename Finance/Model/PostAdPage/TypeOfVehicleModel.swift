@@ -32,7 +32,7 @@ struct TypeOfVehicleData : Mappable {
     var name : String?
     var image_path : String?
     var is_active : Int?
-    var typeofvehicle_id : [String]?
+    var typeofvehicle_id : [TypeofVehicle_id]?
 
     init?(map: Map) {
 
@@ -45,6 +45,31 @@ struct TypeOfVehicleData : Mappable {
         image_path <- map["image_path"]
         is_active <- map["is_active"]
         typeofvehicle_id <- map["typeofvehicle_id"]
+    }
+
+}
+
+
+struct TypeofVehicle_id : Mappable {
+    var id : Int?
+    var name : String?
+    var image_path : String?
+    var type_id : Int?
+    var is_active : Int?
+    
+
+    init?(map: Map) {
+
+    }
+
+    mutating func mapping(map: Map) {
+
+        id <- map["id"]
+        name <- map["name"]
+        image_path <- map["image_path"]
+        is_active <- map["is_active"]
+        type_id <- map["type_id"]
+        is_active <- map["is_active"]
     }
 
 }

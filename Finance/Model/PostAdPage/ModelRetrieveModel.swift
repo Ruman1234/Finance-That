@@ -31,6 +31,7 @@ struct SelectModelData : Mappable {
     var id : Int?
     var make_id : Int?
     var model_make : String?
+    var v_trim : String?
     var is_active : Int?
 
     init?(map: Map) {
@@ -42,6 +43,7 @@ struct SelectModelData : Mappable {
         id <- map["id"]
         make_id <- map["make_id"]
         model_make <- map["model_make"]
+        v_trim <- map["v_trim"]
         is_active <- map["is_active"]
     }
 
