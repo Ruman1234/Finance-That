@@ -18,6 +18,7 @@ pod 'RangeSeekSlider'
 pod 'RangeSeekSlider'
 pod 'SwiftyStarRatingView'
 pod 'ImageViewer.swift'
+pod 'SVGKit'
 
 pod 'GoogleMaps'
 pod 'GooglePlacePicker'

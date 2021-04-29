@@ -10,8 +10,8 @@ import Foundation
 import ObjectMapper
 import Alamofire
 
-extension PostAdNetworkManager {
-    
+extension NetworkManager {
+       
     func TypeOfVehicle(viewcontroller : UIViewController = UIViewController(),
                        
                        success : @escaping (TypeOfVehicleModel) -> Void,
@@ -77,11 +77,11 @@ extension PostAdNetworkManager {
     }
     
     func Features(viewcontroller : UIViewController = UIViewController(),
-                       
+                  id:String,
                        success : @escaping (FeaturesModel) -> Void,
                        failure : @escaping (NSError) -> Void)  {
         
-        self.request(url: Constants.BASE_URL  + Constants.FEATURE, method: .get) { (response) in
+        self.request(url: Constants.BASE_URL  + Constants.FEATURE + "\(id)/", method: .get) { (response) in
             
             if response.response?.statusCode == 200 {
                 do{
@@ -98,11 +98,11 @@ extension PostAdNetworkManager {
     }
     
     func SelectMake(viewcontroller : UIViewController = UIViewController(),
-                       
+                    id :String,
                        success : @escaping (SelectMakeModel) -> Void,
                        failure : @escaping (NSError) -> Void)  {
         
-        self.request(url: Constants.BASE_URL  + Constants.SELECT_MAKE, method: .get) { (response) in
+        self.request(url: Constants.BASE_URL  + Constants.SELECT_MAKE + "\(id)/", method: .get) { (response) in
             
             if response.response?.statusCode == 200 {
                 do{
@@ -119,11 +119,11 @@ extension PostAdNetworkManager {
     }
     
     func BodyType(viewcontroller : UIViewController = UIViewController(),
-                       
+                  id : String,
                        success : @escaping (BodyTypeModel) -> Void,
                        failure : @escaping (NSError) -> Void)  {
         
-        self.request(url: Constants.BASE_URL  + Constants.BODY_TYPE, method: .get) { (response) in
+        self.request(url: Constants.BASE_URL  + Constants.BODY_TYPE + "\(id)/", method: .get) { (response) in
             
             if response.response?.statusCode == 200 {
                 do{
@@ -140,11 +140,32 @@ extension PostAdNetworkManager {
     }
     
     func SelectModel(viewcontroller : UIViewController = UIViewController(),
-                       
+                     id:String,
                        success : @escaping (SelectModel) -> Void,
                        failure : @escaping (NSError) -> Void)  {
         
-        self.request(url: Constants.BASE_URL  + Constants.SELECT_MODEL, method: .get) { (response) in
+        self.request(url: Constants.BASE_URL  + Constants.SELECT_MODEL + "\(id)/", method: .get) { (response) in
+            
+            if response.response?.statusCode == 200 {
+                do{
+                    let value = try response.result.get()
+                    success(Mapper<SelectModel>().map(JSON: value as! [String : Any])!)
+                }catch{
+                    failure(NSError())
+                }
+                
+            }else{
+                failure(NSError())
+            }
+        }
+    }
+    
+    func SelectTrim(viewcontroller : UIViewController = UIViewController(),
+                     id:String,
+                       success : @escaping (SelectModel) -> Void,
+                       failure : @escaping (NSError) -> Void)  {
+        
+        self.request(url: Constants.BASE_URL  + Constants.SELECT_TRIM + "\(id)/", method: .get) { (response) in
             
             if response.response?.statusCode == 200 {
                 do{

@@ -9,20 +9,21 @@
 import UIKit
 
 class BodyTypeViewController: UIViewController {
-
+    
     @IBOutlet weak var bodyTypeCollectionView: UICollectionView!
     
-    let lblArr = ["Sedan","Suv","Sports Car","Coupe","Pickup Truck","Wagon"]
-    
     var bodyTypeArray = [BodyTypeData]()
-    
+    var id : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bodyTypeCollectionView.delegate = self
         bodyTypeCollectionView.dataSource = self
-        
-        PostAdNetworkManager.SharedInstance.BodyType(viewcontroller: self) { (res) in
+        self.getBodyType(id: POSTAd.vehicleTypeID)
+    }
+    
+    func getBodyType(id : String)  {
+        NetworkManager.SharedInstance.BodyType(viewcontroller: self,id: id) { (res) in
             print(res)
             guard let arr = res.data else{return}
             self.bodyTypeArray = arr
@@ -30,7 +31,6 @@ class BodyTypeViewController: UIViewController {
         } failure: { (err) in
             print("Failed")
         }
-
     }
     
     func setCollecView(view: UIView) {
@@ -60,11 +60,8 @@ extension BodyTypeViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "SeatingViewController") as! SeatingViewController
-            self.navigationController?.pushViewController(main, animated: true)
-
-        }
+        let main = storyboard?.instantiateViewController(withIdentifier: "SeatingViewController") as! SeatingViewController
+        self.navigationController?.pushViewController(main, animated: true)
     }
     
 }

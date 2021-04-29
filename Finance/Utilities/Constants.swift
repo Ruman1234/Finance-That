@@ -53,32 +53,39 @@ class Constants {
     static let Feature_Listing = "ad_details/featured_listing"
     static let Listing_Filter = "ad_details/listing_filter/"
     static let FIND_ADS = "ads/"
+    
     static let POST_APPLICATION = "application/"
+    
+    
+    
+    
+    
+
+//    ruman set code
     static let TYPE_OF_VEHICLE = "type_of_vehicle/list/"
+    static let SELECT_MAKE = "v_make/retrieve_by_type/"
+    static let SELECT_MODEL = "v_model/retrieve_by_make/"
+    static let SELECT_TRIM = "v_trim/retrieve_by_model/"
     static let FUEL_TYPE = "fuel_type/list/"
     static let DRIVE_TRAIN = "drive_train/list/"
-    static let FEATURE = "v_features/list/7/"
-    static let SELECT_MAKE = "v_make/retrieve_by_type/7/"
-    static let BODY_TYPE = "body_type/retrieve_by_type/7/"
-    static let SELECT_MODEL = "v_model/retrieve_by_make/1119/"
+    static let BODY_TYPE = "body_type/retrieve_by_type/"
+    static let FEATURE = "v_features/list/"
     
-    static var URL_Images = "/assets/image/automotive.svg"
-
 }
 
 class defaults  {
     static var token : String{
         get{
-            return _get(valueForKay: .Token) as! String
+            return _get(valueForKay: .Token) as? String ?? ""
         }set{
             _set(value: newValue, key: .Token)
         }
     }
     static var userID : String{
         get{
-            return UserDefaults.standard.string(forKey: "userID") ?? ""
+            return _get(valueForKay: .userID) as? String ?? ""
         }set{
-            UserDefaults.standard.set(newValue, forKey: "userID")
+            _set(value: newValue, key: .userID)
         }
     }
     private static func _set(value: Any?, key: Defaults) {
@@ -108,7 +115,9 @@ class PostApplicaitonObject {
         IsCoApplicant = false
     }
 }
-
+class POSTAd  {
+    static var vehicleTypeID : String!
+}
 extension UIButton{
     func setButtonTheme()  {
         self.layer.backgroundColor = Color.red_theme_color.cgColor
@@ -126,5 +135,10 @@ extension UIView{
 extension UIFont{
     func BasisGrotesqueProMedium(size : CGFloat) -> UIFont {
         return UIFont(name: "Basis Grotesque Pro Medium", size: size)!
+    }
+}
+extension Int {
+    func toString() ->String {
+        return "\(self)"
     }
 }

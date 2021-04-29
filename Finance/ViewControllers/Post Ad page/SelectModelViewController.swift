@@ -9,28 +9,28 @@
 import UIKit
 
 class SelectModelViewController: UIViewController {
-
+    
     @IBOutlet weak var selectModelCollectionView: UICollectionView!
     
-    let lblArr = ["Amaze","Brio","City","Civic"]
-    
     var selectModelArray = [SelectModelData]()
-    
+    var id  : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         selectModelCollectionView.delegate = self
         selectModelCollectionView.dataSource = self
-        
-        PostAdNetworkManager.SharedInstance.SelectModel(viewcontroller: self) { (res) in
+        getModel(id: "\(id ?? 0)")
+    }
+    
+    func getModel(id:String) {
+        NetworkManager.SharedInstance.SelectModel(viewcontroller: self,id: id) { (res) in
             print(res)
             guard let arr = res.data else{return}
             self.selectModelArray = arr
             self.selectModelCollectionView.reloadData()
         } failure: { (err) in
             print("Failed")
+            Utilities.ShowAlert(title: "ALert!!!", message: "Something went wrong", view: self)
         }
-
     }
     
     func setCollecView(view: UIView) {
@@ -60,10 +60,10 @@ extension SelectModelViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "SelectTrimViewController") as! SelectTrimViewController
-            self.navigationController?.pushViewController(main, animated: true)
-        }
+        let index = selectModelArray[indexPath.row]
+        let main = storyboard?.instantiateViewController(withIdentifier: "SelectTrimViewController") as! SelectTrimViewController
+        main.id = index.id
+        self.navigationController?.pushViewController(main, animated: true)
     }
 }
 

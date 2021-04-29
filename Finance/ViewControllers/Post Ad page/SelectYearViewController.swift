@@ -9,7 +9,7 @@
 import UIKit
 
 class SelectYearViewController: UIViewController {
-
+    
     @IBOutlet weak var selectYearTableView: UITableView!
     
     let arr = ["2018","2019","2020"]
@@ -19,7 +19,7 @@ class SelectYearViewController: UIViewController {
         selectYearTableView.delegate = self
         selectYearTableView.dataSource = self
     }
-
+    
 }
 
 extension SelectYearViewController: UITableViewDelegate, UITableViewDataSource {
@@ -34,10 +34,7 @@ extension SelectYearViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "SelectConditionViewController") as! SelectConditionViewController
-            self.navigationController?.pushViewController(main, animated: true)
-
-        }
+        let main = storyboard?.instantiateViewController(withIdentifier: "SelectConditionViewController") as! SelectConditionViewController
+        self.navigationController?.pushViewController(main, animated: true)
     }
 }

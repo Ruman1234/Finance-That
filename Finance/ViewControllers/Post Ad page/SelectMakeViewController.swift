@@ -7,31 +7,38 @@
 //
 
 import UIKit
-
+import SVGKit
 class SelectMakeViewController: UIViewController {
-
+    
     @IBOutlet weak var selectMakeTextField: CustomTextField!
     @IBOutlet weak var provideMakeTextField: CustomTextField!
     @IBOutlet weak var vehicleBrandCollectionView: UICollectionView!
     
-    let imagesArr = [UIImage(named: "Honda"),UIImage(named: "Toyota"),UIImage(named: "Nisan"),UIImage(named: "Hyundai"),UIImage(named: "Mazda"),UIImage(named: "Ford"),UIImage(named: "Chevrolet"),UIImage(named: "Volkswagcn"),UIImage(named: "Audi"),UIImage(named: "Lexus"),UIImage(named: "Mercedes"),UIImage(named: "Porsche")]
-    
     var selectMakeArray = [SelectMakeData]()
+    var selectQuickMakeArray = [SelectMakeData]()
+    var id:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         vehicleBrandCollectionView.delegate = self
         vehicleBrandCollectionView.dataSource = self
-        
-        PostAdNetworkManager.SharedInstance.SelectMake(viewcontroller: self) { (res) in
+        getMake(id: "\(id ?? 0)")
+    }
+    
+    func getMake(id : String)  {
+        NetworkManager.SharedInstance.SelectMake(viewcontroller: self,id: id) { (res) in
             guard let arr = res.data else{return}
             self.selectMakeArray = arr
+            self.selectQuickMakeArray = arr
+            
+            self.selectQuickMakeArray = self.selectMakeArray.filter { (res) -> Bool in
+                return res.image_path != nil
+            }
+            
             self.vehicleBrandCollectionView.reloadData()
         } failure: { (err) in
-            print("Failed")
+            Utilities.ShowAlert(title: "Alert", message: "Something went wrong", view: self)
         }
-
     }
     
     func setCollecView(view: UIView) {
@@ -48,27 +55,29 @@ class SelectMakeViewController: UIViewController {
 extension SelectMakeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return selectMakeArray.count
+        return selectQuickMakeArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let index = selectMakeArray[indexPath.row]
+        let index = selectQuickMakeArray[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VehicleBrandsCollectionViewCell", for: indexPath) as! VehicleBrandsCollectionViewCell
         setCollecView(view: cell.mainView)
         
-        cell.brandImg.sd_setImage(with: URL(string: Constants.BASE_URL_Images + (index.image_path!)), placeholderImage:UIImage(contentsOfFile:"placeholder.png"))
-        print(Constants.BASE_URL_Images + index.image_path!)
-
+        cell.brandImg.sd_setImage(with: URL(string: Constants.BASE_URL_Images + index.image_path!), placeholderImage:UIImage(contentsOfFile:"placeholder.png"))
+        
+        //        let mySVGImage: SVGKImage = SVGKImage(contentsOf: URL(string:Constants.BASE_URL_Images + index.image_path!)!)
+        //        cell.brandImg.image = mySVGImage.uiImage
+        
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        if indexPath.row == 0 {
-            let main = storyboard?.instantiateViewController(withIdentifier: "SelectModelViewController") as! SelectModelViewController
-            self.navigationController?.pushViewController(main, animated: true)
-        }
+        let index = selectQuickMakeArray[indexPath.row]
+        let main = storyboard?.instantiateViewController(withIdentifier: "SelectModelViewController") as! SelectModelViewController
+        main.id = index.id
+        self.navigationController?.pushViewController(main, animated: true)
     }
 }
 

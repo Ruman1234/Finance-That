@@ -115,38 +115,6 @@ class Post2ViewController: UIViewController {
         dict["country"]         = self.countryTextField.text   ?? ""
     }
     
-    func hideTableViewWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        
-        view.addGestureRecognizer(tap)
-        self.mainView.addGestureRecognizer(tap)
-    }
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    @objc func dismissTableView() {
-        view.endEditing(true)
-        tableView.isHidden = true
-    }
-    
-    
-    func setupTableView() {
-        tableView.isHidden = true
-        tableView.delegate = self
-        tableView.dataSource = self
-        mainView.addSubview(tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        // tableView.frame = CGRect(x: 21, y: y, width: self.shipmentAdsres.frame.width, height: 300)
-        
-        tableView.frame = CGRect(x: 21, y: 300, width: self.houseTextField.frame.width, height: 300)
-        
-        // self.tableView.isHidden = true
-    }
-   
 }
 
 extension Post2ViewController : UITextFieldDelegate{
@@ -163,6 +131,41 @@ extension Post2ViewController : UITextFieldDelegate{
     }
 }
 
+
+extension Post2ViewController{
+    func setupTableView() {
+        tableView.isHidden = true
+        tableView.delegate = self
+        tableView.dataSource = self
+        mainView.addSubview(tableView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // tableView.frame = CGRect(x: 21, y: y, width: self.shipmentAdsres.frame.width, height: 300)
+        
+        tableView.frame = CGRect(x: 21, y: 300, width: self.houseTextField.frame.width, height: 300)
+        
+        // self.tableView.isHidden = true
+    }
+    
+    
+    func hideTableViewWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+        self.mainView.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @objc func dismissTableView() {
+        view.endEditing(true)
+        tableView.isHidden = true
+    }
+    
+}
 extension Post2ViewController{
     func latLong(lat: Double,long: Double) {
         
