@@ -53,6 +53,7 @@
 		1811922025F45D9000839599 /* Post8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811921F25F45D9000839599 /* Post8ViewController.swift */; };
 		1811922525F4691000839599 /* Post9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811922425F4691000839599 /* Post9ViewController.swift */; };
 		1811922A25F4691F00839599 /* Post10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811922925F4691F00839599 /* Post10ViewController.swift */; };
+		181222342631E8EF00C41583 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181222332631E8EF00C41583 /* ChatScreenViewController.swift */; };
 		18151DD9261C4BC700691488 /* AllDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151DD8261C4BC700691488 /* AllDoneViewController.swift */; };
 		18151DE1261C4CEC00691488 /* BoostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151DE0261C4CEC00691488 /* BoostViewController.swift */; };
 		18151DF4261C5A0000691488 /* AdDetailsPriceListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18151DF3261C5A0000691488 /* AdDetailsPriceListingModel.swift */; };
@@ -250,6 +251,7 @@
 		1811921F25F45D9000839599 /* Post8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post8ViewController.swift; sourceTree = "<group>"; };
 		1811922425F4691000839599 /* Post9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post9ViewController.swift; sourceTree = "<group>"; };
 		1811922925F4691F00839599 /* Post10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post10ViewController.swift; sourceTree = "<group>"; };
+		181222332631E8EF00C41583 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
 		18151DD8261C4BC700691488 /* AllDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDoneViewController.swift; sourceTree = "<group>"; };
 		18151DE0261C4CEC00691488 /* BoostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostViewController.swift; sourceTree = "<group>"; };
 		18151DF3261C5A0000691488 /* AdDetailsPriceListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailsPriceListingModel.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				1820EF172611C2CF00F8EDF6 /* MyAdsViewController.swift */,
 				180D51772611EAE50066C85A /* EditPostViewController.swift */,
 				188F093F26120C8F000D0E2D /* ChatPageViewController.swift */,
+				181222332631E8EF00C41583 /* ChatScreenViewController.swift */,
 				180E860C261D996E005A5151 /* BottomCardViewController.swift */,
 				18F5723E26135B670038880C /* BlockViewController.swift */,
 				180D134F26203C30003539A1 /* AboutPageViewController.swift */,
@@ -1383,6 +1386,7 @@
 				18089D342617991500F049B6 /* SelectModelViewController.swift in Sources */,
 				18FAAA342608E7FA0041B897 /* MyApplicationDetailViewController.swift in Sources */,
 				180BB29B262F3588001EDEF4 /* PostAdExtensionNetworkManager.swift in Sources */,
+				181222342631E8EF00C41583 /* ChatScreenViewController.swift in Sources */,
 				1885D7562603A0780093B60E /* SearchByTypeCollectionViewCell.swift in Sources */,
 				181E759126185F2E0013CA5D /* OwnerViewController.swift in Sources */,
 				189CA4D825F99F9A007EAAF4 /* Post10TableViewCell.swift in Sources */,
